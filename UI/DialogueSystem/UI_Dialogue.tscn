@@ -1,0 +1,218 @@
+[gd_scene load_steps=5 format=3 uid="uid://4uhkgn2xw3hh"]
+
+[ext_resource type="Script" path="res://Code/UI/DialogueSystem/CTPI_Dialogue.cs" id="1_4kcws"]
+[ext_resource type="Resource" uid="uid://62mwej54xsvd" path="res://Ink/Test/Ink_Test.ink" id="2_bh6tr"]
+[ext_resource type="PackedScene" uid="uid://cgre5s2mwjjkm" path="res://UI/Elements/UI_Button.tscn" id="3_2bh2n"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_7pkty"]
+
+[node name="UiDialogue" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4kcws")
+InkStoryTest = ExtResource("2_bh6tr")
+UI_Button = ExtResource("3_2bh2n")
+
+[node name="BTN_Evidences" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -100.0
+offset_top = 30.0
+offset_right = -30.0
+offset_bottom = 100.0
+grow_horizontal = 0
+
+[node name="TextureRect" type="TextureRect" parent="BTN_Evidences"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("PlaceholderTexture2D_7pkty")
+
+[node name="CON_FwwPos" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 368.0
+offset_top = 500.0
+offset_right = 368.0
+offset_bottom = 500.0
+
+[node name="CON_MccPos" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 903.0
+offset_top = 500.0
+offset_right = 903.0
+offset_bottom = 500.0
+
+[node name="CON_SusPos" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 954.0
+offset_top = 241.0
+offset_right = 954.0
+offset_bottom = 241.0
+
+[node name="CON_DialogueBox" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = 185.06
+offset_bottom = 185.06
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="CON_DialogueBox"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -220.5
+offset_top = -44.0
+offset_right = 220.5
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CON_DialogueBox/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="RTL_Text" type="RichTextLabel" parent="CON_DialogueBox/Panel/MarginContainer"]
+layout_mode = 2
+text = "Test"
+
+[node name="PNL_Name" type="Panel" parent="CON_DialogueBox/Panel"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = -22.825
+offset_right = 119.0
+offset_bottom = 10.34
+
+[node name="MarginContainer" type="MarginContainer" parent="CON_DialogueBox/Panel/PNL_Name"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="RTL_Name" type="RichTextLabel" parent="CON_DialogueBox/Panel/PNL_Name/MarginContainer"]
+layout_mode = 2
+text = "Name"
+
+[node name="CON_FwwSelectionBox" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -295.0
+offset_top = 38.0
+offset_right = -295.0
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="CON_FwwSelectionBox"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -181.5
+offset_top = -118.5
+offset_right = 181.5
+offset_bottom = 118.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CON_FwwSelectionBox/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBX_Options" type="VBoxContainer" parent="CON_FwwSelectionBox/Panel/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="CON_MccSelectionBox" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 282.0
+offset_top = 38.0
+offset_right = 282.0
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="CON_MccSelectionBox"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -181.5
+offset_top = -118.5
+offset_right = 181.5
+offset_bottom = 118.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CON_MccSelectionBox/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBX_Options" type="VBoxContainer" parent="CON_MccSelectionBox/Panel/MarginContainer"]
+layout_mode = 2
+alignment = 1
