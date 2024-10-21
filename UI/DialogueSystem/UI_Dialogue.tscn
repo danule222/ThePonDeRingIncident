@@ -63,6 +63,7 @@ offset_right = 954.0
 offset_bottom = 241.0
 
 [node name="CON_DialogueBox" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -128,6 +129,7 @@ layout_mode = 2
 text = "Name"
 
 [node name="CON_FwwSelectionBox" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -149,9 +151,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -181.5
-offset_top = -118.5
+offset_top = -108.895
 offset_right = 181.5
-offset_bottom = 118.5
+offset_bottom = 108.895
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -172,6 +174,7 @@ layout_mode = 2
 alignment = 1
 
 [node name="CON_MccSelectionBox" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -193,9 +196,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -181.5
-offset_top = -118.5
+offset_top = -108.895
 offset_right = 181.5
-offset_bottom = 118.5
+offset_bottom = 108.895
 grow_horizontal = 2
 grow_vertical = 2
 

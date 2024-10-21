@@ -45,6 +45,9 @@ public partial class CTPI_Dialogue : Control
 
 	public void Speak(ECharacter character, string text)
 	{
+		// Visibility
+		CON_DialogueBox.Visible = true;
+
 		// Name
 		RTL_Name.Text = character.ToString();
 
@@ -72,8 +75,8 @@ public partial class CTPI_Dialogue : Control
 		foreach (var child in VBX_MccOptions.GetChildren())
 			child.QueueFree();
 
-		VBX_FwwOptions.Visible = true;
-		VBX_MccOptions.Visible = true;
+		CON_FwwSelectionBox.Visible = true;
+		CON_MccSelectionBox.Visible = true;
 
 		// Button creation
 		foreach (var choice in story.CurrentChoices)
@@ -88,8 +91,8 @@ public partial class CTPI_Dialogue : Control
 			button.Pressed += delegate ()
 			{
 				story.ChooseChoiceIndex(choice.Index);
-				VBX_FwwOptions.Visible = false;
-				VBX_MccOptions.Visible = false;
+				CON_FwwSelectionBox.Visible = false;
+				CON_MccSelectionBox.Visible = false;
 
 				EmitSignal("Continue");
 			};
