@@ -7,3 +7,11 @@ public enum ECharacter
   Gura,
   Mococo
 }
+
+public enum EEmotion
+{
+  Neutral,
+  Happy,
+  Alert,
+  Thinking
+}

@@ -82,9 +82,9 @@ public partial class CTPI_Dialogue : Control
 		foreach (var choice in story.CurrentChoices)
 		{
 			string text = choice.Text;
-			string name = Regex.Match(text, "<([^<>]+)>").Groups[1].Value;
+			string name = Regex.Match(text, "<([^:<>]+):([^:<>]+):([^:<>]+)>").Groups[1].Value;
 			ECharacter character = Enum.Parse<ECharacter>(name);
-			text = text.Replace(Regex.Match(text, "<([^<>]+)>").Groups[0].Value + " ", "");
+			text = text.Replace(Regex.Match(text, "<([^:<>]+):([^:<>]+):([^:<>]+)>").Groups[0].Value + " ", "");
 
 			CTPI_Button button = UI_Button.Instantiate<CTPI_Button>();
 			button.Label = text;

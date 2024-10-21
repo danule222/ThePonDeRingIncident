@@ -38,11 +38,11 @@ public partial class CTPI_Interrogation : Control
 			string text = Story.Continue();
 
 			// Get Character from text
-			string name = Regex.Match(text, "<([^<>]+)>").Groups[1].Value;
+			string name = Regex.Match(text, "<([^:<>]+):([^:<>]+):([^:<>]+)>").Groups[1].Value;
 			ECharacter character = Enum.Parse<ECharacter>(name);
 
 			// Remove name from text
-			text = text.Replace(Regex.Match(text, "<([^<>]+)>").Groups[0].Value + " ", "");
+			text = text.Replace(Regex.Match(text, "<([^:<>]+):([^:<>]+):([^:<>]+)>").Groups[0].Value + " ", "");
 
 			UI_Dialogue.Speak(character, text);
 		}
