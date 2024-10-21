@@ -1,7 +1,7 @@
-Once upon a time...
+<Gura> Cómeme un huevo.
 
- * There were two choices.
- * There were four lines of content.
+ * <Fuwawa> Sí hombre.
+ * <Mococo> Los tuyos más capullos.
 
-- They lived happily ever after.
+- <Gura> Va perfecto entiendo muchas gracias adios.
     -> END

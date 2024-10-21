@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Code/UI/Elements/CTPI_Button.cs" id="1_d81lk"]
 
-[node name="UiButton" type="Control"]
+[node name="UI_Button" type="Control"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 3
 anchors_preset = 15

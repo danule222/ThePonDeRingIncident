@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://18tas7nugvv8"]
+
+[ext_resource type="Script" path="res://Code/SceneControllers/CTPI_Interrogation.cs" id="1_ni0ly"]
+[ext_resource type="Resource" uid="uid://62mwej54xsvd" path="res://Ink/Test/Ink_Test.ink" id="2_0exrr"]
+[ext_resource type="Script" path="res://Code/Resources/RTPI_Interrogation.cs" id="3_56tyo"]
+[ext_resource type="PackedScene" uid="uid://4uhkgn2xw3hh" path="res://UI/DialogueSystem/UI_Dialogue.tscn" id="4_vn8w5"]
+
+[sub_resource type="Resource" id="Resource_8n5fy"]
+script = ExtResource("3_56tyo")
+Character = 2
+Story = ExtResource("2_0exrr")
+TensionLevelStart = 0
+
+[node name="S_InterrogationTest" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ni0ly")
+Interrogations = Array[Resource]([SubResource("Resource_8n5fy")])
+
+[node name="UI_Dialogue" parent="." instance=ExtResource("4_vn8w5")]
+layout_mode = 1

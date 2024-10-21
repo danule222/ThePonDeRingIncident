@@ -1,12 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://4uhkgn2xw3hh"]
+[gd_scene load_steps=4 format=3 uid="uid://4uhkgn2xw3hh"]
 
 [ext_resource type="Script" path="res://Code/UI/DialogueSystem/CTPI_Dialogue.cs" id="1_4kcws"]
-[ext_resource type="Resource" uid="uid://62mwej54xsvd" path="res://Ink/Test/Ink_Test.ink" id="2_bh6tr"]
 [ext_resource type="PackedScene" uid="uid://cgre5s2mwjjkm" path="res://UI/Elements/UI_Button.tscn" id="3_2bh2n"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_7pkty"]
 
-[node name="UiDialogue" type="Control"]
+[node name="UI_Dialogue" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,7 +13,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4kcws")
-InkStoryTest = ExtResource("2_bh6tr")
 UI_Button = ExtResource("3_2bh2n")
 
 [node name="BTN_Evidences" type="Button" parent="."]

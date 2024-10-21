@@ -1,11 +1,10 @@
+using System;
+using System.Text.RegularExpressions;
 using Godot;
 using GodotInk;
-using System;
 
 public partial class CTPI_Dialogue : Control
 {
-	[Export]
-	public InkStory InkStoryTest;
 	[Export]
 	private PackedScene UI_Button;
 
@@ -21,8 +20,8 @@ public partial class CTPI_Dialogue : Control
 	private VBoxContainer VBX_FwwOptions;
 	private Control CON_MccSelectionBox;
 	private VBoxContainer VBX_MccOptions;
+	[Signal] public delegate void ContinueEventHandler();
 
-	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
 		CON_FwwPos = GetNode<Control>("CON_FwwPos");
@@ -36,39 +35,12 @@ public partial class CTPI_Dialogue : Control
 		CON_FwwSelectionBox = GetNode<Control>("CON_FwwSelectionBox");
 		VBX_FwwOptions = CON_FwwSelectionBox.GetNode<VBoxContainer>("Panel/MarginContainer/VBX_Options");
 		CON_MccSelectionBox = GetNode<Control>("CON_MccSelectionBox");
-		VBX_FwwOptions = CON_MccSelectionBox.GetNode<VBoxContainer>("Panel/MarginContainer/VBX_Options");
-
-
-		Speak(ECharacter.Mococo, "Holaa");
+		VBX_MccOptions = CON_MccSelectionBox.GetNode<VBoxContainer>("Panel/MarginContainer/VBX_Options");
 	}
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		if (Input.IsKeyPressed(Key.P))
-		{
-			// Print text
-			if (InkStoryTest.CanContinue)
-			{
-				GD.Print(InkStoryTest.Continue());
-			}
-			// Choices
-			else if (InkStoryTest.CurrentChoices.Count > 0)
-			{
-				// Button creation
-				foreach (var choice in InkStoryTest.CurrentChoices)
-				{
-					CTPI_Button button = UI_Button.Instantiate<CTPI_Button>();
-					button.Label = choice.Text;
-					button.Pressed += delegate ()
-					{
-						InkStoryTest.ChooseChoiceIndex(choice.Index);
-					};
 
-					VBX_FwwOptions.AddChild(button);
-				}
-			}
-		}
 	}
 
 	public void Speak(ECharacter character, string text)
@@ -91,5 +63,41 @@ public partial class CTPI_Dialogue : Control
 		}
 
 		RTL_Text.Text = text; // TODO: Animation
+	}
+
+	public void AddOptions(InkStory story)
+	{
+		foreach (var child in VBX_FwwOptions.GetChildren())
+			child.QueueFree();
+		foreach (var child in VBX_MccOptions.GetChildren())
+			child.QueueFree();
+
+		VBX_FwwOptions.Visible = true;
+		VBX_MccOptions.Visible = true;
+
+		// Button creation
+		foreach (var choice in story.CurrentChoices)
+		{
+			string text = choice.Text;
+			string name = Regex.Match(text, "<([^<>]+)>").Groups[1].Value;
+			ECharacter character = Enum.Parse<ECharacter>(name);
+			text = text.Replace(Regex.Match(text, "<([^<>]+)>").Groups[0].Value + " ", "");
+
+			CTPI_Button button = UI_Button.Instantiate<CTPI_Button>();
+			button.Label = text;
+			button.Pressed += delegate ()
+			{
+				story.ChooseChoiceIndex(choice.Index);
+				VBX_FwwOptions.Visible = false;
+				VBX_MccOptions.Visible = false;
+
+				EmitSignal("Continue");
+			};
+
+			if (character == ECharacter.Fuwawa)
+				VBX_FwwOptions.AddChild(button);
+			else
+				VBX_MccOptions.AddChild(button);
+		}
 	}
 }
