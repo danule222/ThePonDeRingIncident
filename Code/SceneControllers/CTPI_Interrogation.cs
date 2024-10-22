@@ -8,7 +8,6 @@ public partial class CTPI_Interrogation : Control
 {
 	[Export]
 	private Array<RTPI_Interrogation> Interrogations;
-
 	private CTPI_Dialogue UI_Dialogue;
 	private InkStory Story;
 	private bool Selecting;

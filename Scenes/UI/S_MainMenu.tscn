@@ -1,0 +1,177 @@
+[gd_scene load_steps=10 format=3 uid="uid://byfotpy5wxwed"]
+
+[ext_resource type="PackedScene" uid="uid://cgre5s2mwjjkm" path="res://UI/Elements/UI_Button.tscn" id="1_n8vay"]
+[ext_resource type="Script" path="res://Code/SceneControllers/CTPI_MainMenu.cs" id="1_ullf4"]
+[ext_resource type="PackedScene" uid="uid://bbrgq43mnuo3i" path="res://Scenes/World/S_WorldOffice.tscn" id="2_e2ity"]
+[ext_resource type="VoxelGIData" uid="uid://bkngp88w35f0q" path="res://Scenes/UI/GI/S_MainMenu.VoxelGI_data.res" id="3_0rmek"]
+[ext_resource type="PackedScene" uid="uid://e1p6wap32mjw" path="res://UI/Settings/UI_Settings.tscn" id="3_ncdck"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_0ovtr"]
+size = Vector2(47, 179)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_2q25t"]
+sky_top_color = Color(0.786869, 0.465412, 1.34766e-06, 1)
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+sky_curve = 1.00907
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_antdn"]
+sky_material = SubResource("ProceduralSkyMaterial_2q25t")
+
+[sub_resource type="Environment" id="Environment_gbdap"]
+background_mode = 2
+sky = SubResource("Sky_antdn")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="S_MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ullf4")
+
+[node name="VBX_MainMenu" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 98.0
+offset_top = -265.0
+offset_right = 454.0
+offset_bottom = 265.0
+grow_vertical = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="VBX_MainMenu"]
+layout_mode = 2
+texture = SubResource("PlaceholderTexture2D_0ovtr")
+
+[node name="Spacer" type="Control" parent="VBX_MainMenu"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="BTN_Play" parent="VBX_MainMenu" instance=ExtResource("1_n8vay")]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+Label = "Play"
+
+[node name="Spacer2" type="Control" parent="VBX_MainMenu"]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+
+[node name="BTN_Settings" parent="VBX_MainMenu" instance=ExtResource("1_n8vay")]
+layout_mode = 2
+Label = "Settings"
+
+[node name="BTN_Credits" parent="VBX_MainMenu" instance=ExtResource("1_n8vay")]
+layout_mode = 2
+Label = "Credits"
+
+[node name="BTN_Exit" parent="VBX_MainMenu" instance=ExtResource("1_n8vay")]
+layout_mode = 2
+Label = "Exit"
+
+[node name="PNL_Settings" parent="." instance=ExtResource("3_ncdck")]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -329.5
+offset_top = -231.0
+offset_right = 329.5
+offset_bottom = 231.0
+
+[node name="PNL_Credits" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -329.5
+offset_top = -231.0
+offset_right = 329.5
+offset_bottom = 231.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="RichTextLabel" parent="PNL_Credits"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 23.0
+offset_right = 635.0
+offset_bottom = 83.0
+theme_override_font_sizes/normal_font_size = 41
+text = "CREDITS"
+
+[node name="Label2" type="RichTextLabel" parent="PNL_Credits"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 88.0
+offset_right = 635.0
+offset_bottom = 385.0
+text = "Yo, yo y yo."
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PNL_Credits"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.855
+anchor_right = 1.0
+anchor_bottom = 0.963
+offset_left = 17.0
+offset_top = -0.0100098
+offset_right = -18.0
+offset_bottom = 0.0939636
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="BTN_Credits_Back" parent="PNL_Credits/HBoxContainer" instance=ExtResource("1_n8vay")]
+layout_mode = 2
+size_flags_horizontal = 3
+Label = "Back"
+
+[node name="Spacer" type="Control" parent="PNL_Credits/HBoxContainer"]
+custom_minimum_size = Vector2(16.73, 0)
+layout_mode = 2
+
+[node name="Spacer2" type="Control" parent="PNL_Credits/HBoxContainer"]
+custom_minimum_size = Vector2(16.73, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="World" parent="." instance=ExtResource("2_e2ity")]
+
+[node name="ReflectionProbe" type="ReflectionProbe" parent="World"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -1.48428, 0.182041, 15.1918)
+size = Vector3(20, 4.26923, 24.543)
+box_projection = true
+interior = true
+enable_shadows = true
+ambient_mode = 0
+ambient_color = Color(0.393086, 0.393086, 0.393085, 1)
+ambient_color_energy = 0.84
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="World"]
+transform = Transform3D(-0.51753, 0.855635, 0.00723065, -0.565153, -0.348153, 0.747925, 0.642468, 0.382988, 0.663744, 0, 9.10121, 0)
+light_bake_mode = 1
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="World"]
+environment = SubResource("Environment_gbdap")
+
+[node name="VoxelGI" type="VoxelGI" parent="World"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -2.81382, 0.62668, 15.3239)
+subdiv = 2
+size = Vector3(17.2085, 6.28301, 25.656)
+data = ExtResource("3_0rmek")
+
+[node name="Camera3D" type="Camera3D" parent="World"]
+transform = Transform3D(0.893371, 4.66088e-09, 0.449319, 0.449319, -1.96404e-08, -0.893371, 4.66088e-09, 1, -1.96404e-08, 0.71, 2.335, 14.921)
+fov = 68.5
