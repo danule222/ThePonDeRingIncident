@@ -1,43 +1,74 @@
 using Godot;
-using System;
 
 public partial class ATPI_PlayerController : CharacterBody3D
 {
-	public const float Speed = 5.0f;
-	public const float JumpVelocity = 4.5f;
+	[ExportCategory("Character")]
+	[Export]
+	float baseSpeed = 3.0f;
+	[Export]
+	float sprintSpeed = 6.0f;
+	[Export]
+	float crouchSpeed = 1.0f;
 
-	public override void _PhysicsProcess(double delta)
+	[Export]
+	float acceleration = 10.0f;
+	[Export]
+	float jumpVelocity = 4.5f;
+	[Export]
+	float mouseSensitivity = 0.005f;
+	[Export]
+	bool immobile = false;
+
+	[ExportGroup("Nodes")]
+	[Export]
+	Camera3D CAMERA;
+
+	// Member variables
+	float speed;
+	float currentSpeed = 0.0f;
+	bool lowCeiling = false; // This is for when the ceiling is too low and the player needs to crouch.
+	bool wasOnFloor = true;
+
+	public override void _Ready()
 	{
-		Vector3 velocity = Velocity;
+		base._Ready();
+		speed = baseSpeed;
 
-		// Add the gravity.
-		if (!IsOnFloor())
-		{
-			velocity += GetGravity() * (float)delta;
-		}
+		Input.MouseMode = Input.MouseModeEnum.Captured;
+	}
 
-		// Handle Jump.
-		if (Input.IsActionJustPressed("ui_accept") && IsOnFloor())
-		{
-			velocity.Y = JumpVelocity;
-		}
+	public override void _Process(double delta)
+	{
+		currentSpeed = Vector3.Zero.DistanceTo(GetRealVelocity());
 
-		// Get the input direction and handle the movement/deceleration.
-		// As good practice, you should replace UI actions with custom gameplay actions.
-		Vector2 inputDir = Input.GetVector("ui_left", "ui_right", "ui_up", "ui_down");
-		Vector3 direction = (Transform.Basis * new Vector3(inputDir.X, 0, inputDir.Y)).Normalized();
-		if (direction != Vector3.Zero)
-		{
-			velocity.X = direction.X * Speed;
-			velocity.Z = direction.Z * Speed;
-		}
-		else
-		{
-			velocity.X = Mathf.MoveToward(Velocity.X, 0, Speed);
-			velocity.Z = Mathf.MoveToward(Velocity.Z, 0, Speed);
-		}
+		Vector2 inputDir = immobile ? Vector2.Zero : Input.GetVector("move_left", "move_right", "move_forward", "move_backwards");
 
-		Velocity = velocity;
+		HandleMovement(delta, inputDir);
+	}
+
+	void HandleMovement(double delta, Vector2 inputDir)
+	{
+		Vector2 direction2D = inputDir.Rotated(-CAMERA.Rotation.Y);
+		Vector3 direction = new Vector3(direction2D.X, 0, direction2D.Y);
+		direction = direction.Normalized();
+
+		Vector3 currentVelocity = Vector3.Zero;
+		currentVelocity.X = Mathf.Lerp(Velocity.X, direction.X * speed, (float)(acceleration * delta));
+		currentVelocity.Z = Mathf.Lerp(Velocity.Z, direction.Z * speed, (float)(acceleration * delta));
+		Velocity = currentVelocity;
+
 		MoveAndSlide();
+	}
+
+	public override void _UnhandledInput(InputEvent @event)
+	{
+		if (@event is InputEventMouseMotion && Input.MouseMode == Input.MouseModeEnum.Captured)
+		{
+			InputEventMouseMotion iemm = (InputEventMouseMotion)@event;
+			Vector3 currentRotation = CAMERA.Rotation;
+			currentRotation.Y -= iemm.Relative.X * mouseSensitivity;
+			currentRotation.X -= iemm.Relative.Y * mouseSensitivity;
+			CAMERA.Rotation = currentRotation;
+		}
 	}
 }

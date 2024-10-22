@@ -3576,6 +3576,7 @@ points = PackedVector3Array(30.2498, -71.4447, 34.3436, 27.509, -82.0605, 31.170
 points = PackedVector3Array(-0.967992, 84.6601, 99.9087, 10.8612, -37.9918, -91.548, 19.5052, -38.211, -91.8901, -0.967992, 84.6601, -99.9087, -4.09105, -43.3479, 9.34932, 20.8834, -27.7353, 99.9087, -13.4602, 59.675, -93.6497, -13.4602, 81.5276, 99.9087, 5.27141, -37.0953, 93.6497, 20.8834, -27.7353, -99.9087, -13.4602, 56.555, 90.5398, -13.4602, 81.5276, -99.9087, 5.27141, -37.0953, -93.6497, 19.5052, -38.211, 91.8901, -4.09105, -43.3479, -9.34932, 11.5142, 22.1973, -99.9087, 11.5142, 22.1973, 99.9087, -13.4602, 56.555, -90.5398, -4.09105, 6.60983, -90.5398, -4.09105, 6.60983, 90.5398, -13.4602, 59.675, 93.6497, 2.15507, -24.6028, 90.5398, 2.15507, -24.6028, -90.5398, 10.8612, -37.9918, 91.548, -0.967992, -5.8702, 93.6497, -0.967992, -5.8702, -93.6497)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vqny8"]
+radius = 0.249911
 
 [node name="S_OfficeTest" type="Node3D"]
 
@@ -4863,9 +4864,10 @@ shape = SubResource("ConvexPolygonShape3D_i321n")
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Sketchfab_model/7300b5c5ebe140e7b8d044755ef8c189_fbx/RootNode/Cube_034/Cube_034_TV_0/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_qwbxs")
 
-[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." node_paths=PackedStringArray("CAMERA")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.18754, 0, -2.1078)
 script = ExtResource("5_ervp4")
+CAMERA = NodePath("Camera3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
