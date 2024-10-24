@@ -4,4 +4,5 @@
 
 [resource]
 script = ExtResource("1_mfsvq")
+Name = 2
 Emotions = null

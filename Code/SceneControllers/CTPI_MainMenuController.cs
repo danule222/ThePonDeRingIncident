@@ -1,6 +1,6 @@
 using Godot;
 
-public partial class CTPI_MainMenu : Control
+public partial class CTPI_MainMenuController : Control
 {
   private CTPI_Button BTN_Play;
   private CTPI_Button BTN_Settings;

@@ -11,6 +11,7 @@ public partial class CTPI_Dialogue : Control
 	private Control CON_SusPos;
 	private Control CON_FwwPos;
 	private Control CON_MccPos;
+	private Control CON_NarPos;
 
 	private Control CON_DialogueBox;
 	private RichTextLabel RTL_Text;
@@ -27,6 +28,7 @@ public partial class CTPI_Dialogue : Control
 		CON_FwwPos = GetNode<Control>("CON_FwwPos");
 		CON_MccPos = GetNode<Control>("CON_MccPos");
 		CON_SusPos = GetNode<Control>("CON_SusPos");
+		CON_NarPos = GetNode<Control>("CON_NarPos");
 
 		CON_DialogueBox = GetNode<Control>("CON_DialogueBox");
 		RTL_Text = CON_DialogueBox.GetNode<RichTextLabel>("Panel/MarginContainer/RTL_Text");
@@ -59,6 +61,9 @@ public partial class CTPI_Dialogue : Control
 				break;
 			case ECharacter.Mococo:
 				CON_DialogueBox.Position = CON_MccPos.Position;
+				break;
+			case ECharacter.Narrator:
+				CON_DialogueBox.Position = CON_NarPos.Position;
 				break;
 			default:
 				CON_DialogueBox.Position = CON_SusPos.Position;

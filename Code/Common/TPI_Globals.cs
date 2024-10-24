@@ -2,10 +2,15 @@
 
 public enum ECharacter
 {
-  Placeholder,
+  Narrator,
   Fuwawa,
+  Mococo,
+  FWMC,
+  Baelz,
   Gura,
-  Mococo
+  Ollie,
+  Ina,
+  Korone
 }
 
 public enum EEmotion
@@ -13,5 +18,8 @@ public enum EEmotion
   Neutral,
   Happy,
   Alert,
-  Thinking
+  Thinking,
+  Sad,
+  Mad,
+  Laugh
 }

@@ -1,0 +1,16 @@
+[remap]
+
+importer="ink"
+type="Resource"
+uid="uid://l6wrq1a2ea0m"
+path="res://.godot/imported/Ink_Interrogation_Baelz_1_Introduction.ink-d1308090c34b992a894fa1422f026143.res"
+
+[deps]
+
+source_file="res://Ink/Interrogations/Baelz/Ink_Interrogation_Baelz_1_Introduction.ink"
+dest_files=["res://.godot/imported/Ink_Interrogation_Baelz_1_Introduction.ink-d1308090c34b992a894fa1422f026143.res"]
+
+[params]
+
+is_main_file=true
+compress=true

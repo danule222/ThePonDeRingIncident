@@ -1,6 +1,6 @@
 using Godot;
+using Godot.Collections;
 using GodotInk;
-using System;
 
 [GlobalClass]
 public partial class RTPI_Interrogation : Resource
@@ -8,7 +8,7 @@ public partial class RTPI_Interrogation : Resource
   [Export]
   public ECharacter Character;
   [Export]
-  public InkStory Story;
+  public Array<InkStory> Stories;
   [Export]
   public int TensionLevelStart;
 }

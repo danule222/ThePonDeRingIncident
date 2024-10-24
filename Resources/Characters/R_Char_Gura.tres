@@ -6,7 +6,7 @@
 
 [resource]
 script = ExtResource("1_4jrc7")
-Name = 2
+Name = 5
 Portrait = ExtResource("1_n6xj1")
 Emotions = {
 0: ExtResource("1_n6xj1"),

@@ -1,0 +1,6 @@
+- <Baelz:Happy:0> Welp, if there's no more questions, I'll go back home.
+- <Baelz:Neutral:0> My little ones are waiting for me.
+- <Baelz:Neutral:0> Bye bye you two! Hope you have luck in your little investigation!
+- <Mococo:Mad:0> Haeh! Not "little investigation"! This is important for us!
+- <Baelz:Happy:0> Yeah yeah, sorry about that. Welp, see you soon!
+- <FWMC:Happy:0> Bye bye Baelz-senpai! BAU BAU!

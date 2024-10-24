@@ -13,4 +13,4 @@ dest_files=["res://.godot/imported/Ink_Test.ink-67b5fa9c0e7a70cf70f94568cb80caaf
 [params]
 
 is_main_file=true
-compress=true
+compress=false

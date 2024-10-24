@@ -12,7 +12,7 @@ namespace GodotInk;
 
 [Tool]
 #if GODOT4_1_OR_GREATER
-[GlobalClass, Icon("../GodotInk.svg")]
+[GlobalClass, Icon("addons/GodotInk/GodotInk.svg")]
 #endif
 public partial class InkStory : Resource
 {

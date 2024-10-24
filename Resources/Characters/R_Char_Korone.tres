@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="RTPI_Character" load_steps=2 format=3 uid="uid://bakuc3njkpg4a"]
+
+[ext_resource type="Script" path="res://Code/Resources/RTPI_Character.cs" id="1_vfa5i"]
+
+[resource]
+script = ExtResource("1_vfa5i")
+Name = 2
+Emotions = null

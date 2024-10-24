@@ -4,7 +4,7 @@ using Godot;
 using Godot.Collections;
 using GodotInk;
 
-public partial class CTPI_Interrogation : Control
+public partial class CTPI_InterrogationController : Control
 {
 	[Export]
 	private Array<RTPI_Interrogation> Interrogations;
@@ -17,7 +17,7 @@ public partial class CTPI_Interrogation : Control
 		UI_Dialogue = GetNode<CTPI_Dialogue>("UI_Dialogue");
 		UI_Dialogue.Continue += Continue;
 
-		Story = Interrogations[0].Story;
+		Story = Interrogations[0].Stories[0];
 		Selecting = false;
 
 		Continue();
@@ -34,6 +34,8 @@ public partial class CTPI_Interrogation : Control
 		// Print text
 		if (Story.CanContinue)
 		{
+			if (Selecting) Selecting = false;
+
 			string text = Story.Continue();
 
 			// Get Character from text
