@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="RTPI_Interrogation" load_steps=8 format=3 uid="uid://g3bm4h0bwrjb"]
+[gd_resource type="Resource" script_class="RTPI_Interrogation" load_steps=9 format=3 uid="uid://g3bm4h0bwrjb"]
 
 [ext_resource type="Script" path="res://Code/Resources/RTPI_Interrogation.cs" id="1_21252"]
 [ext_resource type="Resource" uid="uid://l6wrq1a2ea0m" path="res://Ink/Interrogations/Baelz/Ink_Interrogation_Baelz_1_Introduction.ink" id="1_rv686"]
+[ext_resource type="Resource" uid="uid://cmh5nmndt558o" path="res://Resources/Characters/R_Char_Baelz.tres" id="1_y1pe6"]
 [ext_resource type="Resource" uid="uid://cscb062on4gia" path="res://Ink/Interrogations/Baelz/Ink_Interrogation_Baelz_2_PtR_Tension.ink" id="2_mdk1u"]
 [ext_resource type="Resource" uid="uid://cf6hu86653d00" path="res://Ink/Interrogations/Baelz/Ink_Interrogation_Baelz_3_PtR_Calm.ink" id="3_kfl0l"]
 [ext_resource type="Resource" uid="uid://j1a5yq7duw8n" path="res://Ink/Interrogations/Baelz/Ink_Interrogation_Baelz_4_Con_Tension.ink" id="4_g27q2"]
@@ -10,6 +11,6 @@
 
 [resource]
 script = ExtResource("1_21252")
-Character = 4
+Character = ExtResource("1_y1pe6")
 Stories = Array[Object]([ExtResource("1_rv686"), ExtResource("2_mdk1u"), ExtResource("3_kfl0l"), ExtResource("4_g27q2"), ExtResource("5_16387"), ExtResource("6_n0xej")])
 TensionLevelStart = 0

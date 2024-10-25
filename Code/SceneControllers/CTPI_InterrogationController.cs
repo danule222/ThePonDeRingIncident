@@ -12,12 +12,30 @@ public partial class CTPI_InterrogationController : Control
 	private InkStory Story;
 	private bool Selecting;
 	private int TensionLevel;
+	private MeshInstance3D MSH_Sus;
+	private MeshInstance3D MSH_Fuwawa;
+	private MeshInstance3D MSH_Mococo;
+	private StandardMaterial3D MAT_Sus;
+	private StandardMaterial3D MAT_Fuwawa;
+	private StandardMaterial3D MAT_Mococo;
 
 	public override void _Ready()
 	{
 		UI_Dialogue = GetNode<CTPI_Dialogue>("UI_Dialogue");
 		UI_Dialogue.Continue += Continue;
 		UI_Dialogue.AddTension += AddTension;
+
+		MSH_Sus = GetNode<MeshInstance3D>("World/MSH_Sus");
+		MSH_Fuwawa = GetNode<MeshInstance3D>("World/MSH_Fuwawa");
+		MSH_Mococo = GetNode<MeshInstance3D>("World/MSH_Mococo");
+
+		StandardMaterial3D MAT_Sus = MSH_Sus.GetSurfaceOverrideMaterial(0) as StandardMaterial3D;
+		StandardMaterial3D MAT_Fuwawa = MSH_Fuwawa.GetSurfaceOverrideMaterial(0) as StandardMaterial3D;
+		StandardMaterial3D MAT_Mococo = MSH_Mococo.GetSurfaceOverrideMaterial(0) as StandardMaterial3D;
+		// Set textures
+		MAT_Sus.AlbedoTexture = Interrogations[0].Character.Emotions[EEmotion.Neutral];
+		MAT_Fuwawa.AlbedoTexture = Interrogations[0].Character.Emotions[EEmotion.Neutral];
+		MAT_Mococo.AlbedoTexture = Interrogations[0].Character.Emotions[EEmotion.Neutral];
 
 		Story = Interrogations[0].Stories[0];
 		TensionLevel = Interrogations[0].TensionLevelStart;
@@ -41,12 +59,16 @@ public partial class CTPI_InterrogationController : Control
 
 			string text = Story.Continue();
 
+			Match rgx = Regex.Match(text, "<([^:<>]+):([^:<>]+):([^:<>]+)>");
 			// Get Character from text
-			string name = Regex.Match(text, "<([^:<>]+):([^:<>]+):([^:<>]+)>").Groups[1].Value;
+			string name = rgx.Groups[1].Value;
 			ECharacter character = Enum.Parse<ECharacter>(name);
+			// Get Emotion from text
+			string emotion_str = rgx.Groups[2].Value;
+			EEmotion emotion = Enum.Parse<EEmotion>(emotion_str);
 
 			// Remove name from text
-			text = text.Replace(Regex.Match(text, "<([^:<>]+):([^:<>]+):([^:<>]+)>").Groups[0].Value + " ", "");
+			text = text.Replace(rgx.Groups[0].Value + " ", "");
 
 			UI_Dialogue.Speak(character, text);
 		}
@@ -61,6 +83,5 @@ public partial class CTPI_InterrogationController : Control
 	private void AddTension(int tension)
 	{
 		TensionLevel += tension;
-		GD.Print("Tension: " + TensionLevel);
 	}
 }

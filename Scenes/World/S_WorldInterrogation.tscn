@@ -3730,7 +3730,7 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_pdloj")
 
 [node name="Office Object_025" type="Node3D" parent="7300b5c5ebe140e7b8d044755ef8c189_fbx/RootNode"]
-transform = Transform3D(7.54979e-08, 0, -1, 5.29396e-23, 1, 0, 1, -5.29396e-23, 7.54979e-08, 42.6931, 1440.18, 921.608)
+transform = Transform3D(7.54979e-08, 0, -1.39633, 5.29396e-23, 1, 0, 1, -5.29396e-23, 1.0542e-07, 63.8435, 1440.18, 921.608)
 
 [node name="Office Object_020_HoloDeskBase_0" type="MeshInstance3D" parent="7300b5c5ebe140e7b8d044755ef8c189_fbx/RootNode/Office Object_025"]
 mesh = SubResource("ArrayMesh_yjfde")
@@ -4153,6 +4153,7 @@ shape = SubResource("ConvexPolygonShape3D_pfqvw")
 transform = Transform3D(0.994431, 4.79796e-16, -0.105391, -3.86916e-16, 1, 9.01732e-16, 0.105391, -8.55932e-16, 0.994431, 175.57, 1380.77, 963.38)
 
 [node name="Cube_011_HoloDeskBase_0" type="MeshInstance3D" parent="7300b5c5ebe140e7b8d044755ef8c189_fbx/RootNode/Cube_017"]
+transform = Transform3D(1, 9.92617e-24, -7.45058e-09, 3.97047e-23, 1, 2.64698e-23, 7.45058e-09, -2.64698e-23, 1, 1.4422, 0, 13.6083)
 mesh = SubResource("ArrayMesh_xccdd")
 skeleton = NodePath("")
 

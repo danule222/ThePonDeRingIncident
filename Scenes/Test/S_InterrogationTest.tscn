@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://18tas7nugvv8"]
+[gd_scene load_steps=15 format=3 uid="uid://18tas7nugvv8"]
 
 [ext_resource type="Script" path="res://Code/SceneControllers/CTPI_InterrogationController.cs" id="1_6q4a4"]
 [ext_resource type="Resource" uid="uid://g3bm4h0bwrjb" path="res://Resources/Interrogations/R_Inte_Baelz.tres" id="2_5vnki"]
@@ -23,6 +23,28 @@ tonemap_mode = 2
 ssao_enabled = true
 glow_enabled = true
 
+[sub_resource type="QuadMesh" id="QuadMesh_3gx66"]
+size = Vector2(1, 1.66)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tu7fd"]
+transparency = 4
+heightmap_scale = 16.0
+texture_repeat = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_ew33h"]
+size = Vector2(1, 1.66)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oe4iq"]
+transparency = 4
+texture_repeat = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_1wp5x"]
+size = Vector2(1, 1.66)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jkl84"]
+transparency = 4
+texture_repeat = false
+
 [node name="S_InterrogationTest" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -39,7 +61,7 @@ layout_mode = 1
 [node name="World" parent="." instance=ExtResource("4_k2180")]
 
 [node name="Camera3D" type="Camera3D" parent="World"]
-transform = Transform3D(-4.37114e-08, 4.37114e-08, 1, 1, 2.41601e-15, 4.37114e-08, -5.05322e-16, 1, -4.37114e-08, 3.28, -9.215, 14.696)
+transform = Transform3D(-4.37114e-08, 4.37114e-08, 1, 1, -4.37114e-08, 4.37114e-08, 4.37114e-08, 1, -4.37114e-08, 3.28, -9.215, 14.711)
 fov = 37.9
 
 [node name="VoxelGI" type="VoxelGI" parent="World"]
@@ -57,3 +79,22 @@ ambient_color_energy = 0.84
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="World"]
 environment = SubResource("Environment_ibjj6")
+
+[node name="MSH_Sus" type="MeshInstance3D" parent="World"]
+transform = Transform3D(-4.37114e-08, 5.05322e-16, 1, 1, -4.37114e-08, 4.37114e-08, 4.37114e-08, 1, 1.40536e-15, -0.837688, -9.25684, 14.6709)
+mesh = SubResource("QuadMesh_3gx66")
+surface_material_override/0 = SubResource("StandardMaterial3D_tu7fd")
+
+[node name="MSH_Fuwawa" type="MeshInstance3D" parent="World"]
+transform = Transform3D(-4.37114e-08, 4.37114e-08, 1, 1, -4.37114e-08, 4.37114e-08, 4.37114e-08, 1, -4.37114e-08, 1.997, -9.9, 14.671)
+mesh = SubResource("QuadMesh_ew33h")
+surface_material_override/0 = SubResource("StandardMaterial3D_oe4iq")
+
+[node name="MSH_Mococo" type="MeshInstance3D" parent="World"]
+transform = Transform3D(-4.37114e-08, 4.37114e-08, 1, 1, -4.37114e-08, 4.37114e-08, 4.37114e-08, 1, -4.37114e-08, 1.997, -8.557, 14.671)
+mesh = SubResource("QuadMesh_1wp5x")
+surface_material_override/0 = SubResource("StandardMaterial3D_jkl84")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="World"]
+transform = Transform3D(0.453611, -0.513489, 0.7284, 0.54898, 0.804842, 0.2255, -0.702038, 0.297587, 0.646981, 0.963255, -8.72688, 14.6773)
+shadow_enabled = true

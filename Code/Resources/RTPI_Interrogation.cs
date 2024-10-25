@@ -6,7 +6,7 @@ using GodotInk;
 public partial class RTPI_Interrogation : Resource
 {
   [Export]
-  public ECharacter Character;
+  public RTPI_Character Character;
   [Export]
   public Array<InkStory> Stories;
   [Export]
