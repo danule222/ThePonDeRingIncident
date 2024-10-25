@@ -11,13 +11,16 @@ public partial class CTPI_InterrogationController : Control
 	private CTPI_Dialogue UI_Dialogue;
 	private InkStory Story;
 	private bool Selecting;
+	private int TensionLevel;
 
 	public override void _Ready()
 	{
 		UI_Dialogue = GetNode<CTPI_Dialogue>("UI_Dialogue");
 		UI_Dialogue.Continue += Continue;
+		UI_Dialogue.AddTension += AddTension;
 
 		Story = Interrogations[0].Stories[0];
+		TensionLevel = Interrogations[0].TensionLevelStart;
 		Selecting = false;
 
 		Continue();
@@ -53,5 +56,11 @@ public partial class CTPI_InterrogationController : Control
 			UI_Dialogue.AddOptions(Story);
 			Selecting = true;
 		}
+	}
+
+	private void AddTension(int tension)
+	{
+		TensionLevel += tension;
+		GD.Print("Tension: " + TensionLevel);
 	}
 }

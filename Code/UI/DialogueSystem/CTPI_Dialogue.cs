@@ -22,6 +22,7 @@ public partial class CTPI_Dialogue : Control
 	private Control CON_MccSelectionBox;
 	private VBoxContainer VBX_MccOptions;
 	[Signal] public delegate void ContinueEventHandler();
+	[Signal] public delegate void AddTensionEventHandler(int tension);
 
 	public override void _Ready()
 	{
@@ -89,6 +90,7 @@ public partial class CTPI_Dialogue : Control
 			string text = choice.Text;
 			string name = Regex.Match(text, "<([^:<>]+):([^:<>]+):([^:<>]+)>").Groups[1].Value;
 			ECharacter character = Enum.Parse<ECharacter>(name);
+			int tension = Regex.Match(text, "<([^:<>]+):([^:<>]+):([^:<>]+)>").Groups[3].Value.ToInt();
 			text = text.Replace(Regex.Match(text, "<([^:<>]+):([^:<>]+):([^:<>]+)>").Groups[0].Value + " ", "");
 
 			CTPI_Button button = UI_Button.Instantiate<CTPI_Button>();
@@ -100,6 +102,7 @@ public partial class CTPI_Dialogue : Control
 				CON_MccSelectionBox.Visible = false;
 
 				EmitSignal("Continue");
+				EmitSignal("AddTension", tension);
 			};
 
 			if (character == ECharacter.Fuwawa)
