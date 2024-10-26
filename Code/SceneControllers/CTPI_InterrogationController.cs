@@ -14,6 +14,7 @@ public partial class CTPI_InterrogationController : Control
 	private bool End;
 	private int TensionLevel;
 	private int CurrentStory;
+	private int CurrentInterrogation;
 	private MeshInstance3D MSH_Sus;
 	private MeshInstance3D MSH_Fuwawa;
 	private MeshInstance3D MSH_Mococo;
@@ -40,8 +41,9 @@ public partial class CTPI_InterrogationController : Control
 		MAT_Mococo.AlbedoTexture = Interrogations[0].Character.Emotions[EEmotion.Neutral];
 
 		CurrentStory = 0;
-		Story = Interrogations[0].Stories[CurrentStory];
-		TensionLevel = Interrogations[0].TensionLevelStart;
+		CurrentInterrogation = 0;
+		Story = Interrogations[CurrentInterrogation].Stories[CurrentStory];
+		TensionLevel = Interrogations[CurrentInterrogation].TensionLevelStart;
 		Selecting = false;
 		End = false;
 
@@ -118,11 +120,30 @@ public partial class CTPI_InterrogationController : Control
 					CurrentStory = 5;
 				break;
 			default:
-				End = true;
-				break;
+				ChangeInterrogation();
+				return;
 		}
 
-		Story = Interrogations[0].Stories[CurrentStory];
+		Story = Interrogations[CurrentInterrogation].Stories[CurrentStory];
+		Story.ResetState(); // Just in case is a repeated story
+		Continue();
+	}
+
+	private void ChangeInterrogation()
+	{
+		CurrentInterrogation++;
+		if (CurrentInterrogation >= Interrogations.Count)
+		{
+			End = true;
+			GD.Print("End");
+			return;
+		}
+
+		CurrentStory = 0;
+		Story = Interrogations[CurrentInterrogation].Stories[CurrentStory];
+		Story.ResetState(); // Just in case is a repeated story
+		TensionLevel = Interrogations[CurrentInterrogation].TensionLevelStart;
+
 		Continue();
 	}
 }

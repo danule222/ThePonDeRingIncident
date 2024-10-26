@@ -1,7 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://18tas7nugvv8"]
+[gd_scene load_steps=16 format=3 uid="uid://18tas7nugvv8"]
 
 [ext_resource type="Script" path="res://Code/SceneControllers/CTPI_InterrogationController.cs" id="1_6q4a4"]
 [ext_resource type="Resource" uid="uid://g3bm4h0bwrjb" path="res://Resources/Interrogations/R_Inte_Baelz.tres" id="2_5vnki"]
+[ext_resource type="Resource" uid="uid://d40i01lm6dob" path="res://Resources/Interrogations/R_Inte_Gura.tres" id="3_5x7oa"]
 [ext_resource type="PackedScene" uid="uid://cy2kdx4vti0ir" path="res://Scenes/World/S_WorldInterrogation.tscn" id="4_k2180"]
 [ext_resource type="PackedScene" uid="uid://4uhkgn2xw3hh" path="res://UI/DialogueSystem/UI_Dialogue.tscn" id="4_vn8w5"]
 [ext_resource type="VoxelGIData" uid="uid://7lfyy7ihd4he" path="res://Scenes/Test/GI/S_InterrogationTest.VoxelGI_data.res" id="5_ey8i0"]
@@ -53,7 +54,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_6q4a4")
-Interrogations = Array[Object]([ExtResource("2_5vnki")])
+Interrogations = Array[Object]([ExtResource("2_5vnki"), ExtResource("3_5x7oa")])
 
 [node name="UI_Dialogue" parent="." instance=ExtResource("4_vn8w5")]
 layout_mode = 1
