@@ -1,0 +1,16 @@
+[remap]
+
+importer="ink"
+type="Resource"
+uid="uid://j1a5yq7duw8n"
+path="res://.godot/imported/Ink_Interrogation_Baelz_3_Con_Tension.ink-02552256787797f38b4701edb8f43230.res"
+
+[deps]
+
+source_file="res://Ink/Interrogations/Baelz/Ink_Interrogation_Baelz_3_Con_Tension.ink"
+dest_files=["res://.godot/imported/Ink_Interrogation_Baelz_3_Con_Tension.ink-02552256787797f38b4701edb8f43230.res"]
+
+[params]
+
+is_main_file=true
+compress=true

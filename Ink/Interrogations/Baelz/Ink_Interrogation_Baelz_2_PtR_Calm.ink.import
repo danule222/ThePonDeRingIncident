@@ -1,0 +1,16 @@
+[remap]
+
+importer="ink"
+type="Resource"
+uid="uid://cf6hu86653d00"
+path="res://.godot/imported/Ink_Interrogation_Baelz_2_PtR_Calm.ink-20a5f47a24377ba0ce94c3602ce031bb.res"
+
+[deps]
+
+source_file="res://Ink/Interrogations/Baelz/Ink_Interrogation_Baelz_2_PtR_Calm.ink"
+dest_files=["res://.godot/imported/Ink_Interrogation_Baelz_2_PtR_Calm.ink-20a5f47a24377ba0ce94c3602ce031bb.res"]
+
+[params]
+
+is_main_file=true
+compress=true

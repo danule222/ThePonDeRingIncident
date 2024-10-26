@@ -11,7 +11,9 @@ public partial class CTPI_InterrogationController : Control
 	private CTPI_Dialogue UI_Dialogue;
 	private InkStory Story;
 	private bool Selecting;
+	private bool End;
 	private int TensionLevel;
+	private int CurrentStory;
 	private MeshInstance3D MSH_Sus;
 	private MeshInstance3D MSH_Fuwawa;
 	private MeshInstance3D MSH_Mococo;
@@ -37,9 +39,11 @@ public partial class CTPI_InterrogationController : Control
 		MAT_Fuwawa.AlbedoTexture = Interrogations[0].Character.Emotions[EEmotion.Neutral];
 		MAT_Mococo.AlbedoTexture = Interrogations[0].Character.Emotions[EEmotion.Neutral];
 
-		Story = Interrogations[0].Stories[0];
+		CurrentStory = 0;
+		Story = Interrogations[0].Stories[CurrentStory];
 		TensionLevel = Interrogations[0].TensionLevelStart;
 		Selecting = false;
+		End = false;
 
 		Continue();
 	}
@@ -78,10 +82,47 @@ public partial class CTPI_InterrogationController : Control
 			UI_Dialogue.AddOptions(Story);
 			Selecting = true;
 		}
+		// Change story
+		else if (!Selecting && !End)
+		{
+			ChangeStory();
+		}
 	}
 
 	private void AddTension(int tension)
 	{
 		TensionLevel += tension;
+	}
+
+	private void ChangeStory()
+	{
+		switch (CurrentStory)
+		{
+			// Introduction
+			case 0:
+				if (TensionLevel > 0)
+					CurrentStory = 1;
+				else
+					CurrentStory = 2;
+				break;
+			case 1:
+				if (TensionLevel > 0)
+					CurrentStory = 3;
+				else
+					CurrentStory = 4;
+				break;
+			case 2:
+				if (TensionLevel > 0)
+					CurrentStory = 4;
+				else
+					CurrentStory = 5;
+				break;
+			default:
+				End = true;
+				break;
+		}
+
+		Story = Interrogations[0].Stories[CurrentStory];
+		Continue();
 	}
 }

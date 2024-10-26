@@ -1,0 +1,16 @@
+[remap]
+
+importer="ink"
+type="Resource"
+uid="uid://cscb062on4gia"
+path="res://.godot/imported/Ink_Interrogation_Baelz_1_PtR_Tension.ink-b8e2d7ada6892b18f332d2a8486903d7.res"
+
+[deps]
+
+source_file="res://Ink/Interrogations/Baelz/Ink_Interrogation_Baelz_1_PtR_Tension.ink"
+dest_files=["res://.godot/imported/Ink_Interrogation_Baelz_1_PtR_Tension.ink-b8e2d7ada6892b18f332d2a8486903d7.res"]
+
+[params]
+
+is_main_file=true
+compress=true
