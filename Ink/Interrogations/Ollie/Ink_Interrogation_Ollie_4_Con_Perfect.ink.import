@@ -1,0 +1,16 @@
+[remap]
+
+importer="ink"
+type="Resource"
+uid="uid://bby8u38fovhx5"
+path="res://.godot/imported/Ink_Interrogation_Ollie_4_Con_Perfect.ink-b27d01afce42b5a766b7ef277ac29471.res"
+
+[deps]
+
+source_file="res://Ink/Interrogations/Ollie/Ink_Interrogation_Ollie_4_Con_Perfect.ink"
+dest_files=["res://.godot/imported/Ink_Interrogation_Ollie_4_Con_Perfect.ink-b27d01afce42b5a766b7ef277ac29471.res"]
+
+[params]
+
+is_main_file=true
+compress=true

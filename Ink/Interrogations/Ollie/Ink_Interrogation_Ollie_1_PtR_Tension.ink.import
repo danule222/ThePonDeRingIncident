@@ -1,0 +1,16 @@
+[remap]
+
+importer="ink"
+type="Resource"
+uid="uid://clwdy1kj8sl0m"
+path="res://.godot/imported/Ink_Interrogation_Ollie_1_PtR_Tension.ink-2e74ac9396ec227cb06dc5727ef2bce4.res"
+
+[deps]
+
+source_file="res://Ink/Interrogations/Ollie/Ink_Interrogation_Ollie_1_PtR_Tension.ink"
+dest_files=["res://.godot/imported/Ink_Interrogation_Ollie_1_PtR_Tension.ink-2e74ac9396ec227cb06dc5727ef2bce4.res"]
+
+[params]
+
+is_main_file=true
+compress=true

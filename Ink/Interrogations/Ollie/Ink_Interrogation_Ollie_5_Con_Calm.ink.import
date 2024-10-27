@@ -1,0 +1,16 @@
+[remap]
+
+importer="ink"
+type="Resource"
+uid="uid://820aesrdrou7"
+path="res://.godot/imported/Ink_Interrogation_Ollie_5_Con_Calm.ink-9e8a23e0832d80f43ca45e49e416b406.res"
+
+[deps]
+
+source_file="res://Ink/Interrogations/Ollie/Ink_Interrogation_Ollie_5_Con_Calm.ink"
+dest_files=["res://.godot/imported/Ink_Interrogation_Ollie_5_Con_Calm.ink-9e8a23e0832d80f43ca45e49e416b406.res"]
+
+[params]
+
+is_main_file=true
+compress=true

@@ -1,0 +1,16 @@
+[remap]
+
+importer="ink"
+type="Resource"
+uid="uid://sbgrvii0fmuh"
+path="res://.godot/imported/Ink_Interrogation_Ollie_3_Con_Tension.ink-52cb2adf9d08c9e2f6bd98675ecd12b7.res"
+
+[deps]
+
+source_file="res://Ink/Interrogations/Ollie/Ink_Interrogation_Ollie_3_Con_Tension.ink"
+dest_files=["res://.godot/imported/Ink_Interrogation_Ollie_3_Con_Tension.ink-52cb2adf9d08c9e2f6bd98675ecd12b7.res"]
+
+[params]
+
+is_main_file=true
+compress=true

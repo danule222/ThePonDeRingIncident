@@ -1,0 +1,16 @@
+[remap]
+
+importer="ink"
+type="Resource"
+uid="uid://c0kydrlw1dift"
+path="res://.godot/imported/Ink_Interrogation_Ollie_0_Introduction.ink-97a959046a154ab56720f1b2a23bfe28.res"
+
+[deps]
+
+source_file="res://Ink/Interrogations/Ollie/Ink_Interrogation_Ollie_0_Introduction.ink"
+dest_files=["res://.godot/imported/Ink_Interrogation_Ollie_0_Introduction.ink-97a959046a154ab56720f1b2a23bfe28.res"]
+
+[params]
+
+is_main_file=true
+compress=true

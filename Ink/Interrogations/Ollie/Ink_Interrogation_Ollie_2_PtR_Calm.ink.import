@@ -1,0 +1,16 @@
+[remap]
+
+importer="ink"
+type="Resource"
+uid="uid://bpkvccnfrrkqt"
+path="res://.godot/imported/Ink_Interrogation_Ollie_2_PtR_Calm.ink-a8341e369b92e9cf2336ff4806a17bd3.res"
+
+[deps]
+
+source_file="res://Ink/Interrogations/Ollie/Ink_Interrogation_Ollie_2_PtR_Calm.ink"
+dest_files=["res://.godot/imported/Ink_Interrogation_Ollie_2_PtR_Calm.ink-a8341e369b92e9cf2336ff4806a17bd3.res"]
+
+[params]
+
+is_main_file=true
+compress=true
