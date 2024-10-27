@@ -2,35 +2,31 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmassrf1cc4ds"
-path.s3tc="res://.godot/imported/canonical_hologra_office_11.png-30d8871b95fc40112f95c62b0a408b0f.s3tc.ctex"
+uid="uid://wl5oiqrkv65c"
+path="res://.godot/imported/canonical_hologra_office_11.png-30d8871b95fc40112f95c62b0a408b0f.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
-}
-generator_parameters={
-"md5": "a225e24d4cbdc4a41941af601b580d9f"
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://Art/Office/canonical_hologra_office_11.png"
-dest_files=["res://.godot/imported/canonical_hologra_office_11.png-30d8871b95fc40112f95c62b0a408b0f.s3tc.ctex"]
+dest_files=["res://.godot/imported/canonical_hologra_office_11.png-30d8871b95fc40112f95c62b0a408b0f.ctex"]
 
 [params]
 
-compress/mode=2
-compress/high_quality=false
+compress/mode=0
+compress/high_quality=true
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=1
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=1
-roughness/src_normal="res://Art/Office/canonical_hologra_office_11.png"
+roughness/src_normal=""
 process/fix_alpha_border=true
-process/premult_alpha=false
+process/premult_alpha=true
 process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false

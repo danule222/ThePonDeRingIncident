@@ -1,0 +1,16 @@
+[remap]
+
+importer="ink"
+type="Resource"
+uid="uid://dn60xsr2epb5b"
+path="res://.godot/imported/Ink_Interrogation_Gura_1_Tension.ink-9f4a4915ea1ffc0e874ea627b10c9466.res"
+
+[deps]
+
+source_file="res://Ink/Interrogations/Gura/Ink_Interrogation_Gura_1_Tension.ink"
+dest_files=["res://.godot/imported/Ink_Interrogation_Gura_1_Tension.ink-9f4a4915ea1ffc0e874ea627b10c9466.res"]
+
+[params]
+
+is_main_file=true
+compress=true

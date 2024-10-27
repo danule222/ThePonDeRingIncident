@@ -1,0 +1,16 @@
+[remap]
+
+importer="ink"
+type="Resource"
+uid="uid://cqp1i7ss6l0fb"
+path="res://.godot/imported/Ink_Interrogation_Gura_5_Con_Calm.ink-4716920704646c5c254350535c027bca.res"
+
+[deps]
+
+source_file="res://Ink/Interrogations/Gura/Ink_Interrogation_Gura_5_Con_Calm.ink"
+dest_files=["res://.godot/imported/Ink_Interrogation_Gura_5_Con_Calm.ink-4716920704646c5c254350535c027bca.res"]
+
+[params]
+
+is_main_file=true
+compress=true

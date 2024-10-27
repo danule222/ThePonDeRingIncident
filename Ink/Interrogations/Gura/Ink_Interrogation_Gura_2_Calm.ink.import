@@ -1,0 +1,16 @@
+[remap]
+
+importer="ink"
+type="Resource"
+uid="uid://cmk30k1e1rbh6"
+path="res://.godot/imported/Ink_Interrogation_Gura_2_Calm.ink-65680062c39d65aab1c502c6ada7d675.res"
+
+[deps]
+
+source_file="res://Ink/Interrogations/Gura/Ink_Interrogation_Gura_2_Calm.ink"
+dest_files=["res://.godot/imported/Ink_Interrogation_Gura_2_Calm.ink-65680062c39d65aab1c502c6ada7d675.res"]
+
+[params]
+
+is_main_file=true
+compress=true

@@ -1,0 +1,16 @@
+[remap]
+
+importer="ink"
+type="Resource"
+uid="uid://cuphrc6sqsa4a"
+path="res://.godot/imported/Ink_Interrogation_Gura_3_Con_Tension.ink-fc79d9658e8594ec353cd0bfce8887cd.res"
+
+[deps]
+
+source_file="res://Ink/Interrogations/Gura/Ink_Interrogation_Gura_3_Con_Tension.ink"
+dest_files=["res://.godot/imported/Ink_Interrogation_Gura_3_Con_Tension.ink-fc79d9658e8594ec353cd0bfce8887cd.res"]
+
+[params]
+
+is_main_file=true
+compress=true
