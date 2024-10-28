@@ -1,0 +1,16 @@
+[remap]
+
+importer="ink"
+type="Resource"
+uid="uid://bh1k3qm7rdmxh"
+path="res://.godot/imported/Ink_Interrogation_Ina_4_Con_Perfect.ink-be5cf302334a71455c0ef9899eaffcaf.res"
+
+[deps]
+
+source_file="res://Ink/Interrogations/Ina/Ink_Interrogation_Ina_4_Con_Perfect.ink"
+dest_files=["res://.godot/imported/Ink_Interrogation_Ina_4_Con_Perfect.ink-be5cf302334a71455c0ef9899eaffcaf.res"]
+
+[params]
+
+is_main_file=true
+compress=true

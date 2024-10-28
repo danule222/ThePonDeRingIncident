@@ -1,0 +1,23 @@
+- <Ina:Neutral:0> OK girls, I think it's time to go now.
+- <Ina:Neutral:0> Before I go home I'll stop by the konbini to buy some mentaiko onigiri.
+- <Ina:Sad:0> I hope Gura didn't bought them all...
+- <Fuwawa:Sad:0> Gura-senpai was looking for Bloop.
+- <Mococo:Sad:0> We don't know if she hasn't found him yet.
+- <Ina:Neutral:0> What? Is Bloop lost or something?
+- <FWMC:Thiking:0> Don't you know?
+- <Fuwawa:Thiking:0> Gura-senpai told us before that she was looking for Bloop, that he's lost.
+- <Ina:Thiking:0> Hmm...
+- <Ina:Neutral:0> That's weird.
+- <Ina:Neutral:0> She hasn't told anyone at Myth about it as far as I know.
+- <FWMC:Thiking:0> Weird...
+- <Mococo:Happy:0> That's a huge clue Ina-senpai! Thank you so much!
+- <Ina:Neutral:0> You're welcome!
+- <Ina:Sad:0> I hope I didn't put Gura into any trouble...
+- <FWMC:Happy:0> Don't worry Ina-senpai!
+- <FWMC:Happy:0> We will get to the bottom of this!
+- <Ina:Neutral:0> I hope you do! Good luck girls!
+- <Ina:Happy:0> Bye bye!
+- <FWMC:Happy:0> BAU BAU Ina-senpai!
+
+<Narrator:Neutral:0> Ina leaves the room.
+->END

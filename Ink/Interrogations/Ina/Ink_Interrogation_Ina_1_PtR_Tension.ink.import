@@ -1,0 +1,16 @@
+[remap]
+
+importer="ink"
+type="Resource"
+uid="uid://doh1kh1m2g62p"
+path="res://.godot/imported/Ink_Interrogation_Ina_1_PtR_Tension.ink-7516eabd552649f59f3dff7bb317a7a8.res"
+
+[deps]
+
+source_file="res://Ink/Interrogations/Ina/Ink_Interrogation_Ina_1_PtR_Tension.ink"
+dest_files=["res://.godot/imported/Ink_Interrogation_Ina_1_PtR_Tension.ink-7516eabd552649f59f3dff7bb317a7a8.res"]
+
+[params]
+
+is_main_file=true
+compress=true
