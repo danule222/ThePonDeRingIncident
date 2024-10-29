@@ -1,0 +1,16 @@
+[remap]
+
+importer="ink"
+type="Resource"
+uid="uid://bfjvrxdrd7pcp"
+path="res://.godot/imported/Ink_Interrogation_Korone_3_Con_Tension.ink-fd5ed41ff2d5fc996464ddf9ae6712a4.res"
+
+[deps]
+
+source_file="res://Ink/Interrogations/Korone/Ink_Interrogation_Korone_3_Con_Tension.ink"
+dest_files=["res://.godot/imported/Ink_Interrogation_Korone_3_Con_Tension.ink-fd5ed41ff2d5fc996464ddf9ae6712a4.res"]
+
+[params]
+
+is_main_file=true
+compress=true

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ink"
+type="Resource"
+uid="uid://dthcc5l0dox52"
+valid=false
+
+[deps]
+
+source_file="res://Ink/Interrogations/Korone/Ink_Interrogation_Korone_0_Introduction.ink"
+
+[params]
+
+is_main_file=true
+compress=true

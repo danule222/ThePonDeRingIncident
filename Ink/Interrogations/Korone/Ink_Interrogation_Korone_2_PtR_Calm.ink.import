@@ -1,0 +1,16 @@
+[remap]
+
+importer="ink"
+type="Resource"
+uid="uid://rqlmc4vyq3ia"
+path="res://.godot/imported/Ink_Interrogation_Korone_2_PtR_Calm.ink-9f9fd3464e5634b4549509b09bc06cbb.res"
+
+[deps]
+
+source_file="res://Ink/Interrogations/Korone/Ink_Interrogation_Korone_2_PtR_Calm.ink"
+dest_files=["res://.godot/imported/Ink_Interrogation_Korone_2_PtR_Calm.ink-9f9fd3464e5634b4549509b09bc06cbb.res"]
+
+[params]
+
+is_main_file=true
+compress=true
