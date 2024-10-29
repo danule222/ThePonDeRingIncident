@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="The Pon de Ring incident"
-run/main_scene="res://Scenes/Test/S_InterrogationTest.tscn"
+run/main_scene="res://Scenes/S_Investigation.tscn"
 config/features=PackedStringArray("4.3", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 

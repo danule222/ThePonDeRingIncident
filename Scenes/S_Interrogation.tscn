@@ -1,11 +1,11 @@
-[gd_scene load_steps=16 format=3 uid="uid://18tas7nugvv8"]
+[gd_scene load_steps=16 format=3 uid="uid://d0ecx1hytevne"]
 
-[ext_resource type="Script" path="res://Code/SceneControllers/CTPI_InterrogationController.cs" id="1_6q4a4"]
-[ext_resource type="Resource" uid="uid://g3bm4h0bwrjb" path="res://Resources/Interrogations/R_Inte_Baelz.tres" id="2_5vnki"]
-[ext_resource type="Resource" uid="uid://d40i01lm6dob" path="res://Resources/Interrogations/R_Inte_Gura.tres" id="3_5x7oa"]
-[ext_resource type="PackedScene" uid="uid://cy2kdx4vti0ir" path="res://Scenes/World/S_WorldInterrogation.tscn" id="4_k2180"]
-[ext_resource type="PackedScene" uid="uid://4uhkgn2xw3hh" path="res://UI/DialogueSystem/UI_Dialogue.tscn" id="4_vn8w5"]
-[ext_resource type="VoxelGIData" uid="uid://7lfyy7ihd4he" path="res://Scenes/Test/GI/S_InterrogationTest.VoxelGI_data.res" id="5_ey8i0"]
+[ext_resource type="Script" path="res://Code/SceneControllers/CTPI_InterrogationController.cs" id="1_7n2fj"]
+[ext_resource type="Resource" uid="uid://g3bm4h0bwrjb" path="res://Resources/Interrogations/R_Inte_Baelz.tres" id="2_q1s7x"]
+[ext_resource type="Resource" uid="uid://d40i01lm6dob" path="res://Resources/Interrogations/R_Inte_Gura.tres" id="3_pabp4"]
+[ext_resource type="PackedScene" uid="uid://4uhkgn2xw3hh" path="res://UI/DialogueSystem/UI_Dialogue.tscn" id="4_j5018"]
+[ext_resource type="PackedScene" uid="uid://cy2kdx4vti0ir" path="res://Scenes/World/S_WorldInterrogation.tscn" id="5_jy1jp"]
+[ext_resource type="VoxelGIData" uid="uid://b1uym42de8kf3" path="res://Scenes/GI/S_Interrogation.VoxelGI_data.res" id="6_w1pka"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_c8ncp"]
 sky_top_color = Color(1, 1, 1, 1)
@@ -57,20 +57,20 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_6q4a4")
-Interrogations = Array[Object]([ExtResource("2_5vnki"), ExtResource("3_5x7oa")])
+script = ExtResource("1_7n2fj")
+Interrogations = Array[Object]([ExtResource("2_q1s7x"), ExtResource("3_pabp4")])
 
-[node name="UI_Dialogue" parent="." instance=ExtResource("4_vn8w5")]
+[node name="UI_Dialogue" parent="." instance=ExtResource("4_j5018")]
 layout_mode = 1
 
-[node name="World" parent="." instance=ExtResource("4_k2180")]
+[node name="World" parent="." instance=ExtResource("5_jy1jp")]
 
 [node name="Camera3D" type="Camera3D" parent="World"]
 transform = Transform3D(-4.37114e-08, 4.37114e-08, 1, 1, -4.37114e-08, 4.37114e-08, 4.37114e-08, 1, -4.37114e-08, 3.28, -9.215, 14.711)
 fov = 37.9
 
 [node name="VoxelGI" type="VoxelGI" parent="World"]
-data = ExtResource("5_ey8i0")
+data = ExtResource("6_w1pka")
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="World"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -1.48428, 0.182041, 15.1918)

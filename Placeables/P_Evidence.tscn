@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cncev156gdqc2"]
+
+[ext_resource type="Script" path="res://Code/Placeables/ATPI_Evidence.cs" id="1_45gyi"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_l8qdy"]
+radius = 0.75
+
+[node name="Evidence" type="StaticBody3D"]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_45gyi")
+
+[node name="Shape" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_l8qdy")

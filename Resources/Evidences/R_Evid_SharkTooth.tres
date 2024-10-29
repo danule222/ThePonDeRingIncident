@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="RTPI_Evidence" load_steps=3 format=3 uid="uid://1aiugrohxj02"]
+
+[ext_resource type="Script" path="res://Code/Resources/RTPI_Evidence.cs" id="1_ie018"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_uxqir"]
+size = Vector2(64, 64)
+
+[resource]
+script = ExtResource("1_ie018")
+Name = "Shark tooth"
+Description = "OWO"
+Photo = SubResource("PlaceholderTexture2D_uxqir")

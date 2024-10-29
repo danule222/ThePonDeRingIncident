@@ -4,37 +4,44 @@ public partial class ATPI_PlayerController : CharacterBody3D
 {
 	[ExportCategory("Character")]
 	[Export]
-	float baseSpeed = 3.0f;
+	private float baseSpeed = 3.0f;
 	[Export]
-	float sprintSpeed = 6.0f;
+	private float sprintSpeed = 6.0f;
 	[Export]
-	float crouchSpeed = 1.0f;
+	private float crouchSpeed = 1.0f;
 
 	[Export]
-	float acceleration = 10.0f;
+	private float acceleration = 10.0f;
 	[Export]
-	float jumpVelocity = 4.5f;
+	private float jumpVelocity = 4.5f;
 	[Export]
-	float mouseSensitivity = 0.005f;
+	private float mouseSensitivity = 0.005f;
 	[Export]
-	bool immobile = false;
+	private bool immobile = false;
 
 	[ExportGroup("Nodes")]
 	[Export]
 	Camera3D CAMERA;
 
 	// Member variables
-	float speed;
-	float currentSpeed = 0.0f;
-	bool lowCeiling = false; // This is for when the ceiling is too low and the player needs to crouch.
-	bool wasOnFloor = true;
+	private float speed;
+	private float currentSpeed = 0.0f;
+	private bool lowCeiling = false; // This is for when the ceiling is too low and the player needs to crouch.
+	private bool wasOnFloor = true;
+
+	private RayCast3D RayCast;
+	private bool ColliderDetected = false;
+	private ATPI_Evidence LastEvidence;
+	private ATPI_InvestigationController InvestigationController;
 
 	public override void _Ready()
 	{
-		base._Ready();
 		speed = baseSpeed;
 
 		Input.MouseMode = Input.MouseModeEnum.Captured;
+
+		InvestigationController = GetParent<ATPI_InvestigationController>();
+		RayCast = GetNode<RayCast3D>("Camera3D/RayCast3D");
 	}
 
 	public override void _Process(double delta)
@@ -44,9 +51,10 @@ public partial class ATPI_PlayerController : CharacterBody3D
 		Vector2 inputDir = immobile ? Vector2.Zero : Input.GetVector("move_left", "move_right", "move_forward", "move_backwards");
 
 		HandleMovement(delta, inputDir);
+		HandleRayCast();
 	}
 
-	void HandleMovement(double delta, Vector2 inputDir)
+	private void HandleMovement(double delta, Vector2 inputDir)
 	{
 		Vector2 direction2D = inputDir.Rotated(-CAMERA.Rotation.Y);
 		Vector3 direction = new Vector3(direction2D.X, 0, direction2D.Y);
@@ -60,7 +68,34 @@ public partial class ATPI_PlayerController : CharacterBody3D
 		MoveAndSlide();
 	}
 
-	public override void _UnhandledInput(InputEvent @event)
+	private void HandleRayCast()
+	{
+		GodotObject obj = RayCast.GetCollider();
+		if (obj != null && !ColliderDetected)
+		{
+			ColliderDetected = true;
+			ATPI_Evidence evidence = obj as ATPI_Evidence;
+
+			if (evidence != null)
+			{
+				if (evidence != LastEvidence)
+				{
+					InvestigationController.HUD.SetReticle(true);
+
+					LastEvidence = evidence;
+				}
+			}
+		}
+		else if (obj == null && ColliderDetected)
+		{
+			InvestigationController.HUD.SetReticle(false);
+
+			ColliderDetected = false;
+			LastEvidence = null;
+		}
+	}
+
+	public override void _Input(InputEvent @event)
 	{
 		if (@event is InputEventMouseMotion && Input.MouseMode == Input.MouseModeEnum.Captured)
 		{
