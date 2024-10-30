@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="RTPI_Evidence" load_steps=3 format=3 uid="uid://cj6k7ydhkj0in"]
+
+[ext_resource type="Texture2D" uid="uid://oxpog80ti61l" path="res://Art/UI/HUD/T_Evidence_Marshmallow.png" id="1_k4h2s"]
+[ext_resource type="Script" path="res://Code/Resources/RTPI_Evidence.cs" id="2_u35b8"]
+
+[resource]
+script = ExtResource("2_u35b8")
+Name = "Burnt marshmallow"
+Description = "Looks like a burnt marshmallow. Eating it doesn't seem like a good idea."
+Photo = ExtResource("1_k4h2s")

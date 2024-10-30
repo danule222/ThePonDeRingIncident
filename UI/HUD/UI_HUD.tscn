@@ -1,8 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://dkvmu8yslsktx"]
+[gd_scene load_steps=12 format=3 uid="uid://dkvmu8yslsktx"]
 
 [ext_resource type="Script" path="res://Code/UI/HUD/CTPI_HUD.cs" id="1_kx8dx"]
 [ext_resource type="Texture2D" uid="uid://c4wi0mir2d6kn" path="res://Art/UI/HUD/T_Reticle_Default.png" id="2_1soiv"]
 [ext_resource type="Texture2D" uid="uid://5x44jllbq4nf" path="res://Art/UI/HUD/T_Reticle_Evidence.png" id="3_30yis"]
+[ext_resource type="Texture2D" uid="uid://d0go10pu0y0k1" path="res://Art/UI/HUD/T_Evidence_Paper.png" id="4_j2brh"]
+[ext_resource type="Texture2D" uid="uid://c8bi4ncf7nkhc" path="res://Art/UI/HUD/T_Evidence_Clip.png" id="5_osjml"]
+[ext_resource type="Texture2D" uid="uid://e5hcseikkps0" path="res://Art/UI/HUD/T_Evidence_SharkTooth.png" id="5_vbnvk"]
+[ext_resource type="Texture2D" uid="uid://cwn8dkdxdexky" path="res://Art/UI/HUD/T_Evidence_Photograph.png" id="5_wcnf2"]
+[ext_resource type="FontFile" uid="uid://dcbjyx401snns" path="res://Art/Fonts/Font_Caveat.ttf" id="8_evle6"]
+[ext_resource type="FontFile" uid="uid://b2n257bour0ee" path="res://Art/Fonts/Font_Tiny5.ttf" id="9_hpx8b"]
+[ext_resource type="Texture2D" uid="uid://yt4u0fd14woc" path="res://Art/UI/Common/T_Common_Fade.png" id="10_j0y0k"]
+[ext_resource type="FontFile" uid="uid://r68vafhpo33u" path="res://Art/Fonts/Font_BalsamiqSans.ttf" id="11_wsl57"]
 
 [node name="UI_HUD" type="Control"]
 layout_mode = 3
@@ -14,6 +22,20 @@ grow_vertical = 2
 script = ExtResource("1_kx8dx")
 ReticleDefault = ExtResource("2_1soiv")
 ReticleEvidence = ExtResource("3_30yis")
+
+[node name="IMG_Fade" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -210.0
+offset_bottom = 64.175
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("10_j0y0k")
+expand_mode = 1
 
 [node name="IMG_Reticle" type="TextureRect" parent="."]
 layout_mode = 1
@@ -29,3 +51,149 @@ offset_bottom = 16.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_1soiv")
+
+[node name="CON_Evidence" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -485.0
+offset_top = -379.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="TEvidencePaper" type="TextureRect" parent="CON_Evidence"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 50.0
+offset_right = 906.0
+offset_bottom = 1043.0
+rotation = -0.0349066
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_j2brh")
+
+[node name="IMG_EvidencePhoto" type="TextureRect" parent="CON_Evidence"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 72.0
+offset_right = 559.0
+offset_bottom = 572.0
+rotation = -0.129154
+scale = Vector2(0.271346, 0.271346)
+texture = ExtResource("5_vbnvk")
+
+[node name="TEvidencePhotograph" type="TextureRect" parent="CON_Evidence"]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 58.0
+offset_right = 549.0
+offset_bottom = 626.0
+rotation = -0.129154
+scale = Vector2(0.33, 0.33)
+texture = ExtResource("5_wcnf2")
+
+[node name="TEvidenceClip" type="TextureRect" parent="CON_Evidence"]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 18.0
+offset_right = 213.0
+offset_bottom = 180.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_osjml")
+
+[node name="TimeToHideEvidence" type="Timer" parent="CON_Evidence"]
+wait_time = 7.0
+one_shot = true
+
+[node name="TXT_EvidenceName" type="RichTextLabel" parent="CON_Evidence"]
+layout_mode = 0
+offset_left = 234.0
+offset_top = 97.0
+offset_right = 428.0
+offset_bottom = 215.0
+rotation = -0.0349066
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = -25
+theme_override_fonts/normal_font = ExtResource("8_evle6")
+theme_override_font_sizes/normal_font_size = 43
+bbcode_enabled = true
+text = "[center]Name[/center]"
+scroll_active = false
+shortcut_keys_enabled = false
+drag_and_drop_selection_enabled = false
+
+[node name="TXT_EvidenceDescription" type="RichTextLabel" parent="CON_Evidence"]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 258.0
+offset_right = 444.0
+offset_bottom = 390.0
+rotation = -0.0349066
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = -12
+theme_override_fonts/normal_font = ExtResource("8_evle6")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "Description"
+scroll_active = false
+shortcut_keys_enabled = false
+drag_and_drop_selection_enabled = false
+
+[node name="TXT_Time" type="Label" parent="."]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 16.0
+offset_right = 196.0
+offset_bottom = 88.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.513726)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("9_hpx8b")
+theme_override_font_sizes/font_size = 56
+text = "1:00"
+
+[node name="TXT_Message" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -310.5
+offset_top = 228.0
+offset_right = 310.5
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.513726)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("11_wsl57")
+theme_override_font_sizes/font_size = 41
+text = "Message."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TXT_Evidence" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -540.0
+offset_top = 228.0
+offset_right = 81.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.513726)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("11_wsl57")
+theme_override_font_sizes/font_size = 41
+text = "Evidence obtained!"
+horizontal_alignment = 1
+vertical_alignment = 1

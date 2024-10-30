@@ -1,12 +1,10 @@
 [gd_resource type="Resource" script_class="RTPI_Evidence" load_steps=3 format=3 uid="uid://1aiugrohxj02"]
 
 [ext_resource type="Script" path="res://Code/Resources/RTPI_Evidence.cs" id="1_ie018"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_uxqir"]
-size = Vector2(64, 64)
+[ext_resource type="Texture2D" uid="uid://e5hcseikkps0" path="res://Art/UI/HUD/T_Evidence_SharkTooth.png" id="1_qavpc"]
 
 [resource]
 script = ExtResource("1_ie018")
 Name = "Shark tooth"
-Description = "OWO"
-Photo = SubResource("PlaceholderTexture2D_uxqir")
+Description = "Probably Gura's tooth. Why would she have dropped it?"
+Photo = ExtResource("1_qavpc")

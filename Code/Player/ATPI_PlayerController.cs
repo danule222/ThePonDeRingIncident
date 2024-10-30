@@ -73,11 +73,11 @@ public partial class ATPI_PlayerController : CharacterBody3D
 		GodotObject obj = RayCast.GetCollider();
 		if (obj != null && !ColliderDetected)
 		{
-			ColliderDetected = true;
 			ATPI_Evidence evidence = obj as ATPI_Evidence;
-
 			if (evidence != null)
 			{
+				ColliderDetected = true;
+
 				if (evidence != LastEvidence)
 				{
 					InvestigationController.HUD.SetReticle(true);
@@ -86,7 +86,7 @@ public partial class ATPI_PlayerController : CharacterBody3D
 				}
 			}
 		}
-		else if (obj == null && ColliderDetected)
+		else if (obj != LastEvidence && ColliderDetected)
 		{
 			InvestigationController.HUD.SetReticle(false);
 
@@ -104,6 +104,11 @@ public partial class ATPI_PlayerController : CharacterBody3D
 			currentRotation.Y -= iemm.Relative.X * mouseSensitivity;
 			currentRotation.X -= iemm.Relative.Y * mouseSensitivity;
 			CAMERA.Rotation = currentRotation;
+		}
+
+		if (@event.IsActionPressed("dialogic_default_action") && LastEvidence != null)
+		{
+			InvestigationController.HUD.SetEvidence(LastEvidence.GetEvidence());
 		}
 	}
 }
