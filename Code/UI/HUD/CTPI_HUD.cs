@@ -13,8 +13,10 @@ public partial class CTPI_HUD : Control
 	private Label TXT_Time;
 	private Label TXT_Message;
 	private Label TXT_Evidence;
+	private Label TXT_Evidences;
 
 	private Timer TimeToHideEvidence;
+	private Timer TimeToMessage;
 
 	// Evidence paper
 	private Control CON_Evidence;
@@ -30,6 +32,8 @@ public partial class CTPI_HUD : Control
 		TXT_Time = GetNode<Label>("TXT_Time");
 		TXT_Message = GetNode<Label>("TXT_Message");
 		TXT_Evidence = GetNode<Label>("TXT_Evidence");
+		TXT_Evidences = GetNode<Label>("TXT_Evidences");
+		TimeToMessage = GetNode<Timer>("TimeToMessage");
 
 		// Evidence paper
 		CON_Evidence = GetNode<Control>("CON_Evidence");
@@ -39,6 +43,7 @@ public partial class CTPI_HUD : Control
 		TimeToHideEvidence = CON_Evidence.GetNode<Timer>("TimeToHideEvidence");
 
 		TimeToHideEvidence.Timeout += HideEvidence;
+		TimeToMessage.Timeout += HideMessage;
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -67,10 +72,30 @@ public partial class CTPI_HUD : Control
 		TimeToHideEvidence.Start();
 	}
 
+	public void AddEvidence(int found, int total)
+	{
+		TXT_Evidences.Text = found + "/" + total;
+	}
+
 	private void HideEvidence()
 	{
 		CON_Evidence.Visible = false;
 		TXT_Evidence.Visible = false;
+		IMG_Fade.Visible = false;
+	}
+
+	public void SetMessage(string message)
+	{
+		TXT_Message.Visible = true;
+		IMG_Fade.Visible = true;
+
+		TXT_Message.Text = message;
+		TimeToMessage.Start();
+	}
+
+	private void HideMessage()
+	{
+		TXT_Message.Visible = false;
 		IMG_Fade.Visible = false;
 	}
 

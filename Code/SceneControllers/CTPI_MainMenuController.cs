@@ -15,6 +15,8 @@ public partial class CTPI_MainMenuController : Control
 
   public override void _Ready()
   {
+    Input.MouseMode = Input.MouseModeEnum.Visible;
+
     VBX_MainMenu = GetNode<VBoxContainer>("VBX_MainMenu");
     BTN_Play = VBX_MainMenu.GetNode<CTPI_Button>("BTN_Play");
     BTN_Settings = VBX_MainMenu.GetNode<CTPI_Button>("BTN_Settings");
@@ -40,7 +42,7 @@ public partial class CTPI_MainMenuController : Control
 
   private void PlayPressed()
   {
-
+    GetTree().ChangeSceneToFile("res://Scenes/S_Investigation.tscn");
   }
 
   private void SettingsPressed()

@@ -66,6 +66,7 @@ blend_shape_mode = 0
 
 [node name="S_Investigation" type="Node3D"]
 script = ExtResource("1_uu0b1")
+TotalEvidences = 5
 
 [node name="UI_HUD" parent="." instance=ExtResource("1_yms2o")]
 
@@ -172,5 +173,9 @@ upper_fade = 1e-05
 lower_fade = 1e-05
 
 [node name="Countdown" type="Timer" parent="."]
-wait_time = 300.0
+wait_time = 120.0
+one_shot = true
+
+[node name="MoveToInterrogation" type="Timer" parent="."]
+wait_time = 10.0
 one_shot = true

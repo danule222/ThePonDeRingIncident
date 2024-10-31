@@ -110,8 +110,6 @@ public partial class ATPI_PlayerController : CharacterBody3D
 		}
 
 		if (@event.IsActionPressed("dialogic_default_action") && LastEvidence != null)
-		{
-			InvestigationController.HUD.SetEvidence(LastEvidence.GetEvidence());
-		}
+			InvestigationController.AddEvidence(LastEvidence.GetEvidence());
 	}
 }

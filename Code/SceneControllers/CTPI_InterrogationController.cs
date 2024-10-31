@@ -24,6 +24,8 @@ public partial class CTPI_InterrogationController : Control
 
 	public override void _Ready()
 	{
+		Input.MouseMode = Input.MouseModeEnum.Visible;
+
 		UI_Dialogue = GetNode<CTPI_Dialogue>("UI_Dialogue");
 		UI_Dialogue.Continue += Continue;
 		UI_Dialogue.AddTension += AddTension;

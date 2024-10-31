@@ -144,15 +144,49 @@ drag_and_drop_selection_enabled = false
 
 [node name="TXT_Time" type="Label" parent="."]
 layout_mode = 0
-offset_left = 30.0
-offset_top = 16.0
-offset_right = 196.0
-offset_bottom = 88.0
+offset_left = 37.0
+offset_top = 22.0
+offset_right = 203.0
+offset_bottom = 94.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 0.513726)
 theme_override_constants/outline_size = 12
 theme_override_fonts/font = ExtResource("9_hpx8b")
 theme_override_font_sizes/font_size = 56
 text = "1:00"
+
+[node name="TXT_Evidences" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -112.0
+offset_top = 22.0
+offset_right = -35.0
+offset_bottom = 94.0
+grow_horizontal = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.513726)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("9_hpx8b")
+theme_override_font_sizes/font_size = 56
+text = "0/5"
+horizontal_alignment = 2
+
+[node name="Label evidences" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -134.0
+offset_top = 77.0
+offset_right = -14.0
+offset_bottom = 105.0
+grow_horizontal = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.513726)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("9_hpx8b")
+theme_override_font_sizes/font_size = 21
+text = "Evidences"
+horizontal_alignment = 1
 
 [node name="TXT_Message" type="Label" parent="."]
 visible = false
@@ -197,3 +231,7 @@ theme_override_font_sizes/font_size = 41
 text = "Evidence obtained!"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="TimeToMessage" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true

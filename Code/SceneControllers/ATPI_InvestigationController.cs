@@ -2,17 +2,28 @@ using Godot;
 
 public partial class ATPI_InvestigationController : Node3D
 {
-  public CTPI_HUD HUD;
+  [Export]
+  private int TotalEvidences;
+
+  public CTPI_HUD HUD { get; private set; }
+  public NTPI_AL_GameState GameState { get; private set; }
 
   private Timer Countdown;
+  private Timer MoveToInterrogation;
+  private int EvidencesFound = 0;
 
   public override void _Ready()
   {
     HUD = GetNode<CTPI_HUD>("UI_HUD");
     Countdown = GetNode<Timer>("Countdown");
+    MoveToInterrogation = GetNode<Timer>("MoveToInterrogation");
+    GameState = NTPI_AL_GameState.Instance;
 
     Countdown.Timeout += CountdownEnd;
     Countdown.Start();
+    MoveToInterrogation.Timeout += InvestigationEnd;
+
+    HUD.AddEvidence(EvidencesFound, TotalEvidences);
   }
 
   public override void _Process(double delta)
@@ -20,8 +31,32 @@ public partial class ATPI_InvestigationController : Node3D
     HUD.SetTime((float)Countdown.TimeLeft);
   }
 
+  public void AddEvidence(RTPI_Evidence evidence)
+  {
+    HUD.SetEvidence(evidence);
+    GameState.AddEvidence(evidence);
+
+    EvidencesFound++;
+    HUD.AddEvidence(EvidencesFound, TotalEvidences);
+
+    if (EvidencesFound == TotalEvidences)
+      EverythingFound();
+  }
+
   private void CountdownEnd()
   {
-    // TODO: Implement end
+    HUD.SetMessage("Time's up!");
+    MoveToInterrogation.Start();
+  }
+
+  private void EverythingFound()
+  {
+    HUD.SetMessage("You found every evidence!");
+    MoveToInterrogation.Start();
+  }
+
+  private void InvestigationEnd()
+  {
+    GetTree().ChangeSceneToFile("res://Scenes/S_Interrogation.tscn");
   }
 }
