@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Reflection;
 
 public partial class CTPI_HUD : Control
 {
@@ -17,12 +18,15 @@ public partial class CTPI_HUD : Control
 
 	private Timer TimeToHideEvidence;
 	private Timer TimeToMessage;
+	private Timer MessageDelay;
 
 	// Evidence paper
 	private Control CON_Evidence;
 	private TextureRect IMG_EvidencePhoto;
 	private RichTextLabel TXT_EvidenceName;
 	private RichTextLabel TXT_EvidenceDescription;
+
+	private Action DelayMethod;
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -34,6 +38,7 @@ public partial class CTPI_HUD : Control
 		TXT_Evidence = GetNode<Label>("TXT_Evidence");
 		TXT_Evidences = GetNode<Label>("TXT_Evidences");
 		TimeToMessage = GetNode<Timer>("TimeToMessage");
+		MessageDelay = GetNode<Timer>("MessageDelay");
 
 		// Evidence paper
 		CON_Evidence = GetNode<Control>("CON_Evidence");
@@ -44,6 +49,9 @@ public partial class CTPI_HUD : Control
 
 		TimeToHideEvidence.Timeout += HideEvidence;
 		TimeToMessage.Timeout += HideMessage;
+
+		DelayMethod = delegate { GD.Print("owo"); };
+		MessageDelay.Timeout += DelayMethod;
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -84,8 +92,22 @@ public partial class CTPI_HUD : Control
 		IMG_Fade.Visible = false;
 	}
 
-	public void SetMessage(string message)
+	public void SetMessage(string message, int delay = 0)
 	{
+		if (delay > 0 || TimeToMessage.TimeLeft > 0 || TimeToHideEvidence.TimeLeft > 0)
+		{
+			MessageDelay.Timeout -= DelayMethod;
+			DelayMethod = delegate
+			{
+				SetMessage(message, 0);
+			};
+			MessageDelay.Timeout += DelayMethod;
+			MessageDelay.WaitTime = delay + TimeToMessage.TimeLeft + TimeToHideEvidence.TimeLeft;
+			MessageDelay.Start();
+
+			return;
+		}
+
 		TXT_Message.Visible = true;
 		IMG_Fade.Visible = true;
 

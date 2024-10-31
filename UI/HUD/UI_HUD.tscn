@@ -235,3 +235,6 @@ vertical_alignment = 1
 [node name="TimeToMessage" type="Timer" parent="."]
 wait_time = 5.0
 one_shot = true
+
+[node name="MessageDelay" type="Timer" parent="."]
+one_shot = true

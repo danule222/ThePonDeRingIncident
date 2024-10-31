@@ -10,7 +10,8 @@ public partial class ATPI_InvestigationController : Node3D
 
   private Timer Countdown;
   private Timer MoveToInterrogation;
-  private int EvidencesFound = 0;
+  private int EvidencesFound;
+  private bool InvestigationEnded;
 
   public override void _Ready()
   {
@@ -23,7 +24,9 @@ public partial class ATPI_InvestigationController : Node3D
     Countdown.Start();
     MoveToInterrogation.Timeout += InvestigationEnd;
 
+    EvidencesFound = 0;
     HUD.AddEvidence(EvidencesFound, TotalEvidences);
+    InvestigationEnded = false;
   }
 
   public override void _Process(double delta)
@@ -53,6 +56,8 @@ public partial class ATPI_InvestigationController : Node3D
   {
     HUD.SetMessage("You found every evidence!");
     MoveToInterrogation.Start();
+    Countdown.Paused = true;
+    InvestigationEnded = true;
   }
 
   private void InvestigationEnd()
