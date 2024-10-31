@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://bd6lv77r7g56m"]
+[gd_scene load_steps=26 format=4 uid="uid://bd6lv77r7g56m"]
 
 [ext_resource type="PackedScene" uid="uid://bbrgq43mnuo3i" path="res://Scenes/World/S_WorldOffice.tscn" id="1_ne1xu"]
 [ext_resource type="Script" path="res://Code/SceneControllers/ATPI_InvestigationController.cs" id="1_uu0b1"]
@@ -10,6 +10,15 @@
 [ext_resource type="PackedScene" uid="uid://s5qi858fc5l4" path="res://Art/Models/Shark tooth/untitled.glb" id="8_bce48"]
 [ext_resource type="Resource" uid="uid://cj6k7ydhkj0in" path="res://Resources/Evidences/R_Evid_Marshmallow.tres" id="9_7tduj"]
 [ext_resource type="Texture2D" uid="uid://oll6ihvyxg3b" path="res://Art/Models/Marshmallow/marshmallow_istockphoto-1051555162-612x612.jpg" id="9_iw3jx"]
+[ext_resource type="Resource" uid="uid://bombddyilttw8" path="res://Resources/Evidences/R_Evid_Chocolate.tres" id="11_1slqp"]
+[ext_resource type="Texture2D" uid="uid://dtip6v2bg185t" path="res://Art/Decoration/T_Decoration_Chocolate.png" id="11_drcfy"]
+[ext_resource type="Texture2D" uid="uid://87vefisyhlph" path="res://Art/Decoration/N_Decoration_Chocolate.png" id="12_af6j0"]
+[ext_resource type="PackedScene" uid="uid://3lldhjwfk6hm" path="res://Art/Models/Cheese/cheese.glb" id="13_ffddl"]
+[ext_resource type="Texture2D" uid="uid://35d0oat2okva" path="res://Art/Decoration/T_Decoration_ChocolateSplash.png" id="13_jrg5n"]
+[ext_resource type="Texture2D" uid="uid://p5ajfwutr7bq" path="res://Art/Decoration/N_Decoration_ChocolateSplash.png" id="14_huuq3"]
+[ext_resource type="Resource" uid="uid://dtq53kvmu763p" path="res://Resources/Evidences/R_Evid_Cheese.tres" id="14_mqutv"]
+[ext_resource type="Resource" uid="uid://ldb0w4r517br" path="res://Resources/Evidences/R_Evid_Tree.tres" id="16_ufjby"]
+[ext_resource type="PackedScene" uid="uid://bo7y8fj3auuov" path="res://Art/Models/Korone tree/tree.glb" id="18_bau4y"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vqny8"]
 radius = 0.249911
@@ -77,6 +86,7 @@ fov = 80.0
 
 [node name="RayCast3D" type="RayCast3D" parent="CharacterBody3D/Camera3D"]
 target_position = Vector3(0, 0, -2)
+collision_mask = 3
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.99344, -0.203125)
@@ -107,7 +117,6 @@ data = ExtResource("3_awxbr")
 
 [node name="Ev_SharkTooth" parent="Evidences" instance=ExtResource("4_6kgwc")]
 transform = Transform3D(0.122724, 1.48398e-09, 0.324455, 0.00725345, 0.346802, -0.0027436, -0.324374, 0.00775499, 0.122694, -5.90685, -0.00218251, -4.86589)
-collision_layer = 1
 Evidence = ExtResource("5_hqg2m")
 
 [node name="Model" parent="Evidences/Ev_SharkTooth" instance=ExtResource("8_bce48")]
@@ -115,7 +124,6 @@ transform = Transform3D(0.108646, 7.45058e-09, -2.32831e-10, 0, -4.65661e-09, -0
 
 [node name="Ev_Marshmallow" parent="Evidences" instance=ExtResource("4_6kgwc")]
 transform = Transform3D(0.326827, -0.00591711, 0.116108, 0.00725345, 0.346802, -0.0027436, -0.116033, 0.00501275, 0.326869, -0.597893, 1.02308, -10.4724)
-collision_layer = 1
 Evidence = ExtResource("9_7tduj")
 
 [node name="Model" type="Node3D" parent="Evidences/Ev_Marshmallow"]
@@ -126,6 +134,42 @@ transform = Transform3D(0.178336, 0, 0, 0, 0.178336, 0, 0, 0, 0.178336, 0, 0, 0)
 lod_bias = 7.047
 mesh = SubResource("ArrayMesh_nyye7")
 skeleton = NodePath("")
+
+[node name="Ev_Chocolate" parent="Evidences" instance=ExtResource("4_6kgwc")]
+transform = Transform3D(0.982733, -0.0177921, 0.349125, 0.0218103, 1.0428, -0.0082497, -0.348897, 0.0150728, 0.982859, -1.27494, -0.0284439, 3.74476)
+Evidence = ExtResource("11_1slqp")
+
+[node name="Decal" type="Decal" parent="Evidences/Ev_Chocolate"]
+transform = Transform3D(-0.320687, 0.0200468, -0.903273, 0.0138541, 0.958481, 0.0163535, 0.903389, -0.00758266, -0.320896, -0.621467, -0.131685, -0.210383)
+size = Vector3(2, 0.354, 2)
+texture_albedo = ExtResource("11_drcfy")
+texture_normal = ExtResource("12_af6j0")
+upper_fade = 1e-05
+lower_fade = 1e-05
+
+[node name="Ev_Cheese" parent="Evidences" instance=ExtResource("4_6kgwc")]
+transform = Transform3D(0.311958, -0.0056479, 0.110826, 0.00692344, 0.331024, -0.00261878, -0.110753, 0.00478469, 0.311998, -5.56301, 0.56466, -9.82817)
+Evidence = ExtResource("14_mqutv")
+
+[node name="cheese" parent="Evidences/Ev_Cheese" instance=ExtResource("13_ffddl")]
+transform = Transform3D(-0.249801, 0.00617462, -0.157355, 0.0064694, 0.295221, 0.00131433, 0.157343, -0.00233553, -0.249874, 0, 0, 0)
+
+[node name="Ev_Tree" parent="Evidences" instance=ExtResource("4_6kgwc")]
+transform = Transform3D(0.748299, -0.0135477, 0.26584, 0.0166074, 0.794033, -0.00628171, -0.265665, 0.0114771, 0.748395, 4.96735, 0.406522, -3.29091)
+Evidence = ExtResource("16_ufjby")
+
+[node name="tree" parent="Evidences/Ev_Tree" instance=ExtResource("18_bau4y")]
+transform = Transform3D(0.0475159, -0.086107, -0.02705, 0.00465595, 0.0328674, -0.0964466, 0.0901355, 0.0436945, 0.0192416, -0.0397024, 0.00130185, 0.0595942)
+
+[node name="Decorations" type="Node" parent="."]
+
+[node name="Chocolate" type="Decal" parent="Decorations"]
+transform = Transform3D(1, 4.46427e-08, -5.96046e-08, -2.98023e-08, -4.37114e-08, -1, -4.46427e-08, 1, -4.23144e-08, 1.29484, 1.82998, 2.82941)
+size = Vector3(3, 0.10388, 3)
+texture_albedo = ExtResource("13_jrg5n")
+texture_normal = ExtResource("14_huuq3")
+upper_fade = 1e-05
+lower_fade = 1e-05
 
 [node name="Countdown" type="Timer" parent="."]
 wait_time = 300.0

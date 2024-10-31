@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="RTPI_Evidence" load_steps=3 format=3 uid="uid://bombddyilttw8"]
+
+[ext_resource type="Texture2D" uid="uid://dqv34xjcc324s" path="res://Art/UI/HUD/T_Evidence_Chocolate_.png" id="1_b1qf3"]
+[ext_resource type="Script" path="res://Code/Resources/RTPI_Evidence.cs" id="2_17p6x"]
+
+[resource]
+script = ExtResource("2_17p6x")
+Name = "Chocolate puddle"
+Description = "Looks like someone had an accident in the kitchen..."
+Photo = ExtResource("1_b1qf3")

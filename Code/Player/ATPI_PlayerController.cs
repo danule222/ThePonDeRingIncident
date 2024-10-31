@@ -103,6 +103,9 @@ public partial class ATPI_PlayerController : CharacterBody3D
 			Vector3 currentRotation = CAMERA.Rotation;
 			currentRotation.Y -= iemm.Relative.X * mouseSensitivity;
 			currentRotation.X -= iemm.Relative.Y * mouseSensitivity;
+
+			currentRotation.X = Mathf.Clamp(currentRotation.X, -1.5708f, 1.5708f);
+
 			CAMERA.Rotation = currentRotation;
 		}
 

@@ -1,22 +1,22 @@
-[gd_scene load_steps=359 format=4 uid="uid://bbrgq43mnuo3i"]
+[gd_scene load_steps=361 format=4 uid="uid://bbrgq43mnuo3i"]
 
 [ext_resource type="Texture2D" uid="uid://c28mgcagth1dy" path="res://Art/Office/canonical_hologra_office_0.png" id="1_rhhgn"]
 [ext_resource type="Texture2D" uid="uid://326a8nq77ton" path="res://Art/Office/canonical_hologra_office_1.png" id="2_inl4c"]
 [ext_resource type="Texture2D" uid="uid://ci3761uuownir" path="res://Art/Office/canonical_hologra_office_2.png" id="3_p4bot"]
 [ext_resource type="Texture2D" uid="uid://b8834t31ehfi1" path="res://Art/Office/canonical_hologra_office_3.png" id="4_h37qx"]
 [ext_resource type="Texture2D" uid="uid://cixrxhahdpd0j" path="res://Art/Office/canonical_hologra_office_4.png" id="5_2gi5f"]
-[ext_resource type="Texture2D" uid="uid://w8ialojqplau" path="res://Art/Office/canonical_hologra_office_5.png" id="6_l0t7m"]
+[ext_resource type="Texture2D" uid="uid://qf6map8e6bt2" path="res://Art/Office/canonical_hologra_office_5.png" id="6_l0t7m"]
 [ext_resource type="Texture2D" uid="uid://bw3pwnkd7twa4" path="res://Art/Office/canonical_hologra_office_6.png" id="7_44id8"]
 [ext_resource type="Texture2D" uid="uid://ckmd6gmhhit6" path="res://Art/Office/canonical_hologra_office_7.png" id="8_govvr"]
 [ext_resource type="Texture2D" uid="uid://c1o7yq6pueud5" path="res://Art/Office/canonical_hologra_office_8.png" id="9_24fpj"]
-[ext_resource type="Texture2D" uid="uid://bitla3c280co5" path="res://Art/Office/canonical_hologra_office_9.png" id="10_46m2q"]
-[ext_resource type="Texture2D" uid="uid://bucbbr3ogyba3" path="res://Art/Office/canonical_hologra_office_10.png" id="11_qcyc6"]
-[ext_resource type="Texture2D" uid="uid://cmassrf1cc4ds" path="res://Art/Office/canonical_hologra_office_11.png" id="12_g8kjj"]
+[ext_resource type="Texture2D" uid="uid://dfamumnhj7yyc" path="res://Art/Office/canonical_hologra_office_9.png" id="10_46m2q"]
+[ext_resource type="Texture2D" uid="uid://c4khgq8l1ug4q" path="res://Art/Office/canonical_hologra_office_10.png" id="11_qcyc6"]
+[ext_resource type="Texture2D" uid="uid://wl5oiqrkv65c" path="res://Art/Office/canonical_hologra_office_11.png" id="12_g8kjj"]
 [ext_resource type="Texture2D" uid="uid://b6mq64upc2q4h" path="res://Art/Office/canonical_hologra_office_12.png" id="13_vkxkn"]
 [ext_resource type="Texture2D" uid="uid://llv7kcti63so" path="res://Art/Office/canonical_hologra_office_13.png" id="14_3r40b"]
 [ext_resource type="Texture2D" uid="uid://y3hy4ghadvxu" path="res://Art/Office/canonical_hologra_office_14.png" id="15_qu21b"]
-[ext_resource type="Texture2D" uid="uid://bps4vp1smfyyy" path="res://Art/Office/canonical_hologra_office_15.png" id="16_xmgbn"]
-[ext_resource type="Texture2D" uid="uid://dai7dgnbewh8r" path="res://Art/Office/canonical_hologra_office_16.png" id="17_e4ebd"]
+[ext_resource type="Texture2D" uid="uid://6evnqnmiksh3" path="res://Art/Office/canonical_hologra_office_15.png" id="16_xmgbn"]
+[ext_resource type="Texture2D" uid="uid://vd7l7jt2qmk7" path="res://Art/Office/canonical_hologra_office_16.png" id="17_e4ebd"]
 [ext_resource type="Texture2D" uid="uid://d2craxtl5pmc8" path="res://Art/Office/canonical_hologra_office_17.png" id="18_iu446"]
 [ext_resource type="Texture2D" uid="uid://bxmv6m3vd8u7p" path="res://Art/Office/canonical_hologra_office_19.png" id="19_bxfut"]
 [ext_resource type="Texture2D" uid="uid://bt5g2j8glsppv" path="res://Art/Office/canonical_hologra_office_18.png" id="20_dbd28"]
@@ -3584,6 +3584,14 @@ points = PackedVector3Array(30.2498, -71.4447, 34.3436, 27.509, -82.0605, 31.170
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_qwbxs"]
 points = PackedVector3Array(-0.967992, 84.6601, 99.9087, 10.8612, -37.9918, -91.548, 19.5052, -38.211, -91.8901, -0.967992, 84.6601, -99.9087, -4.09105, -43.3479, 9.34932, 20.8834, -27.7353, 99.9087, -13.4602, 59.675, -93.6497, -13.4602, 81.5276, 99.9087, 5.27141, -37.0953, 93.6497, 20.8834, -27.7353, -99.9087, -13.4602, 56.555, 90.5398, -13.4602, 81.5276, -99.9087, 5.27141, -37.0953, -93.6497, 19.5052, -38.211, 91.8901, -4.09105, -43.3479, -9.34932, 11.5142, 22.1973, -99.9087, 11.5142, 22.1973, 99.9087, -13.4602, 56.555, -90.5398, -4.09105, 6.60983, -90.5398, -4.09105, 6.60983, 90.5398, -13.4602, 59.675, 93.6497, 2.15507, -24.6028, 90.5398, 2.15507, -24.6028, -90.5398, 10.8612, -37.9918, 91.548, -0.967992, -5.8702, 93.6497, -0.967992, -5.8702, -93.6497)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bn4pb"]
+albedo_color = Color(0, 0, 0, 1)
+emission_energy_multiplier = 2.35
+
+[sub_resource type="BoxMesh" id="BoxMesh_ss5al"]
+material = SubResource("StandardMaterial3D_bn4pb")
+size = Vector3(250, 300, 20.82)
+
 [sub_resource type="BoxMesh" id="BoxMesh_nvihh"]
 size = Vector3(8.555, 22.515, 8.9)
 
@@ -4908,6 +4916,10 @@ shape = SubResource("ConvexPolygonShape3D_i321n")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="7300b5c5ebe140e7b8d044755ef8c189_fbx/RootNode/Cube_034/Cube_034_TV_0/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_qwbxs")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="7300b5c5ebe140e7b8d044755ef8c189_fbx/RootNode"]
+transform = Transform3D(-4.37114e-08, -8.27181e-23, 1, 0, 1, 2.94476e-22, -1, 0, -4.37114e-08, 553.168, 1450.06, 407.075)
+mesh = SubResource("BoxMesh_ss5al")
 
 [node name="Background" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 5.05322e-16, -1, 0, 1, 5.05322e-16, 0, 22.8505, 13.203)

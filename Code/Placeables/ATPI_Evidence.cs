@@ -7,7 +7,7 @@ public partial class ATPI_Evidence : StaticBody3D
 
 	public RTPI_Evidence GetEvidence()
 	{
-		CollisionLayer = 2;
+		CollisionLayer = 0;
 		return Evidence;
 	}
 }
