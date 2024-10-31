@@ -27,6 +27,7 @@ public partial class CTPI_HUD : Control
 	private RichTextLabel TXT_EvidenceDescription;
 
 	private Action DelayMethod;
+	public CTPI_PauseMenu UI_PauseMenu { get; private set; }
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -46,6 +47,8 @@ public partial class CTPI_HUD : Control
 		TXT_EvidenceName = CON_Evidence.GetNode<RichTextLabel>("TXT_EvidenceName");
 		TXT_EvidenceDescription = CON_Evidence.GetNode<RichTextLabel>("TXT_EvidenceDescription");
 		TimeToHideEvidence = CON_Evidence.GetNode<Timer>("TimeToHideEvidence");
+
+		UI_PauseMenu = GetNode<CTPI_PauseMenu>("UI_PauseMenu");
 
 		TimeToHideEvidence.Timeout += HideEvidence;
 		TimeToMessage.Timeout += HideMessage;
@@ -125,5 +128,10 @@ public partial class CTPI_HUD : Control
 	{
 		TimeSpan t = TimeSpan.FromSeconds(seconds);
 		TXT_Time.Text = t.ToString(@"m\:ss");
+	}
+
+	public void ShowPauseMenu()
+	{
+		UI_PauseMenu.Show();
 	}
 }

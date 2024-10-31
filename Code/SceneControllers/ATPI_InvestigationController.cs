@@ -64,4 +64,9 @@ public partial class ATPI_InvestigationController : Node3D
   {
     GetTree().ChangeSceneToFile("res://Scenes/S_Interrogation.tscn");
   }
+
+  public void Pause()
+  {
+    HUD.ShowPauseMenu();
+  }
 }

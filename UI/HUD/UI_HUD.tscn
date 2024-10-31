@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dkvmu8yslsktx"]
+[gd_scene load_steps=13 format=3 uid="uid://dkvmu8yslsktx"]
 
 [ext_resource type="Script" path="res://Code/UI/HUD/CTPI_HUD.cs" id="1_kx8dx"]
 [ext_resource type="Texture2D" uid="uid://c4wi0mir2d6kn" path="res://Art/UI/HUD/T_Reticle_Default.png" id="2_1soiv"]
@@ -11,6 +11,7 @@
 [ext_resource type="FontFile" uid="uid://b2n257bour0ee" path="res://Art/Fonts/Font_Tiny5.ttf" id="9_hpx8b"]
 [ext_resource type="Texture2D" uid="uid://yt4u0fd14woc" path="res://Art/UI/Common/T_Common_Fade.png" id="10_j0y0k"]
 [ext_resource type="FontFile" uid="uid://r68vafhpo33u" path="res://Art/Fonts/Font_BalsamiqSans.ttf" id="11_wsl57"]
+[ext_resource type="PackedScene" uid="uid://kspvbstgcye4" path="res://UI/PauseMenu/UI_PauseMenu.tscn" id="12_bcd0d"]
 
 [node name="UI_HUD" type="Control"]
 layout_mode = 3
@@ -238,3 +239,8 @@ one_shot = true
 
 [node name="MessageDelay" type="Timer" parent="."]
 one_shot = true
+
+[node name="UI_PauseMenu" parent="." instance=ExtResource("12_bcd0d")]
+visible = false
+layout_mode = 1
+MouseModeWhenResuming = 2

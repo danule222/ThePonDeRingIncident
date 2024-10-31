@@ -111,5 +111,8 @@ public partial class ATPI_PlayerController : CharacterBody3D
 
 		if (@event.IsActionPressed("dialogic_default_action") && LastEvidence != null)
 			InvestigationController.AddEvidence(LastEvidence.GetEvidence());
+
+		if (@event.IsActionPressed("pause"))
+			InvestigationController.Pause();
 	}
 }

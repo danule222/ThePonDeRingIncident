@@ -1,0 +1,85 @@
+[gd_scene load_steps=5 format=3 uid="uid://kspvbstgcye4"]
+
+[ext_resource type="Script" path="res://Code/UI/PauseMenu/CTPI_PauseMenu.cs" id="1_nt2jd"]
+[ext_resource type="FontFile" uid="uid://r68vafhpo33u" path="res://Art/Fonts/Font_BalsamiqSans.ttf" id="1_t3puf"]
+[ext_resource type="PackedScene" uid="uid://cgre5s2mwjjkm" path="res://UI/Elements/UI_Button.tscn" id="2_hdfg2"]
+[ext_resource type="PackedScene" uid="uid://e1p6wap32mjw" path="res://UI/Settings/UI_Settings.tscn" id="4_ih6ue"]
+
+[node name="UI_PauseMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nt2jd")
+
+[node name="PNL_PauseMenu" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -200.0
+offset_right = 150.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PNL_PauseMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PNL_PauseMenu/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="PNL_PauseMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_t3puf")
+theme_override_font_sizes/font_size = 81
+text = "Pause"
+horizontal_alignment = 1
+
+[node name="Spacer" type="Control" parent="PNL_PauseMenu/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="BTN_Resume" parent="PNL_PauseMenu/MarginContainer/VBoxContainer" instance=ExtResource("2_hdfg2")]
+layout_mode = 2
+Label = "Resume"
+
+[node name="BTN_Options" parent="PNL_PauseMenu/MarginContainer/VBoxContainer" instance=ExtResource("2_hdfg2")]
+layout_mode = 2
+Label = "Options"
+
+[node name="Spacer2" type="Control" parent="PNL_PauseMenu/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+
+[node name="BTN_TitleScreen" parent="PNL_PauseMenu/MarginContainer/VBoxContainer" instance=ExtResource("2_hdfg2")]
+layout_mode = 2
+Label = "To title screen"
+
+[node name="PNL_Settings" parent="." instance=ExtResource("4_ih6ue")]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -329.5
+offset_top = -231.0
+offset_right = 329.5
+offset_bottom = 231.0

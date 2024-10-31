@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cgre5s2mwjjkm"]
+[gd_scene load_steps=3 format=3 uid="uid://cgre5s2mwjjkm"]
 
 [ext_resource type="Script" path="res://Code/UI/Elements/CTPI_Button.cs" id="1_d81lk"]
+[ext_resource type="FontFile" uid="uid://r68vafhpo33u" path="res://Art/Fonts/Font_BalsamiqSans.ttf" id="2_ivxqr"]
 
 [node name="UI_Button" type="Control"]
 custom_minimum_size = Vector2(100, 50)
@@ -28,13 +29,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
+theme_override_constants/margin_top = 8
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
 [node name="Label" type="Label" parent="Button/MarginContainer"]
 custom_minimum_size = Vector2(10, 10)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ivxqr")
+theme_override_font_sizes/font_size = 31
 text = "Label"
 horizontal_alignment = 1
 autowrap_mode = 3

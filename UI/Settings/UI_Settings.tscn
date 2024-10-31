@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://e1p6wap32mjw"]
+[gd_scene load_steps=4 format=3 uid="uid://e1p6wap32mjw"]
 
 [ext_resource type="PackedScene" uid="uid://cgre5s2mwjjkm" path="res://UI/Elements/UI_Button.tscn" id="1_odj8t"]
 [ext_resource type="Script" path="res://Code/UI/Settings/CTPI_Settings.cs" id="1_r002d"]
+[ext_resource type="FontFile" uid="uid://r68vafhpo33u" path="res://Art/Fonts/Font_BalsamiqSans.ttf" id="2_g8ohq"]
 
 [node name="PNL_Settings" type="Panel"]
 anchors_preset = 15
@@ -13,13 +14,13 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_r002d")
 
-[node name="Label" type="RichTextLabel" parent="."]
-layout_mode = 0
+[node name="Label" type="Label" parent="."]
 offset_left = 25.0
 offset_top = 23.0
 offset_right = 635.0
 offset_bottom = 83.0
-theme_override_font_sizes/normal_font_size = 41
+theme_override_fonts/font = ExtResource("2_g8ohq")
+theme_override_font_sizes/font_size = 50
 text = "Settings"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
