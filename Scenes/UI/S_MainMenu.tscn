@@ -58,6 +58,7 @@ layout_mode = 2
 custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
 Label = "Play"
+LabelSize = 50
 
 [node name="Spacer2" type="Control" parent="VBX_MainMenu"]
 custom_minimum_size = Vector2(0, 5)

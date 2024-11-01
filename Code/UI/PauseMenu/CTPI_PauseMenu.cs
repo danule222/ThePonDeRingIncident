@@ -50,6 +50,7 @@ public partial class CTPI_PauseMenu : ITPI_Menu
 
 	private void TitleScreenPressed()
 	{
+		Engine.TimeScale = 1;
 		GetTree().ChangeSceneToFile("res://Scenes/UI/S_MainMenu.tscn");
 	}
 }

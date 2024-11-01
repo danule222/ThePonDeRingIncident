@@ -27,6 +27,9 @@ public partial class ATPI_InvestigationController : Node3D
     EvidencesFound = 0;
     HUD.AddEvidence(EvidencesFound, TotalEvidences);
     InvestigationEnded = false;
+
+    // Music
+    NTPI_AL_MusicController.Instance.PlayBackgroundMusic(EGameState.Investigation);
   }
 
   public override void _Process(double delta)

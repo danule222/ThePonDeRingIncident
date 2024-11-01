@@ -14,10 +14,20 @@ public partial class CTPI_Button : Control
 			OnButtonSet();
 		}
 	}
+	[Export]
+	public int LabelSize
+	{
+		get => _LabelSize;
+		set
+		{
+			_LabelSize = value;
+			OnLabelSizeSet();
+		}
+	}
 	[Signal] public delegate void PressedEventHandler();
 
-	private Label _Label;
 	private string _LabelString;
+	private int _LabelSize;
 	private Button _Button;
 
 	private void OnButtonSet()
@@ -26,6 +36,14 @@ public partial class CTPI_Button : Control
 			GetNode<Label>("Button/MarginContainer/Label").Text = _LabelString;
 		else
 			GetNode<Label>("Button/MarginContainer/Label").Text = "Label";
+	}
+
+	private void OnLabelSizeSet()
+	{
+		Label l = GetNodeOrNull<Label>("Button/MarginContainer/Label");
+
+		if (l != null)
+			l.Set("theme_override_font_sizes/font_size", _LabelSize);
 	}
 
 	private void OnButtonPressed()

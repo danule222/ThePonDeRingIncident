@@ -46,12 +46,20 @@ public partial class CTPI_InterrogationController : Control
 		CharacterNodes[Interrogations[CurrentInterrogation].Character.Name].Visible = true;
 
 		Continue();
+
+		// Music
+		NTPI_AL_MusicController.Instance.PlayBackgroundMusic(EGameState.Interrogation);
 	}
 
 	public override void _Process(double delta)
 	{
-		if (Input.IsActionJustPressed("dialogic_default_action"))
+		if (Input.IsActionJustPressed("dialogic_default_action") && !UI_Dialogue.IsPaused())
 			Continue();
+
+		if (Input.IsActionJustPressed("pause") && !UI_Dialogue.IsPaused())
+		{
+			UI_Dialogue.Pause();
+		}
 	}
 
 	private void Continue()

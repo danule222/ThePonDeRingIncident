@@ -33,6 +33,9 @@ public partial class CTPI_MainMenuController : Control
     BTN_Credits.Pressed += CreditsPressed;
     BTN_Credits_Back.Pressed += CreditsBackPressed;
     BTN_Exit.Pressed += ExitPressed;
+
+    // Music
+    NTPI_AL_MusicController.Instance.PlayBackgroundMusic(EGameState.MainMenu);
   }
 
   public override void _Process(double delta)

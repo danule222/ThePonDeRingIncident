@@ -11,6 +11,7 @@ public partial class CTPI_Dialogue : Control
 	private Control CON_SusPos;
 	private Control CON_FwwPos;
 	private Control CON_MccPos;
+	private Control CON_FWMCPos;
 	private Control CON_NarPos;
 
 	private Control CON_DialogueBox;
@@ -29,10 +30,13 @@ public partial class CTPI_Dialogue : Control
 	private string Text;
 	private int CurrentCharacter;
 
+	private CTPI_PauseMenu UI_PauseMenu;
+
 	public override void _Ready()
 	{
 		CON_FwwPos = GetNode<Control>("CON_FwwPos");
 		CON_MccPos = GetNode<Control>("CON_MccPos");
+		CON_FWMCPos = GetNode<Control>("CON_FWMCPos");
 		CON_SusPos = GetNode<Control>("CON_SusPos");
 		CON_NarPos = GetNode<Control>("CON_NarPos");
 
@@ -44,6 +48,8 @@ public partial class CTPI_Dialogue : Control
 		VBX_FwwOptions = CON_FwwSelectionBox.GetNode<VBoxContainer>("Panel/MarginContainer/VBX_Options");
 		CON_MccSelectionBox = GetNode<Control>("CON_MccSelectionBox");
 		VBX_MccOptions = CON_MccSelectionBox.GetNode<VBoxContainer>("Panel/MarginContainer/VBX_Options");
+
+		UI_PauseMenu = GetNode<CTPI_PauseMenu>("UI_PauseMenu");
 
 		NewCharacter = GetNode<Timer>("NewCharacter");
 		NewCharacter.Timeout += TypeWriteEffect;
@@ -77,6 +83,9 @@ public partial class CTPI_Dialogue : Control
 				break;
 			case ECharacter.Narrator:
 				CON_DialogueBox.Position = CON_NarPos.Position;
+				break;
+			case ECharacter.FWMC:
+				CON_DialogueBox.Position = CON_FWMCPos.Position;
 				break;
 			default:
 				CON_DialogueBox.Position = CON_SusPos.Position;
@@ -136,6 +145,7 @@ public partial class CTPI_Dialogue : Control
 
 			CTPI_Button button = UI_Button.Instantiate<CTPI_Button>();
 			button.Label = text;
+			button.LabelSize = 22;
 			button.Pressed += delegate ()
 			{
 				story.ChooseChoiceIndex(choice.Index);
@@ -151,5 +161,12 @@ public partial class CTPI_Dialogue : Control
 			else
 				VBX_MccOptions.AddChild(button);
 		}
+	}
+
+	public bool IsPaused() => UI_PauseMenu.Visible;
+
+	public void Pause()
+	{
+		UI_PauseMenu.Show();
 	}
 }

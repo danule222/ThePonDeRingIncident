@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://yixhwhw8gocd"
+path="res://.godot/imported/Music_SPARKS (Midnight ver.).ogg-3c4fcc940bab3eed83ec7840307a945d.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Music/Music_SPARKS (Midnight ver.).ogg"
+dest_files=["res://.godot/imported/Music_SPARKS (Midnight ver.).ogg-3c4fcc940bab3eed83ec7840307a945d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

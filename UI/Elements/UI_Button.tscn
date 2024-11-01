@@ -12,6 +12,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_d81lk")
+LabelSize = 30
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1
@@ -37,7 +38,7 @@ theme_override_constants/margin_bottom = 5
 custom_minimum_size = Vector2(10, 10)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_ivxqr")
-theme_override_font_sizes/font_size = 31
+theme_override_font_sizes/font_size = 30
 text = "Label"
 horizontal_alignment = 1
 autowrap_mode = 3

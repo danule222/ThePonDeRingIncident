@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://tsfq7yyfk3kl"
+path="res://.godot/imported/Music_メイジ・オブ・ヴァイオレット (Midnight ver.).ogg-e1b7f5679bda96b375a064e05f4372bb.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Music/Music_メイジ・オブ・ヴァイオレット (Midnight ver.).ogg"
+dest_files=["res://.godot/imported/Music_メイジ・オブ・ヴァイオレット (Midnight ver.).ogg-e1b7f5679bda96b375a064e05f4372bb.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

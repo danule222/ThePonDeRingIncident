@@ -23,3 +23,10 @@ public enum EEmotion
   Mad,
   Laugh
 }
+
+public enum EGameState
+{
+  MainMenu,
+  Investigation,
+  Interrogation
+}

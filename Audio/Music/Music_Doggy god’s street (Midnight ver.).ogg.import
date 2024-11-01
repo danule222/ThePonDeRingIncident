@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cnqvxs77qnjcj"
+path="res://.godot/imported/Music_Doggy god’s street (Midnight ver.).ogg-b5bb1d2ea2c4c694ae1ac6bf5688a64d.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Music/Music_Doggy god’s street (Midnight ver.).ogg"
+dest_files=["res://.godot/imported/Music_Doggy god’s street (Midnight ver.).ogg-b5bb1d2ea2c4c694ae1ac6bf5688a64d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
