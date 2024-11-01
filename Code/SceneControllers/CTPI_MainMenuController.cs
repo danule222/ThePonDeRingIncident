@@ -7,6 +7,7 @@ public partial class CTPI_MainMenuController : Control
   private CTPI_Button BTN_Credits;
   private CTPI_Button BTN_Exit;
   private VBoxContainer VBX_MainMenu;
+  private TextureRect IMG_Logo;
   private CTPI_Settings PNL_Settings;
   private Panel PNL_Credits;
 
@@ -19,6 +20,7 @@ public partial class CTPI_MainMenuController : Control
     Input.MouseMode = Input.MouseModeEnum.Visible;
 
     VBX_MainMenu = GetNode<VBoxContainer>("VBX_MainMenu");
+    IMG_Logo = GetNode<TextureRect>("IMG_Logo");
     BTN_Play = VBX_MainMenu.GetNode<CTPI_Button>("BTN_Play");
     BTN_Settings = VBX_MainMenu.GetNode<CTPI_Button>("BTN_Settings");
     BTN_Credits = VBX_MainMenu.GetNode<CTPI_Button>("BTN_Credits");
@@ -40,6 +42,8 @@ public partial class CTPI_MainMenuController : Control
 
     // Music
     NTPI_AL_MusicController.Instance.PlayBackgroundMusic(EGameState.MainMenu);
+
+    VBX_MainMenu.VisibilityChanged += MainMenuVisibilityChanged;
   }
 
   public override void _Process(double delta)
@@ -50,6 +54,14 @@ public partial class CTPI_MainMenuController : Control
   private void OpenURL(Variant url)
   {
     OS.ShellOpen((string)url);
+  }
+
+  private void MainMenuVisibilityChanged()
+  {
+    if (VBX_MainMenu.Visible)
+      IMG_Logo.Visible = true;
+    else
+      IMG_Logo.Visible = false;
   }
 
   private void PlayPressed()

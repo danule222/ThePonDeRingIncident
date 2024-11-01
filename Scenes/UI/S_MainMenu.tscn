@@ -3,12 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://cgre5s2mwjjkm" path="res://UI/Elements/UI_Button.tscn" id="1_n8vay"]
 [ext_resource type="Script" path="res://Code/SceneControllers/CTPI_MainMenuController.cs" id="1_ullf4"]
 [ext_resource type="PackedScene" uid="uid://bbrgq43mnuo3i" path="res://Scenes/World/S_WorldOffice.tscn" id="2_e2ity"]
+[ext_resource type="Texture2D" uid="uid://bcbb0gjyihqyu" path="res://Art/UI/Logo/T_Logo.png" id="2_n6ehf"]
 [ext_resource type="VoxelGIData" uid="uid://bkngp88w35f0q" path="res://Scenes/UI/GI/S_MainMenu.VoxelGI_data.res" id="3_0rmek"]
 [ext_resource type="PackedScene" uid="uid://e1p6wap32mjw" path="res://UI/Settings/UI_Settings.tscn" id="3_ncdck"]
 [ext_resource type="FontFile" uid="uid://r68vafhpo33u" path="res://Art/Fonts/Font_BalsamiqSans.ttf" id="4_vtx63"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_0ovtr"]
-size = Vector2(47, 179)
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_2q25t"]
 sky_top_color = Color(0.786869, 0.465412, 1.34766e-06, 1)
@@ -34,25 +32,37 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ullf4")
 
+[node name="IMG_Logo" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -728.0
+offset_top = -160.0
+offset_right = -102.0
+offset_bottom = 160.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("2_n6ehf")
+expand_mode = 1
+stretch_mode = 4
+
 [node name="VBX_MainMenu" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 4
+anchors_preset = 8
+anchor_left = 0.5
 anchor_top = 0.5
+anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 98.0
-offset_top = -265.0
-offset_right = 454.0
-offset_bottom = 265.0
+offset_left = -541.0
+offset_top = -159.0
+offset_right = -185.0
+offset_bottom = 159.0
+grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
-
-[node name="TextureRect" type="TextureRect" parent="VBX_MainMenu"]
-layout_mode = 2
-texture = SubResource("PlaceholderTexture2D_0ovtr")
-
-[node name="Spacer" type="Control" parent="VBX_MainMenu"]
-custom_minimum_size = Vector2(0, 20)
-layout_mode = 2
 
 [node name="BTN_Play" parent="VBX_MainMenu" instance=ExtResource("1_n8vay")]
 custom_minimum_size = Vector2(0, 80)
