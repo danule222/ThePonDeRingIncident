@@ -151,8 +151,7 @@ public partial class CTPI_InterrogationController : Control
 		CurrentInterrogation++;
 		if (CurrentInterrogation >= Interrogations.Count)
 		{
-			End = true;
-			GD.Print("End");
+			EndInterrogation();
 			return;
 		}
 
@@ -164,5 +163,11 @@ public partial class CTPI_InterrogationController : Control
 		CharacterNodes[Interrogations[CurrentInterrogation].Character.Name].Visible = true;
 
 		Continue();
+	}
+
+	private void EndInterrogation()
+	{
+		End = true;
+		UI_Dialogue.ShowEnd();
 	}
 }

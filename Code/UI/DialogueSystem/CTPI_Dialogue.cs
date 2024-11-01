@@ -32,6 +32,18 @@ public partial class CTPI_Dialogue : Control
 
 	private CTPI_PauseMenu UI_PauseMenu;
 
+	// End panel
+	private Panel PNL_End;
+	private Panel PNL_Wrong;
+	private Panel PNL_Correct;
+	private CTPI_Button BTN_Baelz;
+	private CTPI_Button BTN_Gura;
+	private CTPI_Button BTN_Ollie;
+	private CTPI_Button BTN_Ina;
+	private CTPI_Button BTN_Korone;
+	private Timer TimeToMenu;
+	private bool End;
+
 	public override void _Ready()
 	{
 		CON_FwwPos = GetNode<Control>("CON_FwwPos");
@@ -50,6 +62,25 @@ public partial class CTPI_Dialogue : Control
 		VBX_MccOptions = CON_MccSelectionBox.GetNode<VBoxContainer>("Panel/MarginContainer/VBX_Options");
 
 		UI_PauseMenu = GetNode<CTPI_PauseMenu>("UI_PauseMenu");
+
+		PNL_End = GetNode<Panel>("PNL_End");
+		BTN_Baelz = PNL_End.GetNode<CTPI_Button>("VBoxContainer/BTN_Baelz");
+		BTN_Gura = PNL_End.GetNode<CTPI_Button>("VBoxContainer/BTN_Gura");
+		BTN_Ollie = PNL_End.GetNode<CTPI_Button>("VBoxContainer/BTN_Ollie");
+		BTN_Ina = PNL_End.GetNode<CTPI_Button>("VBoxContainer/BTN_Ina");
+		BTN_Korone = PNL_End.GetNode<CTPI_Button>("VBoxContainer/BTN_Korone");
+		PNL_Wrong = GetNode<Panel>("PNL_Wrong");
+		PNL_Correct = GetNode<Panel>("PNL_Correct");
+		TimeToMenu = GetNode<Timer>("TimeToMenu");
+		End = false;
+
+		BTN_Baelz.Pressed += WrongAnswer;
+		BTN_Ollie.Pressed += WrongAnswer;
+		BTN_Ina.Pressed += WrongAnswer;
+		BTN_Korone.Pressed += WrongAnswer;
+		BTN_Gura.Pressed += CorrectAnswer;
+
+		TimeToMenu.Timeout += ToTitleMenu;
 
 		NewCharacter = GetNode<Timer>("NewCharacter");
 		NewCharacter.Timeout += TypeWriteEffect;
@@ -167,6 +198,36 @@ public partial class CTPI_Dialogue : Control
 
 	public void Pause()
 	{
-		UI_PauseMenu.Show();
+		if (!End)
+			UI_PauseMenu.Show();
+	}
+
+	public void ShowEnd()
+	{
+		End = true;
+		PNL_End.Visible = true;
+		CON_DialogueBox.Visible = false;
+		CON_FwwSelectionBox.Visible = false;
+		CON_MccSelectionBox.Visible = false;
+	}
+
+	private void WrongAnswer()
+	{
+		PNL_End.Visible = false;
+		PNL_Wrong.Visible = true;
+		TimeToMenu.Start();
+	}
+
+	private void CorrectAnswer()
+	{
+		PNL_End.Visible = false;
+		PNL_Correct.Visible = true;
+		TimeToMenu.Start();
+	}
+
+	private void ToTitleMenu()
+	{
+		Engine.TimeScale = 1;
+		GetTree().ChangeSceneToFile("res://Scenes/UI/S_MainMenu.tscn");
 	}
 }
