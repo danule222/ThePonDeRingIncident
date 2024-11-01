@@ -73,7 +73,6 @@ offset_right = 954.0
 offset_bottom = 241.0
 
 [node name="CON_DialogueBox" type="Control" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -113,7 +112,10 @@ theme_override_constants/margin_bottom = 15
 
 [node name="RTL_Text" type="RichTextLabel" parent="CON_DialogueBox/Panel/MarginContainer"]
 layout_mode = 2
-text = "Test"
+bbcode_enabled = true
+text = "Test [color=#00000000]transparente[/color]"
+scroll_active = false
+shortcut_keys_enabled = false
 
 [node name="PNL_Name" type="Panel" parent="CON_DialogueBox/Panel"]
 layout_mode = 0

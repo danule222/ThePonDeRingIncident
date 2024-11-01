@@ -99,7 +99,10 @@ public partial class CTPI_Dialogue : Control
 	{
 		if (CurrentCharacter + 1 < Text.Length)
 		{
-			RTL_Text.Text += Text[CurrentCharacter];
+			RTL_Text.Text = Text.Substr(0, CurrentCharacter + 1)
+				+ "[color=#00000000]" + Text.Substring(CurrentCharacter) + "[/color]";
+
+			// RTL_Text.Text += Text[CurrentCharacter];
 			CurrentCharacter++;
 		}
 		else
