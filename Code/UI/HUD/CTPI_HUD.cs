@@ -29,9 +29,15 @@ public partial class CTPI_HUD : Control
 	private Action DelayMethod;
 	public CTPI_PauseMenu UI_PauseMenu { get; private set; }
 
+	// Instructions
+	private Panel PNL_Instructions;
+	private CTPI_Button BTN_Start;
+
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		Input.MouseMode = Input.MouseModeEnum.Visible;
+
 		IMG_Fade = GetNode<TextureRect>("IMG_Fade");
 		IMG_Reticle = GetNode<TextureRect>("IMG_Reticle");
 		TXT_Time = GetNode<Label>("TXT_Time");
@@ -48,18 +54,34 @@ public partial class CTPI_HUD : Control
 		TXT_EvidenceDescription = CON_Evidence.GetNode<RichTextLabel>("TXT_EvidenceDescription");
 		TimeToHideEvidence = CON_Evidence.GetNode<Timer>("TimeToHideEvidence");
 
-		UI_PauseMenu = GetNode<CTPI_PauseMenu>("UI_PauseMenu");
-
 		TimeToHideEvidence.Timeout += HideEvidence;
 		TimeToMessage.Timeout += HideMessage;
 
+		UI_PauseMenu = GetNode<CTPI_PauseMenu>("UI_PauseMenu");
+
+		// Instructions
+		PNL_Instructions = GetNode<Panel>("PNL_Instructions");
+		BTN_Start = PNL_Instructions.GetNode<CTPI_Button>("BTN_Start");
+
+		BTN_Start.Pressed += StartInvestigation;
+
 		DelayMethod = delegate { GD.Print("owo"); };
 		MessageDelay.Timeout += DelayMethod;
+
+		Engine.TimeScale = 0;
+		PNL_Instructions.Visible = true;
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
+	}
+
+	private void StartInvestigation()
+	{
+		Engine.TimeScale = 1;
+		PNL_Instructions.Visible = false;
+		Input.MouseMode = Input.MouseModeEnum.Captured;
 	}
 
 	public void SetReticle(bool isEvidence)
@@ -132,6 +154,7 @@ public partial class CTPI_HUD : Control
 
 	public void ShowPauseMenu()
 	{
-		UI_PauseMenu.Show();
+		if (!PNL_Instructions.Visible)
+			UI_PauseMenu.Show();
 	}
 }

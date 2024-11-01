@@ -38,8 +38,6 @@ public partial class ATPI_PlayerController : CharacterBody3D
 	{
 		speed = baseSpeed;
 
-		Input.MouseMode = Input.MouseModeEnum.Captured;
-
 		InvestigationController = GetParent<ATPI_InvestigationController>();
 		RayCast = GetNode<RayCast3D>("Camera3D/RayCast3D");
 	}

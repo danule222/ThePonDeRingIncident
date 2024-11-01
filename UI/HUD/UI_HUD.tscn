@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dkvmu8yslsktx"]
+[gd_scene load_steps=14 format=3 uid="uid://dkvmu8yslsktx"]
 
 [ext_resource type="Script" path="res://Code/UI/HUD/CTPI_HUD.cs" id="1_kx8dx"]
 [ext_resource type="Texture2D" uid="uid://c4wi0mir2d6kn" path="res://Art/UI/HUD/T_Reticle_Default.png" id="2_1soiv"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://yt4u0fd14woc" path="res://Art/UI/Common/T_Common_Fade.png" id="10_j0y0k"]
 [ext_resource type="FontFile" uid="uid://r68vafhpo33u" path="res://Art/Fonts/Font_BalsamiqSans.ttf" id="11_wsl57"]
 [ext_resource type="PackedScene" uid="uid://kspvbstgcye4" path="res://UI/PauseMenu/UI_PauseMenu.tscn" id="12_bcd0d"]
+[ext_resource type="PackedScene" uid="uid://cgre5s2mwjjkm" path="res://UI/Elements/UI_Button.tscn" id="13_nnwcl"]
 
 [node name="UI_HUD" type="Control"]
 layout_mode = 3
@@ -153,7 +154,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 0.513726)
 theme_override_constants/outline_size = 12
 theme_override_fonts/font = ExtResource("9_hpx8b")
 theme_override_font_sizes/font_size = 56
-text = "1:00"
+text = "2:00"
 
 [node name="TXT_Evidences" type="Label" parent="."]
 layout_mode = 1
@@ -244,3 +245,55 @@ one_shot = true
 visible = false
 layout_mode = 1
 MouseModeWhenResuming = 2
+
+[node name="PNL_Instructions" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -361.5
+offset_top = -250.0
+offset_right = 361.5
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PNL_Instructions"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -341.5
+offset_top = -221.0
+offset_right = 341.5
+offset_bottom = 178.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("11_wsl57")
+theme_override_font_sizes/normal_font_size = 21
+bbcode_enabled = true
+text = "[center][font_size=40]Investigation Start![/font_size][/center]
+
+Fuwawa and Mococo, on the occasion of the closure of the Mister Donut in Akihabara, decided to gold-plate a Pon de Ring, their favourite sweet from this place.
+One day, when they arrive at the office, they find that the Pon de Ring has disappeared.
+To recover it, they decide to investigate the office in search of evidence that might help them to interrogate the talents who were in the office that day.
+Since they have to talk to all of them before they go home, they will have only 2 minutes to find any evidence.
+With the help of these plus the different conversations you can have with each of them, you will have to decide who is the culprit."
+
+[node name="BTN_Start" parent="PNL_Instructions" instance=ExtResource("13_nnwcl")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -73.0
+offset_top = 179.0
+offset_right = 73.0
+offset_bottom = 229.0
+Label = "Start!"
