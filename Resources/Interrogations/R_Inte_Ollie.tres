@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="RTPI_Interrogation" load_steps=9 format=3 uid="uid://b1eixrm5meq37"]
+
+[ext_resource type="Resource" uid="uid://dgpfopxmentbv" path="res://Resources/Characters/R_Char_Ollie.tres" id="1_8m11i"]
+[ext_resource type="Resource" uid="uid://c0kydrlw1dift" path="res://Ink/Interrogations/Ollie/Ink_Interrogation_Ollie_0_Introduction.ink" id="2_tjbyv"]
+[ext_resource type="Resource" uid="uid://clwdy1kj8sl0m" path="res://Ink/Interrogations/Ollie/Ink_Interrogation_Ollie_1_PtR_Tension.ink" id="3_i1f1l"]
+[ext_resource type="Resource" uid="uid://bpkvccnfrrkqt" path="res://Ink/Interrogations/Ollie/Ink_Interrogation_Ollie_2_PtR_Calm.ink" id="4_px5gt"]
+[ext_resource type="Resource" uid="uid://sbgrvii0fmuh" path="res://Ink/Interrogations/Ollie/Ink_Interrogation_Ollie_3_Con_Tension.ink" id="5_6hg6s"]
+[ext_resource type="Resource" uid="uid://bby8u38fovhx5" path="res://Ink/Interrogations/Ollie/Ink_Interrogation_Ollie_4_Con_Perfect.ink" id="6_bwifn"]
+[ext_resource type="Resource" uid="uid://820aesrdrou7" path="res://Ink/Interrogations/Ollie/Ink_Interrogation_Ollie_5_Con_Calm.ink" id="7_qo8fa"]
+[ext_resource type="Script" path="res://Code/Resources/RTPI_Interrogation.cs" id="8_6rjbg"]
+
+[resource]
+script = ExtResource("8_6rjbg")
+Character = ExtResource("1_8m11i")
+Stories = Array[Object]([ExtResource("2_tjbyv"), ExtResource("3_i1f1l"), ExtResource("4_px5gt"), ExtResource("5_6hg6s"), ExtResource("6_bwifn"), ExtResource("7_qo8fa")])
+TensionLevelStart = 3

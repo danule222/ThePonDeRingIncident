@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://crxsf0ptvvxl"
-path="res://.godot/imported/kureijiOllie.fbx-a34f5a6fb6c7c30a33161f98070694e2.scn"
+valid=false
 
 [deps]
 
 source_file="res://Art/Characters/Ollie/kureijiOllie.fbx"
-dest_files=["res://.godot/imported/kureijiOllie.fbx-a34f5a6fb6c7c30a33161f98070694e2.scn"]
 
 [params]
 

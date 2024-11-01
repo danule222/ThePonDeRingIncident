@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="RTPI_Interrogation" load_steps=9 format=3 uid="uid://d40i01lm6dob"]
 
 [ext_resource type="Resource" uid="uid://s3oo0qfg4v71" path="res://Resources/Characters/R_Char_Gura.tres" id="1_7vaqr"]
-[ext_resource type="Resource" uid="uid://l6wrq1a2ea0m" path="res://Ink/Interrogations/Baelz/Ink_Interrogation_Baelz_0_Introduction.ink" id="2_qitq0"]
-[ext_resource type="Resource" uid="uid://cscb062on4gia" path="res://Ink/Interrogations/Baelz/Ink_Interrogation_Baelz_1_PtR_Tension.ink" id="3_1pf1y"]
-[ext_resource type="Resource" uid="uid://cf6hu86653d00" path="res://Ink/Interrogations/Baelz/Ink_Interrogation_Baelz_2_PtR_Calm.ink" id="4_smy6y"]
-[ext_resource type="Resource" uid="uid://j1a5yq7duw8n" path="res://Ink/Interrogations/Baelz/Ink_Interrogation_Baelz_3_Con_Tension.ink" id="5_qkti6"]
-[ext_resource type="Resource" uid="uid://bek2wlwtg8f73" path="res://Ink/Interrogations/Baelz/Ink_Interrogation_Baelz_4_Con_Perfect.ink" id="6_h2bdg"]
-[ext_resource type="Resource" uid="uid://cpi0xqssohv5r" path="res://Ink/Interrogations/Baelz/Ink_Interrogation_Baelz_5_Con_Calm.ink" id="7_xjk1b"]
+[ext_resource type="Resource" uid="uid://cwc66b1ya5e7x" path="res://Ink/Interrogations/Gura/Ink_Interrogation_Gura_0_Introduction.ink" id="2_3degc"]
+[ext_resource type="Resource" uid="uid://dn60xsr2epb5b" path="res://Ink/Interrogations/Gura/Ink_Interrogation_Gura_1_Tension.ink" id="3_jc71r"]
+[ext_resource type="Resource" uid="uid://cmk30k1e1rbh6" path="res://Ink/Interrogations/Gura/Ink_Interrogation_Gura_2_Calm.ink" id="4_l45ss"]
+[ext_resource type="Resource" uid="uid://cuphrc6sqsa4a" path="res://Ink/Interrogations/Gura/Ink_Interrogation_Gura_3_Con_Tension.ink" id="5_iny0p"]
+[ext_resource type="Resource" uid="uid://bocsgigtol8fu" path="res://Ink/Interrogations/Gura/Ink_Interrogation_Gura_4_Con_Perfect.ink" id="6_1mnat"]
+[ext_resource type="Resource" uid="uid://cqp1i7ss6l0fb" path="res://Ink/Interrogations/Gura/Ink_Interrogation_Gura_5_Con_Calm.ink" id="7_41dqb"]
 [ext_resource type="Script" path="res://Code/Resources/RTPI_Interrogation.cs" id="8_0b4yh"]
 
 [resource]
 script = ExtResource("8_0b4yh")
 Character = ExtResource("1_7vaqr")
-Stories = Array[Object]([ExtResource("2_qitq0"), ExtResource("3_1pf1y"), ExtResource("4_smy6y"), ExtResource("5_qkti6"), ExtResource("6_h2bdg"), ExtResource("7_xjk1b")])
+Stories = Array[Object]([ExtResource("2_3degc"), ExtResource("3_jc71r"), ExtResource("4_l45ss"), ExtResource("5_iny0p"), ExtResource("6_1mnat"), ExtResource("7_41dqb")])
 TensionLevelStart = 3

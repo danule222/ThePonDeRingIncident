@@ -3,11 +3,12 @@
 importer="ink"
 type="Resource"
 uid="uid://dthcc5l0dox52"
-valid=false
+path="res://.godot/imported/Ink_Interrogation_Korone_0_Introduction.ink-5b5ee936b7cfc583968cb148238c58ff.res"
 
 [deps]
 
 source_file="res://Ink/Interrogations/Korone/Ink_Interrogation_Korone_0_Introduction.ink"
+dest_files=["res://.godot/imported/Ink_Interrogation_Korone_0_Introduction.ink-5b5ee936b7cfc583968cb148238c58ff.res"]
 
 [params]
 

@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cxq66bkon7bqp"
-path="res://.godot/imported/InugamiKorone.fbx-9df88eadefd58bdd3f6af9419a1ed933.scn"
+valid=false
 
 [deps]
 
 source_file="res://Art/Characters/Korone/InugamiKorone.fbx"
-dest_files=["res://.godot/imported/InugamiKorone.fbx-9df88eadefd58bdd3f6af9419a1ed933.scn"]
 
 [params]
 

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="RTPI_Interrogation" load_steps=9 format=3 uid="uid://dvljemtyy742s"]
+
+[ext_resource type="Resource" uid="uid://bakuc3njkpg4a" path="res://Resources/Characters/R_Char_Korone.tres" id="1_q3why"]
+[ext_resource type="Resource" uid="uid://dthcc5l0dox52" path="res://Ink/Interrogations/Korone/Ink_Interrogation_Korone_0_Introduction.ink" id="2_c1awe"]
+[ext_resource type="Resource" uid="uid://em1v4okqw7nh" path="res://Ink/Interrogations/Korone/Ink_Interrogation_Korone_1_PtR_Tension.ink" id="3_xr28k"]
+[ext_resource type="Resource" uid="uid://rqlmc4vyq3ia" path="res://Ink/Interrogations/Korone/Ink_Interrogation_Korone_2_PtR_Calm.ink" id="4_21lbc"]
+[ext_resource type="Resource" uid="uid://bfjvrxdrd7pcp" path="res://Ink/Interrogations/Korone/Ink_Interrogation_Korone_3_Con_Tension.ink" id="5_xo8vv"]
+[ext_resource type="Resource" uid="uid://boqlu8ndsc6ls" path="res://Ink/Interrogations/Korone/Ink_Interrogation_Korone_4_Con_Perfect.ink" id="6_xhmrv"]
+[ext_resource type="Resource" uid="uid://cwyar3nidyn82" path="res://Ink/Interrogations/Korone/Ink_Interrogation_Korone_5_Con_Calm.ink" id="7_12ud5"]
+[ext_resource type="Script" path="res://Code/Resources/RTPI_Interrogation.cs" id="8_0aplu"]
+
+[resource]
+script = ExtResource("8_0aplu")
+Character = ExtResource("1_q3why")
+Stories = Array[Object]([ExtResource("2_c1awe"), ExtResource("3_xr28k"), ExtResource("4_21lbc"), ExtResource("5_xo8vv"), ExtResource("6_xhmrv"), ExtResource("7_12ud5")])
+TensionLevelStart = 3

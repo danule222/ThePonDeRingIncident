@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Text.RegularExpressions;
 using Godot;
 using Godot.Collections;
@@ -8,6 +9,9 @@ public partial class CTPI_InterrogationController : Control
 {
 	[Export]
 	private Array<RTPI_Interrogation> Interrogations;
+	[Export(PropertyHint.NodeType)]
+	private Dictionary<RTPI_Character, NodePath> CharacterMesh;
+	private Dictionary<ECharacter, Node3D> CharacterNodes;
 	private CTPI_Dialogue UI_Dialogue;
 	private InkStory Story;
 	private bool Selecting;
@@ -30,6 +34,16 @@ public partial class CTPI_InterrogationController : Control
 		TensionLevel = Interrogations[CurrentInterrogation].TensionLevelStart;
 		Selecting = false;
 		End = false;
+
+		CharacterNodes = new Dictionary<ECharacter, Node3D>();
+		for (int i = 0; i < CharacterMesh.Count; i++)
+		{
+			CharacterNodes.Add(
+				CharacterMesh.Keys.ElementAt(i).Name,
+				GetNode<Node3D>(CharacterMesh.Values.ElementAt(i)));
+		}
+
+		CharacterNodes[Interrogations[CurrentInterrogation].Character.Name].Visible = true;
 
 		Continue();
 	}
@@ -115,6 +129,8 @@ public partial class CTPI_InterrogationController : Control
 
 	private void ChangeInterrogation()
 	{
+		CharacterNodes[Interrogations[CurrentInterrogation].Character.Name].Visible = false;
+
 		CurrentInterrogation++;
 		if (CurrentInterrogation >= Interrogations.Count)
 		{
@@ -127,6 +143,8 @@ public partial class CTPI_InterrogationController : Control
 		Story = Interrogations[CurrentInterrogation].Stories[CurrentStory];
 		Story.ResetState(); // Just in case is a repeated story
 		TensionLevel = Interrogations[CurrentInterrogation].TensionLevelStart;
+
+		CharacterNodes[Interrogations[CurrentInterrogation].Character.Name].Visible = true;
 
 		Continue();
 	}

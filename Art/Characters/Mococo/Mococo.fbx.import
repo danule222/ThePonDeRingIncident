@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b62qvxvrgso8k"
-path="res://.godot/imported/Mococo.fbx-57199d3dffd9673d1ab167826147e1a2.scn"
+valid=false
 
 [deps]
 
 source_file="res://Art/Characters/Mococo/Mococo.fbx"
-dest_files=["res://.godot/imported/Mococo.fbx-57199d3dffd9673d1ab167826147e1a2.scn"]
 
 [params]
 

@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dn6j035bdwfh8"
-path="res://.godot/imported/Hakos Baelz.fbx-2b48a2a69964736c67a0f219f9342eff.scn"
+valid=false
 
 [deps]
 
 source_file="res://Art/Characters/Baelz/Hakos Baelz.fbx"
-dest_files=["res://.godot/imported/Hakos Baelz.fbx-2b48a2a69964736c67a0f219f9342eff.scn"]
 
 [params]
 

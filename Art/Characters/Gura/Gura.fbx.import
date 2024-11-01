@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://0a62lalgktyb"
-path="res://.godot/imported/Gura.fbx-abbd691e30a1791f99158758aa879590.scn"
+valid=false
 
 [deps]
 
 source_file="res://Art/Characters/Gura/Gura.fbx"
-dest_files=["res://.godot/imported/Gura.fbx-abbd691e30a1791f99158758aa879590.scn"]
 
 [params]
 
