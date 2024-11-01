@@ -24,6 +24,11 @@ public partial class CTPI_Dialogue : Control
 	[Signal] public delegate void ContinueEventHandler();
 	[Signal] public delegate void AddTensionEventHandler(int tension);
 
+	private Timer NewCharacter;
+	public bool IsSpeaking { get; private set; }
+	private string Text;
+	private int CurrentCharacter;
+
 	public override void _Ready()
 	{
 		CON_FwwPos = GetNode<Control>("CON_FwwPos");
@@ -39,15 +44,22 @@ public partial class CTPI_Dialogue : Control
 		VBX_FwwOptions = CON_FwwSelectionBox.GetNode<VBoxContainer>("Panel/MarginContainer/VBX_Options");
 		CON_MccSelectionBox = GetNode<Control>("CON_MccSelectionBox");
 		VBX_MccOptions = CON_MccSelectionBox.GetNode<VBoxContainer>("Panel/MarginContainer/VBX_Options");
+
+		NewCharacter = GetNode<Timer>("NewCharacter");
+		NewCharacter.Timeout += TypeWriteEffect;
+		RTL_Text.Text = "";
 	}
 
 	public override void _Process(double delta)
 	{
-
 	}
 
 	public void Speak(ECharacter character, string text)
 	{
+		NewCharacter.Stop();
+		IsSpeaking = true;
+		CurrentCharacter = 0;
+
 		// Visibility
 		CON_DialogueBox.Visible = true;
 
@@ -71,7 +83,30 @@ public partial class CTPI_Dialogue : Control
 				break;
 		}
 
-		RTL_Text.Text = text; // TODO: Animation
+		Text = text;
+		RTL_Text.Text = "";
+		NewCharacter.Start();
+	}
+
+	public void Skip()
+	{
+		IsSpeaking = false;
+		NewCharacter.Stop();
+		RTL_Text.Text = Text;
+	}
+
+	private void TypeWriteEffect()
+	{
+		if (CurrentCharacter + 1 < Text.Length)
+		{
+			RTL_Text.Text += Text[CurrentCharacter];
+			CurrentCharacter++;
+		}
+		else
+		{
+			IsSpeaking = false;
+			NewCharacter.Stop();
+		}
 	}
 
 	public void AddOptions(InkStory story)

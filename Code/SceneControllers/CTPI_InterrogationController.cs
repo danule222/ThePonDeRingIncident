@@ -56,6 +56,12 @@ public partial class CTPI_InterrogationController : Control
 
 	private void Continue()
 	{
+		if (UI_Dialogue.IsSpeaking)
+		{
+			UI_Dialogue.Skip();
+			return;
+		}
+
 		// Print text
 		if (Story.CanContinue)
 		{

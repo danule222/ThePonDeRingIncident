@@ -227,3 +227,6 @@ theme_override_constants/margin_bottom = 15
 [node name="VBX_Options" type="VBoxContainer" parent="CON_MccSelectionBox/Panel/MarginContainer"]
 layout_mode = 2
 alignment = 1
+
+[node name="NewCharacter" type="Timer" parent="."]
+wait_time = 0.05
