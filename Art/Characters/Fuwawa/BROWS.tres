@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dbfo20a7xbt65"]
+
+[ext_resource type="Texture2D" uid="uid://vtdhmu5uqlf8" path="res://Art/Characters/Fuwawa/fuwawa_abyssgard_-_hololive_-advent-_6.png" id="1_orqyp"]
+
+[resource]
+resource_name = "BROWS"
+cull_mode = 2
+diffuse_mode = 3
+albedo_texture = ExtResource("1_orqyp")

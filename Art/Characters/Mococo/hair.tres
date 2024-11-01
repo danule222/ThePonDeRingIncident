@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dqckmsojuhn1v"]
+
+[ext_resource type="Texture2D" uid="uid://dpgro17gkwiqp" path="res://Art/Characters/Mococo/textures/Tex_Mococo_Hair.png" id="1_busr8"]
+
+[resource]
+resource_name = "hair"
+transparency = 4
+vertex_color_use_as_albedo = true
+albedo_color = Color(1, 1, 1, 1)
+albedo_texture = ExtResource("1_busr8")
+emission_enabled = true

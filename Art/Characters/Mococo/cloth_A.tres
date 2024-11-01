@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bwgr1dxpfptfu"]
+
+[ext_resource type="Texture2D" uid="uid://brkybtw2d47o2" path="res://Art/Characters/Mococo/textures/Tex_Mococo_Cloth_A.png" id="1_6ty6p"]
+
+[resource]
+resource_name = "cloth_A"
+vertex_color_use_as_albedo = true
+albedo_color = Color(1, 1, 1, 1)
+albedo_texture = ExtResource("1_6ty6p")
+emission_enabled = true

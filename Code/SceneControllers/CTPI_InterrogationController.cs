@@ -15,12 +15,6 @@ public partial class CTPI_InterrogationController : Control
 	private int TensionLevel;
 	private int CurrentStory;
 	private int CurrentInterrogation;
-	private MeshInstance3D MSH_Sus;
-	private MeshInstance3D MSH_Fuwawa;
-	private MeshInstance3D MSH_Mococo;
-	private StandardMaterial3D MAT_Sus;
-	private StandardMaterial3D MAT_Fuwawa;
-	private StandardMaterial3D MAT_Mococo;
 
 	public override void _Ready()
 	{
@@ -29,18 +23,6 @@ public partial class CTPI_InterrogationController : Control
 		UI_Dialogue = GetNode<CTPI_Dialogue>("UI_Dialogue");
 		UI_Dialogue.Continue += Continue;
 		UI_Dialogue.AddTension += AddTension;
-
-		MSH_Sus = GetNode<MeshInstance3D>("World/MSH_Sus");
-		MSH_Fuwawa = GetNode<MeshInstance3D>("World/MSH_Fuwawa");
-		MSH_Mococo = GetNode<MeshInstance3D>("World/MSH_Mococo");
-
-		StandardMaterial3D MAT_Sus = MSH_Sus.GetSurfaceOverrideMaterial(0) as StandardMaterial3D;
-		StandardMaterial3D MAT_Fuwawa = MSH_Fuwawa.GetSurfaceOverrideMaterial(0) as StandardMaterial3D;
-		StandardMaterial3D MAT_Mococo = MSH_Mococo.GetSurfaceOverrideMaterial(0) as StandardMaterial3D;
-		// Set textures
-		MAT_Sus.AlbedoTexture = Interrogations[0].Character.Emotions[EEmotion.Neutral];
-		MAT_Fuwawa.AlbedoTexture = Interrogations[0].Character.Emotions[EEmotion.Neutral];
-		MAT_Mococo.AlbedoTexture = Interrogations[0].Character.Emotions[EEmotion.Neutral];
 
 		CurrentStory = 0;
 		CurrentInterrogation = 0;

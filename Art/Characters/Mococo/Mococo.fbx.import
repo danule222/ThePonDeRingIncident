@@ -1,0 +1,100 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://b62qvxvrgso8k"
+path="res://.godot/imported/Mococo.fbx-57199d3dffd9673d1ab167826147e1a2.scn"
+
+[deps]
+
+source_file="res://Art/Characters/Mococo/Mococo.fbx"
+dest_files=["res://.godot/imported/Mococo.fbx-57199d3dffd9673d1ab167826147e1a2.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=true
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={
+"materials": {
+"blue": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Mococo2/blue.tres"
+},
+"body": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Mococo2/body.tres"
+},
+"brush": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Mococo2/brush.tres"
+},
+"claw": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Mococo2/claw.tres"
+},
+"cloth_A": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Mococo2/cloth_A.tres"
+},
+"cloth_B": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Mococo2/cloth_B.tres"
+},
+"emote": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Mococo2/emote.tres"
+},
+"hair": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Mococo2/hair.tres"
+},
+"hair_front": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Mococo2/hair_front.tres"
+},
+"head": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Mococo2/head.tres"
+},
+"head_2": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Mococo2/head_2.tres"
+},
+"headphon": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Mococo2/headphon.tres"
+},
+"jacket": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Mococo2/jacket.tres"
+},
+"material_0": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Mococo2/material_0.tres"
+},
+"metal": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Mococo2/metal.tres"
+}
+}
+}
+fbx/importer=0
+fbx/allow_geometry_helper_nodes=false
+fbx/embedded_image_handling=1

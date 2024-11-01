@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://doq16kxac2b7v"]
+
+[ext_resource type="Texture2D" uid="uid://cn5ovb6166jq4" path="res://Art/Characters/Fuwawa/fuwawa_abyssgard_-_hololive_-advent-_13.png" id="1_xavdk"]
+
+[resource]
+resource_name = "BELT_ARM_1.001"
+cull_mode = 2
+diffuse_mode = 3
+albedo_texture = ExtResource("1_xavdk")

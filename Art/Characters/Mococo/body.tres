@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cys5an1s6sepm"]
+
+[ext_resource type="Texture2D" uid="uid://brg3frdoe7uuo" path="res://Art/Characters/Mococo/textures/Tex_Mococo_Body.png" id="1_666lp"]
+
+[resource]
+resource_name = "body"
+vertex_color_use_as_albedo = true
+albedo_color = Color(1, 1, 1, 1)
+albedo_texture = ExtResource("1_666lp")
+emission_enabled = true

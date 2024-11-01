@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bh4laljr4u7lm"]
+
+[ext_resource type="Texture2D" uid="uid://ckf4t5o0m4n63" path="res://Art/Characters/Fuwawa/fuwawa_abyssgard_-_hololive_-advent-_7.png" id="1_1vvc4"]
+
+[resource]
+resource_name = "TEETH_TOUNG"
+cull_mode = 2
+diffuse_mode = 3
+albedo_texture = ExtResource("1_1vvc4")

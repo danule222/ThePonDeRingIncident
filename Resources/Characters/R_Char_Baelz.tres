@@ -1,6 +1,5 @@
-[gd_resource type="Resource" script_class="RTPI_Character" load_steps=5 format=3 uid="uid://cmh5nmndt558o"]
+[gd_resource type="Resource" script_class="RTPI_Character" load_steps=4 format=3 uid="uid://cmh5nmndt558o"]
 
-[ext_resource type="Texture2D" uid="uid://dogrmslac3pah" path="res://Art/Test/T_Gura_Test_Portrait.png" id="1_py5ma"]
 [ext_resource type="Texture2D" uid="uid://pkv3jcip1sp0" path="res://Art/Test/T_TestGura.png" id="1_sh252"]
 [ext_resource type="Texture2D" uid="uid://e6h3d7m6p0aw" path="res://Art/Test/T_TestGura2.png" id="2_j6laq"]
 [ext_resource type="Script" path="res://Code/Resources/RTPI_Character.cs" id="3_m26u8"]
@@ -10,7 +9,7 @@ script = ExtResource("3_m26u8")
 Name = 4
 Portrait = ExtResource("1_sh252")
 Emotions = {
-0: ExtResource("1_py5ma"),
+0: null,
 1: ExtResource("2_j6laq"),
 2: null,
 3: null

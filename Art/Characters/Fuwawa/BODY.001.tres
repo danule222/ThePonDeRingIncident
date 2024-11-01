@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cvfvo1a7p4k1"]
+
+[ext_resource type="Texture2D" uid="uid://djcmxa8qs0twi" path="res://Art/Characters/Fuwawa/fuwawa_abyssgard_-_hololive_-advent-_3.png" id="1_aci0c"]
+
+[resource]
+resource_name = "BODY.001"
+cull_mode = 2
+diffuse_mode = 3
+albedo_texture = ExtResource("1_aci0c")

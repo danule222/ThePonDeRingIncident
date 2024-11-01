@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bmuoba670qkt7"]
+
+[ext_resource type="Texture2D" uid="uid://b03h1lf4gwfa2" path="res://Art/Characters/Fuwawa/fuwawa_abyssgard_-_hololive_-advent-_0.png" id="1_ej8ua"]
+
+[resource]
+resource_name = "BELT_PANTS"
+cull_mode = 2
+diffuse_mode = 3
+albedo_texture = ExtResource("1_ej8ua")

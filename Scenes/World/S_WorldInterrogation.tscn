@@ -4489,14 +4489,6 @@ shadow_enabled = true
 spot_range = 8.83704
 spot_angle = 56.13
 
-[node name="SpotLight3D17" type="SpotLight3D" parent="7300b5c5ebe140e7b8d044755ef8c189_fbx/RootNode/Lights"]
-transform = Transform3D(100, 7.54979e-06, 3.30012e-13, 0, -4.37114e-06, 100, 7.54979e-06, -100, -4.37114e-06, 906.513, -2.0596, 307.135)
-light_energy = 1.777
-light_bake_mode = 1
-shadow_enabled = true
-spot_range = 8.83704
-spot_angle = 56.13
-
 [node name="SpotLight3D18" type="SpotLight3D" parent="7300b5c5ebe140e7b8d044755ef8c189_fbx/RootNode/Lights"]
 transform = Transform3D(1, 7.54979e-08, 3.30012e-15, 0, -4.37114e-08, 1, 7.54979e-08, -1, -4.37114e-08, 930.875, -2.0596, 14.7949)
 visible = false

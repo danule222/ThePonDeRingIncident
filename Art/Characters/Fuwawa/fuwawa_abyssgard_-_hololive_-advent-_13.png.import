@@ -1,0 +1,37 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://cn5ovb6166jq4"
+path="res://.godot/imported/fuwawa_abyssgard_-_hololive_-advent-_13.png-540d280669d0b3760752ad7edfdb5b82.ctex"
+metadata={
+"vram_texture": false
+}
+generator_parameters={
+"md5": "416b2a276bb7a7a0d8d9fc3e759a39bf"
+}
+
+[deps]
+
+source_file="res://Art/Characters/Fuwawa/fuwawa_abyssgard_-_hololive_-advent-_13.png"
+dest_files=["res://.godot/imported/fuwawa_abyssgard_-_hololive_-advent-_13.png-540d280669d0b3760752ad7edfdb5b82.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=true
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=true
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

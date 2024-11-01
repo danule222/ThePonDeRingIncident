@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bw0abxvl1ial5"]
+
+[ext_resource type="Texture2D" uid="uid://cm3c1kowl2hxe" path="res://Art/Characters/Fuwawa/fuwawa_abyssgard_-_hololive_-advent-_17.png" id="1_gi1tl"]
+
+[resource]
+resource_name = "EARS_FUR"
+cull_mode = 2
+diffuse_mode = 3
+albedo_texture = ExtResource("1_gi1tl")

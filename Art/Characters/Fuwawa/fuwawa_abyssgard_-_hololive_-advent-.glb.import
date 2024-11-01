@@ -1,0 +1,119 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://daclandct05sj"
+path="res://.godot/imported/fuwawa_abyssgard_-_hololive_-advent-.glb-0de0be8fde0d5e93cf67b212a54cfebe.scn"
+
+[deps]
+
+source_file="res://Art/Characters/Fuwawa/fuwawa_abyssgard_-_hololive_-advent-.glb"
+dest_files=["res://.godot/imported/fuwawa_abyssgard_-_hololive_-advent-.glb-0de0be8fde0d5e93cf67b212a54cfebe.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=3
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={
+"materials": {
+"BELT_ARM_1.001": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Fuwawa/BELT_ARM_1.001.tres"
+},
+"BELT_PANTS": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Fuwawa/BELT_PANTS.tres"
+},
+"BEZEL": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Fuwawa/BEZEL.tres"
+},
+"BODY.001": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Fuwawa/BODY.001.tres"
+},
+"BOOTS": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Fuwawa/BOOTS.tres"
+},
+"BROWS": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Fuwawa/BROWS.tres"
+},
+"CHOCKER": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Fuwawa/CHOCKER.tres"
+},
+"CLOWS": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Fuwawa/CLOWS.tres"
+},
+"DRESS.001": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Fuwawa/DRESS.001.tres"
+},
+"EARS_FUR": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Fuwawa/EARS_FUR.tres"
+},
+"EYES": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Fuwawa/EYES.tres"
+},
+"HAIR": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Fuwawa/HAIR.tres"
+},
+"PATCH_CROSS": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Fuwawa/PATCH_CROSS.tres"
+},
+"RUFFLES": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Fuwawa/RUFFLES.tres"
+},
+"RUFFLES.001": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Fuwawa/RUFFLES.001.tres"
+},
+"TAIL": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Fuwawa/TAIL.tres"
+},
+"TEETH_TOUNG": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Fuwawa/TEETH_TOUNG.tres"
+},
+"TOP.001": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Fuwawa/TOP.001.tres"
+},
+"TOP_FUR.001": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Fuwawa/TOP_FUR.001.tres"
+},
+"TOP_STRING": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Fuwawa/TOP_STRING.tres"
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=1

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://rrjc88c8bdmg"]
+
+[ext_resource type="Texture2D" uid="uid://b67n6pw1oo4sn" path="res://Art/Characters/Fuwawa/fuwawa_abyssgard_-_hololive_-advent-_14.png" id="1_n1r8c"]
+
+[resource]
+resource_name = "CLOWS"
+cull_mode = 2
+diffuse_mode = 3
+albedo_texture = ExtResource("1_n1r8c")
