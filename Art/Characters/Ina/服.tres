@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c31kvdrviim7y"]
+
+[ext_resource type="Texture2D" uid="uid://cd6277bpb8rkw" path="res://Art/Characters/Ina/clothv2.png" id="1_7tabf"]
+
+[resource]
+resource_name = "服"
+albedo_texture = ExtResource("1_7tabf")

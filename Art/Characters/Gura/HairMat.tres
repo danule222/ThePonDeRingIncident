@@ -1,9 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cs1ed63yokaft"]
-
-[ext_resource type="Texture2D" uid="uid://blht0kapn4y81" path="res://Art/Characters/Gura/gawr_gura_-_casual_outfit_2.png" id="1_u4nbi"]
-
-[resource]
-resource_name = "HairMat"
-cull_mode = 2
-diffuse_mode = 3
-albedo_texture = ExtResource("1_u4nbi")

@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dc71uql8570ng"]
+
+[ext_resource type="Texture2D" uid="uid://cu67yhuyohudf" path="res://Art/Characters/Ina/facev2.png" id="1_mk8j2"]
+
+[resource]
+resource_name = "瞳"
+albedo_texture = ExtResource("1_mk8j2")

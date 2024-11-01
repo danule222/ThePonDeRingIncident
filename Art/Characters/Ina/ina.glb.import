@@ -1,0 +1,139 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://di5677d2ksqrp"
+path="res://.godot/imported/ina.glb-be8f20fbafaf82533534a222dbfc7f1c.scn"
+
+[deps]
+
+source_file="res://Art/Characters/Ina/ina.glb"
+dest_files=["res://.godot/imported/ina.glb-be8f20fbafaf82533534a222dbfc7f1c.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={
+"materials": {
+"EX": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Ina/EX.tres"
+},
+"ひも": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Ina/ひも.tres"
+},
+"まつげ": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Ina/まつげ.tres"
+},
+"まゆ": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Ina/まゆ.tres"
+},
+"カチューシャ": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Ina/カチューシャ.tres"
+},
+"リング": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Ina/リング.tres"
+},
+"体": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Ina/体.tres"
+},
+"前髪": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Ina/前髪.tres"
+},
+"口内": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Ina/口内.tres"
+},
+"後髪": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Ina/後髪.tres"
+},
+"手袋": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Ina/手袋.tres"
+},
+"服": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Ina/服.tres"
+},
+"服橙": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Ina/服橙.tres"
+},
+"服白": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Ina/服白.tres"
+},
+"服紫": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Ina/服紫.tres"
+},
+"横髪": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Ina/横髪.tres"
+},
+"横髪.001": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Ina/横髪.001.tres"
+},
+"歯": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Ina/歯.tres"
+},
+"白目": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Ina/白目.tres"
+},
+"瞳": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Ina/瞳.tres"
+},
+"羽": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Ina/羽.tres"
+},
+"靴": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Ina/靴.tres"
+},
+"靴ひも": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Ina/靴ひも.tres"
+},
+"顔": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Ina/顔.tres"
+},
+"顔線なし": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Ina/顔線なし.tres"
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=1

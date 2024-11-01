@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://djq5w1so8x4wa"]
+
+[ext_resource type="Texture2D" uid="uid://cu67yhuyohudf" path="res://Art/Characters/Ina/facev2.png" id="1_txb4a"]
+
+[resource]
+resource_name = "歯"
+albedo_texture = ExtResource("1_txb4a")

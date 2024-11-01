@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bswr8x2xiuhn0"]
+
+[ext_resource type="Texture2D" uid="uid://765h1p38s73e" path="res://Art/Characters/Ina/skinv2.png" id="1_ikldx"]
+
+[resource]
+resource_name = "体"
+albedo_texture = ExtResource("1_ikldx")

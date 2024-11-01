@@ -1,9 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bhfuwd6roqnhe"]
-
-[ext_resource type="Texture2D" uid="uid://khymjmcsixqc" path="res://Art/Characters/Gura/gawr_gura_-_casual_outfit_0.png" id="1_3w6a1"]
-
-[resource]
-resource_name = "BagMat"
-cull_mode = 2
-diffuse_mode = 3
-albedo_texture = ExtResource("1_3w6a1")

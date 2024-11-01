@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://d3r585gih1fmo"]
+
+[ext_resource type="Texture2D" uid="uid://badha2hl6ptlh" path="res://Art/Characters/Korone/£·É_é▒éÙé╦üQæ╠.tga" id="1_5cwq5"]
+
+[resource]
+resource_name = "material_5"
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_5cwq5")
+emission_enabled = true

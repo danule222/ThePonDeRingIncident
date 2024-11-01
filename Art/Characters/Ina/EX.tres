@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cyhn0asljajnu"]
+
+[ext_resource type="Texture2D" uid="uid://uhf576gchpda" path="res://Art/Characters/Ina/EXv2.png" id="1_j6gvb"]
+
+[resource]
+resource_name = "EX"
+transparency = 1
+albedo_texture = ExtResource("1_j6gvb")

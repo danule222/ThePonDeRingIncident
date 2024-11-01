@@ -1,0 +1,220 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cxq66bkon7bqp"
+path="res://.godot/imported/InugamiKorone.fbx-9df88eadefd58bdd3f6af9419a1ed933.scn"
+
+[deps]
+
+source_file="res://Art/Characters/Korone/InugamiKorone.fbx"
+dest_files=["res://.godot/imported/InugamiKorone.fbx-9df88eadefd58bdd3f6af9419a1ed933.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=true
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={
+"materials": {
+"material_0": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Korone/material_0.tres"
+},
+"material_1": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Korone/material_1.tres"
+},
+"material_10": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Korone/material_10.tres"
+},
+"material_11": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Korone/material_11.tres"
+},
+"material_12": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Korone/material_12.tres"
+},
+"material_13": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Korone/material_13.tres"
+},
+"material_14": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Korone/material_14.tres"
+},
+"material_15": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Korone/material_15.tres"
+},
+"material_16": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Korone/material_16.tres"
+},
+"material_17": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Korone/material_17.tres"
+},
+"material_18": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Korone/material_18.tres"
+},
+"material_19": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Korone/material_19.tres"
+},
+"material_2": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Korone/material_2.tres"
+},
+"material_20": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Korone/material_20.tres"
+},
+"material_21": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Korone/material_21.tres"
+},
+"material_22": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Korone/material_22.tres"
+},
+"material_23": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Korone/material_23.tres"
+},
+"material_24": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Korone/material_24.tres"
+},
+"material_25": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Korone/material_25.tres"
+},
+"material_26": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Korone/material_26.tres"
+},
+"material_27": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Korone/material_27.tres"
+},
+"material_28": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Korone/material_28.tres"
+},
+"material_29": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Korone/material_29.tres"
+},
+"material_3": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Korone/material_3.tres"
+},
+"material_30": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Korone/material_30.tres"
+},
+"material_31": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Korone/material_31.tres"
+},
+"material_32": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Korone/material_32.tres"
+},
+"material_33": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Korone/material_33.tres"
+},
+"material_34": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Korone/material_34.tres"
+},
+"material_35": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Korone/material_35.tres"
+},
+"material_36": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Korone/material_36.tres"
+},
+"material_37": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Korone/material_37.tres"
+},
+"material_38": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Korone/material_38.tres"
+},
+"material_39": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Korone/material_39.tres"
+},
+"material_4": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Korone/material_4.tres"
+},
+"material_40": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Korone/material_40.tres"
+},
+"material_41": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Korone/material_41.tres"
+},
+"material_42": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Korone/material_42.tres"
+},
+"material_43": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Korone/material_43.tres"
+},
+"material_44": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Korone/material_44.tres"
+},
+"material_5": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Korone/material_5.tres"
+},
+"material_6": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Korone/material_6.tres"
+},
+"material_7": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Korone/material_7.tres"
+},
+"material_8": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Korone/material_8.tres"
+},
+"material_9": {
+"use_external/enabled": true,
+"use_external/path": "res://Art/Characters/Korone/material_9.tres"
+}
+}
+}
+fbx/importer=0
+fbx/allow_geometry_helper_nodes=false
+fbx/embedded_image_handling=1
