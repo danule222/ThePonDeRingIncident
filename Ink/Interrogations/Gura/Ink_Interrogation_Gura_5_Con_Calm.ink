@@ -6,3 +6,5 @@
 - <Gura:Neutral:0> Well...
 - <Gura:Happy:0> See you girls!
 - <FWMC:Happy:0> Bye bye Gura-senpai! BAU BAU!
+
+<Narrator:Neutral:0> Gura exits the room.

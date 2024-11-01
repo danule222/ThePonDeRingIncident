@@ -75,6 +75,9 @@ public partial class CTPI_InterrogationController : Control
 			text = text.Replace(rgx.Groups[0].Value + " ", "");
 
 			UI_Dialogue.Speak(character, text);
+
+			if (text.Contains("exits the room") || text.Contains("leaves the room"))
+				CharacterNodes[Interrogations[CurrentInterrogation].Character.Name].Visible = false;
 		}
 		// Choices
 		else if (Story.CurrentChoices.Count > 0 && !Selecting)

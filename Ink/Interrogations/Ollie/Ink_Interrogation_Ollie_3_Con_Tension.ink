@@ -4,4 +4,7 @@
 - <Ollie:Happy:0> See you girls!
 - <Ollie:Happy:0> Otsucrazy!
 - <FWMC:Happy:0> Otsucrazy!
+
+<Narrator:Neutral:0> Ollie leaves the room.
+
 ->END

@@ -30,14 +30,14 @@
 === 1_mococo_1 ===
 
 - <Ollie:Neutral:0> I can tell you for sure that it's not me.
-- <Ollie:Thiking:0> But, who could do something like this?
-- <Ollie:Thiking:0> Hmm...
-- <Ollie:Thiking:0> Someone that is a great fan of Mister Donut?
+- <Ollie:Thinking:0> But, who could do something like this?
+- <Ollie:Thinking:0> Hmm...
+- <Ollie:Thinking:0> Someone that is a great fan of Mister Donut?
 - <FWMC:Happy:0> US!
-- <Ollie:Thiking:0> And someone that love sweets?
+- <Ollie:Thinking:0> And someone that love sweets?
 - <FWMC:Happy:0> US!
-- <Ollie:Thiking:0> And someone that... loves gold?
-- <FWMC:Thiking:0> US?
+- <Ollie:Thinking:0> And someone that... loves gold?
+- <FWMC:Thinking:0> US?
 - <Ollie:Neutral:0> Yeah, I have no idea girls, I'm very sorry.
 - <FWMC:Happy:0> Don't worry Ollie-senpai! Thanks for your help! BAU BAU!
 ->END

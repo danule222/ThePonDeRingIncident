@@ -4,12 +4,12 @@
 - <Fuwawa:Sad:0> Gura-senpai was looking for Bloop.
 - <Mococo:Sad:0> We don't know if she hasn't found him yet.
 - <Ina:Neutral:0> What? Is Bloop lost or something?
-- <FWMC:Thiking:0> Don't you know?
-- <Fuwawa:Thiking:0> Gura-senpai told us before that she was looking for Bloop, that he's lost.
-- <Ina:Thiking:0> Hmm...
+- <FWMC:Thinking:0> Don't you know?
+- <Fuwawa:Thinking:0> Gura-senpai told us before that she was looking for Bloop, that he's lost.
+- <Ina:Thinking:0> Hmm...
 - <Ina:Neutral:0> That's weird.
 - <Ina:Neutral:0> She hasn't told anyone at Myth about it as far as I know.
-- <FWMC:Thiking:0> Weird...
+- <FWMC:Thinking:0> Weird...
 - <Mococo:Happy:0> That's a huge clue Ina-senpai! Thank you so much!
 - <Ina:Neutral:0> You're welcome!
 - <Ina:Sad:0> I hope I didn't put Gura into any trouble...

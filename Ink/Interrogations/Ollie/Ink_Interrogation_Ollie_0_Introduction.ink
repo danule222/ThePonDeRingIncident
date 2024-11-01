@@ -19,7 +19,7 @@
 - <Ollie:Happy:0> Oh! Interesting.
 - <Ollie:Thinking:0> I've seen it a couple of times in the office, but now that you mention it, something felt off today.
 - <Ollie:Neutral:0> Can't tell exactly what, but is like today the office feels "light".
-- <Mococo:Neutral:0> Haeh? The ambient you mean?\
+- <Mococo:Neutral:0> Haeh? The ambient you mean?
 - <Ollie:Neutral:0> Yeah exactly, something like that.
 - <Ollie:Neutral:0> Don't really know if it has something in common.
 - <FWMC:Thinking:0> Hmm...

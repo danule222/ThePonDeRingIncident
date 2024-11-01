@@ -4,3 +4,5 @@
 - <Mococo:Mad:0> Haeh! Not "little investigation"! This is important for us!
 - <Baelz:Happy:0> Yeah yeah, sorry about that. Welp, see you soon!
 - <FWMC:Happy:0> Bye bye Baelz-senpai! BAU BAU!
+- <Narrator:Neutral:0> Bae exits the room.
+->END

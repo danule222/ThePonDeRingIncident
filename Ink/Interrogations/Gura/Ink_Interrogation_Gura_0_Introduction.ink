@@ -24,7 +24,8 @@
 - <Gura:Neutral:0> And what is it?
 - <Mococo:Mad:0> Our beloved golden Pon de Ring!
 - <Gura:Neutral:0> The what?
-- <Fuwawa:Neutral:0> Our golden Pon de Ring statue. We decided to dip a Pon de Ring in gold as a keepsake because of the closure of the Mister Donut in Akihabara.
+- <Fuwawa:Neutral:0> Our golden Pon de Ring statue.
+- <Fuwawa:Neutral:0> We decided to dip a Pon de Ring in gold as a keepsake because of the closure of the Mister Donut in Akihabara.
 - <Gura:Neutral:0> Yeah, makes sense.
 ->2_question
 
@@ -33,7 +34,8 @@
 - <Gura:Alert:0> I am the culprit of what exactly?
 - <Mococo:Mad:0> Our golden Pon de Ring! It's gone now!
 - <Gura:Alert:0> Your what?
-- <Fuwawa:Neutral:0> Our golden Pon de Ring statue. We decided to dip a Pon de Ring in gold as a keepsake because of the closure of the Mister Donut in Akihabara.
+- <Fuwawa:Neutral:0> Our golden Pon de Ring statue.
+- <Fuwawa:Neutral:0> We decided to dip a Pon de Ring in gold as a keepsake because of the closure of the Mister Donut in Akihabara.
 - <Gura:Alert:0> And why am I a suspect?
 - <Fuwawa:Neutral:0> We're iterrogating everyone who has been in the office today.
 - <Gura:Neutral:0> OK, understood.

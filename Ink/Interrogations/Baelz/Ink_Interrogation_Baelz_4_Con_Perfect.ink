@@ -8,3 +8,6 @@
 
 - <Baelz:Laugh:0> Hahaha... maybe it's that. OK you two, hope you have luck with your investigation. Bye!
 - <FWMC:Happy:0> Bye bye Baelz-senpai! BAU BAU!
+
+- <Narrator:Neutral:0> Bae exits the room.
+->END

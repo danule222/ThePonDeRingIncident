@@ -4,6 +4,8 @@
 - <Gura:Neutral:0> Welp...
 - <Gura:Happy:0> See you next time!
 - <FWMC:Happy:0> Bye bye Gura-senpai! BAU BAU!
+
 <Narrator:Neutral:0> Gura exits the room.
+
 - <Fuwawa:Alert:0> Moco-chan, that was weird right?
 - <Mococo:Neutral:0> Yeah, that was actually weird.
