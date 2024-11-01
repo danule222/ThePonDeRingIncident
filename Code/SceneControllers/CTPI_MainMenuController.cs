@@ -12,6 +12,7 @@ public partial class CTPI_MainMenuController : Control
 
   // Credits
   private CTPI_Button BTN_Credits_Back;
+  private RichTextLabel RTL_Credits;
 
   public override void _Ready()
   {
@@ -25,6 +26,9 @@ public partial class CTPI_MainMenuController : Control
     PNL_Settings = GetNode<CTPI_Settings>("PNL_Settings");
     PNL_Credits = GetNode<Panel>("PNL_Credits");
     BTN_Credits_Back = PNL_Credits.GetNode<CTPI_Button>("HBoxContainer/BTN_Credits_Back");
+    RTL_Credits = PNL_Credits.GetNode<RichTextLabel>("RTL_Credits");
+
+    RTL_Credits.MetaClicked += OpenURL;
 
     PNL_Settings.ParentMenu = VBX_MainMenu;
 
@@ -41,6 +45,11 @@ public partial class CTPI_MainMenuController : Control
   public override void _Process(double delta)
   {
 
+  }
+
+  private void OpenURL(Variant url)
+  {
+    OS.ShellOpen((string)url);
   }
 
   private void PlayPressed()

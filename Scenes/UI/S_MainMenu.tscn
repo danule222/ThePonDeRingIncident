@@ -114,7 +114,7 @@ theme_override_fonts/font = ExtResource("4_vtx63")
 theme_override_font_sizes/font_size = 50
 text = "Credits"
 
-[node name="Label2" type="RichTextLabel" parent="PNL_Credits"]
+[node name="RTL_Credits" type="RichTextLabel" parent="PNL_Credits"]
 layout_mode = 0
 offset_left = 30.0
 offset_top = 88.0
@@ -122,7 +122,66 @@ offset_right = 632.0
 offset_bottom = 378.0
 theme_override_fonts/normal_font = ExtResource("4_vtx63")
 theme_override_font_sizes/normal_font_size = 26
-text = "Yo, yo y yo."
+bbcode_enabled = true
+text = "
+
+[font_size=10] [/font_size]
+[center][font_size=35]Game by Daniel Ramírez[/font_size]
+[url=https://drm.xarblanca.es]Portfolio[/url] • [url=https://danule222.itch.io/]Itch.io[/url] • [url=https://bsky.app/profile/drm.xarblanca.es]BlueSky[/url] • [url=https://twitter.com/Danule222]Twitter[/url]
+
+[font_size=20]This project would not have been possible 
+without the following assets:[/font_size]
+[font_size=44] [/font_size]
+[font_size=30][Canonical Hologra Office][/font_size]
+Model by Aeri @ Sketchfab.com
+[url=https://sketchfab.com/3d-models/canonical-hologra-office-e2b98781e3124418bba6ebe8a4d20646]Link[/url]
+
+[font_size=30][Gawr Gura MMD Model][/font_size]
+Model by Hololive @ Nicovideo.jp
+[url=https://3d.nicovideo.jp/works/td88336]Link[/url]
+
+[font_size=30][Kureiji Ollie MMD Model][/font_size]
+Model by Hololive @ Nicovideo.jp
+[url=https://3d.nicovideo.jp/works/td92058]Link[/url]
+
+[font_size=30][Inugami Korone MMD Model][/font_size]
+Model by Hololive @ Nicovideo.jp
+[url=https://3d.nicovideo.jp/works/td63650]Link[/url]
+
+[font_size=30][Ninomae Ina'nis MMD Model][/font_size]
+Model by ちひ @ Nicovideo.jp
+[url=https://3d.nicovideo.jp/works/td88804]Link[/url]
+
+[font_size=30][Hakos Baelz MMD Model][/font_size]
+Model by Antro @ Nicovideo.jp
+[url=https://3d.nicovideo.jp/works/td86819]Link[/url] • [url=https://twitter.com/antro3dcg]Twitter[/url]
+
+[font_size=30][Mococo Abyssgard MMD Model][/font_size]
+Model by Antro @ Sketchfab.com
+[url=https://sketchfab.com/3d-models/mococo-abyssgard-3d-mmd-model-download-2e87c3ba2e2d4d2d8b5c7fca80fd1f91]Link[/url] • [url=https://twitter.com/antro3dcg]Twitter[/url]
+
+[font_size=30][Mococo Abyssgard MMD Model][/font_size]
+Model by Merkuria @ Sketchfab.com
+[url=https://sketchfab.com/3d-models/fuwawa-abyssgard-hololive-advent-2b906a0023904d2f9b0e84094d2c83de]Link[/url]
+
+[Main Menu Background Music]
+SPARKS （Midnight ver.）
+Arrangement, Programming & Mixing：吉村 隆行／Takayuki Yoshimura
+[url=https://youtu.be/cBlrARl9tIQ]Link[/url]
+
+[Investigation Background Music]
+Doggy god’s street（Midnight ver.）
+Arrangement, Programming & Mixing：吉村 隆行／Takayuki Yoshimura
+[url=https://youtu.be/cBlrARl9tIQ]Link[/url]
+
+[Interrogation Background Music]
+メイジ・オブ・ヴァイオレット（Midnight ver.）
+Arrangement, Programming & Mixing：吉村 隆行／Takayuki Yoshimura
+[url=https://youtu.be/cBlrARl9tIQ]Link[/url]
+
+And thanks to the amazing Hololive community
+for making projects like this worthwhile.
+<3"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PNL_Credits"]
 layout_mode = 1
