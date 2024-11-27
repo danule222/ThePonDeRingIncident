@@ -1,4 +1,4 @@
-[gd_scene load_steps=361 format=4 uid="uid://bbrgq43mnuo3i"]
+[gd_scene load_steps=365 format=4 uid="uid://bbrgq43mnuo3i"]
 
 [ext_resource type="Texture2D" uid="uid://c28mgcagth1dy" path="res://Art/Office/canonical_hologra_office_0.png" id="1_rhhgn"]
 [ext_resource type="Texture2D" uid="uid://326a8nq77ton" path="res://Art/Office/canonical_hologra_office_1.png" id="2_inl4c"]
@@ -32,6 +32,7 @@
 [ext_resource type="Texture2D" uid="uid://ru4s6r0ujbfd" path="res://Art/Office/canonical_hologra_office_29.png" id="30_g0cs2"]
 [ext_resource type="Texture2D" uid="uid://dh60843kjg86x" path="res://Art/Office/canonical_hologra_office_30.png" id="31_n54k0"]
 [ext_resource type="Texture2D" uid="uid://d06lb0dxpghdq" path="res://Art/Office/canonical_hologra_office_31.png" id="32_7tf31"]
+[ext_resource type="VideoStream" path="res://Video/V_Hologra_Baelz.ogv" id="34_dmey4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1p4xx"]
 resource_name = "Carton_Box"
@@ -3424,6 +3425,21 @@ points = PackedVector3Array(-29.9156, -2.06677, -34.3338, 13.7945, 4.17752, 37.4
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_y8wph"]
 points = PackedVector3Array(4.42803, 122.819, 99.9087, -15.4841, 3.3462, -10.5264, -8.0575, 119.694, -96.7792, 4.42803, 13.5464, -99.9087, 4.42803, 13.5464, 99.9087, -8.0575, 119.694, 96.7792, 4.42803, 122.819, -99.9087, -8.0575, 16.671, 96.7792, -8.0575, 16.671, -96.7792, -15.4841, 3.3462, 10.5264)
 
+[sub_resource type="PlaneMesh" id="PlaneMesh_bba2b"]
+size = Vector2(191.465, 101.525)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_vanmo"]
+viewport_path = NodePath("7300b5c5ebe140e7b8d044755ef8c189_fbx/RootNode/TV/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eqe0s"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_vanmo")
+albedo_texture_force_srgb = true
+roughness = 0.0
+emission_enabled = true
+emission_energy_multiplier = 0.5
+emission_texture = SubResource("ViewportTexture_vanmo")
+
 [sub_resource type="ArrayMesh" id="ArrayMesh_wsyv3"]
 _surfaces = [{
 "aabb": AABB(-27.5099, -82.3747, -98.3476, 55.0198, 164.749, 196.695),
@@ -4856,6 +4872,25 @@ shape = SubResource("ConvexPolygonShape3D_pfe4n")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="7300b5c5ebe140e7b8d044755ef8c189_fbx/RootNode/TV/Cube_030_TV_0/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_y8wph")
+
+[node name="Video" type="MeshInstance3D" parent="7300b5c5ebe140e7b8d044755ef8c189_fbx/RootNode/TV"]
+transform = Transform3D(0, 1, -4.37114e-08, 4.37114e-08, -4.37114e-08, -1, -1, 0, -4.37114e-08, 2.5069, 67.6541, 0)
+mesh = SubResource("PlaneMesh_bba2b")
+surface_material_override/0 = SubResource("StandardMaterial3D_eqe0s")
+
+[node name="SubViewport" type="SubViewport" parent="7300b5c5ebe140e7b8d044755ef8c189_fbx/RootNode/TV"]
+handle_input_locally = false
+size = Vector2i(854, 480)
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="7300b5c5ebe140e7b8d044755ef8c189_fbx/RootNode/TV/SubViewport"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("34_dmey4")
+volume_db = -80.0
+autoplay = true
 
 [node name="Cube_031" type="Node3D" parent="7300b5c5ebe140e7b8d044755ef8c189_fbx/RootNode"]
 transform = Transform3D(-0.0971633, 1.06501e-16, -0.429395, 1.18991e-17, 0.44025, 1.06501e-16, 0.429395, 1.18991e-17, -0.0971633, 49.1023, 1453.93, -926.076)
