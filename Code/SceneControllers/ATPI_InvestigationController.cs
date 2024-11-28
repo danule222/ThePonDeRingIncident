@@ -29,7 +29,7 @@ public partial class ATPI_InvestigationController : Node3D
     InvestigationEnded = false;
 
     // Music
-    NTPI_AL_MusicController.Instance.PlayBackgroundMusic(EGameState.Investigation);
+    NTPI_AL_AudioController.Instance.PlayBackgroundMusic(EGameState.Investigation);
   }
 
   public override void _Process(double delta)

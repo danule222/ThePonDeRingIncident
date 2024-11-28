@@ -48,7 +48,7 @@ public partial class CTPI_InterrogationController : Control
 		Continue();
 
 		// Music
-		NTPI_AL_MusicController.Instance.PlayBackgroundMusic(EGameState.Interrogation);
+		NTPI_AL_AudioController.Instance.PlayBackgroundMusic(EGameState.Interrogation);
 	}
 
 	public override void _Process(double delta)

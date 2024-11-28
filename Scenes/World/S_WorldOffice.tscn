@@ -1,4 +1,4 @@
-[gd_scene load_steps=365 format=4 uid="uid://bbrgq43mnuo3i"]
+[gd_scene load_steps=372 format=4 uid="uid://bbrgq43mnuo3i"]
 
 [ext_resource type="Texture2D" uid="uid://c28mgcagth1dy" path="res://Art/Office/canonical_hologra_office_0.png" id="1_rhhgn"]
 [ext_resource type="Texture2D" uid="uid://326a8nq77ton" path="res://Art/Office/canonical_hologra_office_1.png" id="2_inl4c"]
@@ -31,8 +31,15 @@
 [ext_resource type="Texture2D" uid="uid://br4pmmukyf6vt" path="res://Art/Office/canonical_hologra_office_28.png" id="29_s26xp"]
 [ext_resource type="Texture2D" uid="uid://ru4s6r0ujbfd" path="res://Art/Office/canonical_hologra_office_29.png" id="30_g0cs2"]
 [ext_resource type="Texture2D" uid="uid://dh60843kjg86x" path="res://Art/Office/canonical_hologra_office_30.png" id="31_n54k0"]
+[ext_resource type="Script" path="res://Code/SceneControllers/ATPI_TVController.cs" id="31_u38p1"]
+[ext_resource type="Resource" uid="uid://p2n1nw03popw" path="res://Resources/HolograChapters/R_Hologra_Baelz.tres" id="32_3ipqs"]
 [ext_resource type="Texture2D" uid="uid://d06lb0dxpghdq" path="res://Art/Office/canonical_hologra_office_31.png" id="32_7tf31"]
-[ext_resource type="VideoStream" path="res://Video/V_Hologra_Baelz.ogv" id="34_dmey4"]
+[ext_resource type="Resource" uid="uid://bfo1vxfmyrg3p" path="res://Resources/HolograChapters/R_Hologra_FWMC.tres" id="33_v5kyf"]
+[ext_resource type="Resource" uid="uid://0jmels3qirfk" path="res://Resources/HolograChapters/R_Hologra_Gura.tres" id="34_b63ph"]
+[ext_resource type="Resource" uid="uid://dnn010e4ecvdl" path="res://Resources/HolograChapters/R_Hologra_Ina.tres" id="35_53lk8"]
+[ext_resource type="Resource" uid="uid://yjrbv1qb4sa0" path="res://Resources/HolograChapters/R_Hologra_Korone.tres" id="36_lbf7a"]
+[ext_resource type="Resource" uid="uid://dok21wlnmm50" path="res://Resources/HolograChapters/R_Hologra_Ollie.tres" id="37_6epuq"]
+[ext_resource type="AudioStream" uid="uid://bkk6mdb7i0j33" path="res://Video/V_Hologra_Gura.ogg" id="40_5i4mh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1p4xx"]
 resource_name = "Carton_Box"
@@ -4860,6 +4867,8 @@ shape = SubResource("ConvexPolygonShape3D_wba27")
 
 [node name="TV" type="Node3D" parent="7300b5c5ebe140e7b8d044755ef8c189_fbx/RootNode"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -889.283, 1420.44, -777.907)
+script = ExtResource("31_u38p1")
+Chapters = Array[Object]([ExtResource("32_3ipqs"), ExtResource("33_v5kyf"), ExtResource("34_b63ph"), ExtResource("35_53lk8"), ExtResource("36_lbf7a"), ExtResource("37_6epuq")])
 
 [node name="Cube_030_TV_0" type="MeshInstance3D" parent="7300b5c5ebe140e7b8d044755ef8c189_fbx/RootNode/TV"]
 mesh = SubResource("ArrayMesh_6gwuo")
@@ -4888,9 +4897,20 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-stream = ExtResource("34_dmey4")
-volume_db = -80.0
-autoplay = true
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="7300b5c5ebe140e7b8d044755ef8c189_fbx/RootNode/TV"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 13.4385, 60, 5.87416e-07)
+stream = ExtResource("40_5i4mh")
+attenuation_model = 1
+volume_db = -22.0
+unit_size = 5.0
+max_db = -10.0
+max_distance = 20.0
+bus = &"TV"
+playback_type = 1
+emission_angle_enabled = true
+emission_angle_degrees = 55.0
+attenuation_filter_db = -8.0
 
 [node name="Cube_031" type="Node3D" parent="7300b5c5ebe140e7b8d044755ef8c189_fbx/RootNode"]
 transform = Transform3D(-0.0971633, 1.06501e-16, -0.429395, 1.18991e-17, 0.44025, 1.06501e-16, 0.429395, 1.18991e-17, -0.0971633, 49.1023, 1453.93, -926.076)

@@ -16,10 +16,14 @@ config/features=PackedStringArray("4.3", "C#", "Forward Plus")
 config/icon="res://Art/Icon/T_Icon.png"
 config/windows_native_icon="res://Art/Icon/T_Icon.ico"
 
+[audio]
+
+buses/default_bus_layout="res://Audio/default_bus_layout.tres"
+
 [autoload]
 
 NTPI_AL_GameState="*res://Code/Autoloads/NTPI_AL_GameState.cs"
-NTPI_AL_MusicController="*res://Code/Autoloads/NTPI_AL_MusicController.cs"
+NTPI_AL_MusicController="*res://Code/Autoloads/NTPI_AL_AudioController.cs"
 
 [dialogic]
 

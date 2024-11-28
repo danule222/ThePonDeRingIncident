@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="RTPI_HolograChapter" load_steps=4 format=3 uid="uid://0jmels3qirfk"]
+
+[ext_resource type="AudioStream" uid="uid://bkk6mdb7i0j33" path="res://Video/V_Hologra_Gura.ogg" id="1_1mbed"]
+[ext_resource type="Script" path="res://Code/Resources/RTPI_HolograChapter.cs" id="1_edosu"]
+[ext_resource type="VideoStream" path="res://Video/V_Hologra_Gura.ogv" id="2_e61vs"]
+
+[resource]
+script = ExtResource("1_edosu")
+Video = ExtResource("2_e61vs")
+Audio = ExtResource("1_1mbed")

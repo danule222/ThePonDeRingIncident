@@ -41,7 +41,7 @@ public partial class CTPI_MainMenuController : Control
     BTN_Exit.Pressed += ExitPressed;
 
     // Music
-    NTPI_AL_MusicController.Instance.PlayBackgroundMusic(EGameState.MainMenu);
+    NTPI_AL_AudioController.Instance.PlayBackgroundMusic(EGameState.MainMenu);
 
     VBX_MainMenu.VisibilityChanged += MainMenuVisibilityChanged;
   }
