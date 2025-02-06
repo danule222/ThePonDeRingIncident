@@ -258,8 +258,8 @@ theme_override_constants/margin_bottom = 15
 layout_mode = 2
 alignment = 1
 
-[node name="NewCharacter" type="Timer" parent="."]
-wait_time = 0.05
+[node name="NewTextCharacter" type="Timer" parent="."]
+wait_time = 0.1
 
 [node name="UI_PauseMenu" parent="." instance=ExtResource("4_fiflb")]
 visible = false
@@ -434,3 +434,6 @@ text = "[center][font_size=40]Correct answer![/font_size][/center]
 [node name="TimeToMenu" type="Timer" parent="."]
 wait_time = 7.0
 one_shot = true
+
+[node name="VoicePlayer" type="AudioStreamPlayer" parent="."]
+bus = &"Effects"

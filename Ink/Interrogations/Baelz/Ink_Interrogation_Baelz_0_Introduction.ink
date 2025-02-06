@@ -33,7 +33,7 @@
 === 2_fuwawa_1 ===
 
 - <Baelz:Happy:0> Nah, don't worry girls, it's OK.
-- <Baelz:Neutral:0> My little disciples were kicked out of their home because the couldn't pay the rent.
+- <Baelz:Neutral:0> My little disciples were kicked out of their home because they couldn't pay the rent.
 - <Baelz:Sad:0> So, while they find some other place, they're staying at my home.
 -> finish
 

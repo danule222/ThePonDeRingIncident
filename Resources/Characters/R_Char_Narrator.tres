@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="RTPI_Character" load_steps=5 format=3 uid="uid://c11c81cafac3e"]
+
+[ext_resource type="Texture2D" uid="uid://e6h3d7m6p0aw" path="res://Art/Test/T_TestGura2.png" id="1_yfkk8"]
+[ext_resource type="Texture2D" uid="uid://pkv3jcip1sp0" path="res://Art/Test/T_TestGura.png" id="2_g06gw"]
+[ext_resource type="AudioStream" uid="uid://5imqu0vhwbaw" path="res://Audio/FX/Voices/Gura/DV_Gura_01.ogg" id="3_eccuw"]
+[ext_resource type="Script" path="res://Code/Resources/RTPI_Character.cs" id="4_g8mu2"]
+
+[resource]
+script = ExtResource("4_g8mu2")
+Name = 0
+Portrait = ExtResource("2_g06gw")
+Emotions = {
+0: null,
+1: ExtResource("1_yfkk8"),
+2: null,
+3: null
+}
+Voice = ExtResource("3_eccuw")

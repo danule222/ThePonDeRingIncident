@@ -10,4 +10,6 @@ public partial class RTPI_Character : Resource
   public Texture2D Portrait;
   [Export]
   public Dictionary<EEmotion, Texture2D> Emotions;
+  [Export]
+  public AudioStream Voice;
 }

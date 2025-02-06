@@ -9,9 +9,12 @@ public partial class CTPI_InterrogationController : Control
 {
 	[Export]
 	private Array<RTPI_Interrogation> Interrogations;
+	[Export]
+	private Array<RTPI_Character> Characters;
 	[Export(PropertyHint.NodeType)]
 	private Dictionary<RTPI_Character, NodePath> CharacterMesh;
 	private Dictionary<ECharacter, Node3D> CharacterNodes;
+	private Dictionary<ECharacter, RTPI_Character> EnumCharacter;
 	private CTPI_Dialogue UI_Dialogue;
 	private InkStory Story;
 	private bool Selecting;
@@ -44,6 +47,12 @@ public partial class CTPI_InterrogationController : Control
 		}
 
 		CharacterNodes[Interrogations[CurrentInterrogation].Character.Name].Visible = true;
+
+		EnumCharacter = new Dictionary<ECharacter, RTPI_Character>();
+		foreach (RTPI_Character c in Characters)
+		{
+			EnumCharacter.Add(c.Name, c);
+		}
 
 		Continue();
 
@@ -88,7 +97,7 @@ public partial class CTPI_InterrogationController : Control
 			// Remove name from text
 			text = text.Replace(rgx.Groups[0].Value + " ", "");
 
-			UI_Dialogue.Speak(character, text);
+			UI_Dialogue.Speak(EnumCharacter[character], emotion, text);
 
 			if (text.Contains("exits the room") || text.Contains("leaves the room"))
 				CharacterNodes[Interrogations[CurrentInterrogation].Character.Name].Visible = false;

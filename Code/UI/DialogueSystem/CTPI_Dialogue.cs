@@ -18,6 +18,9 @@ public partial class CTPI_Dialogue : Control
 	private RichTextLabel RTL_Text;
 	private RichTextLabel RTL_Name;
 
+	private RTPI_Character CurrentCharacter;
+	private double VoiceBasePitch;
+
 	private Control CON_FwwSelectionBox;
 	private VBoxContainer VBX_FwwOptions;
 	private Control CON_MccSelectionBox;
@@ -25,10 +28,12 @@ public partial class CTPI_Dialogue : Control
 	[Signal] public delegate void ContinueEventHandler();
 	[Signal] public delegate void AddTensionEventHandler(int tension);
 
-	private Timer NewCharacter;
+	private Timer NewTextCharacter;
 	public bool IsSpeaking { get; private set; }
 	private string Text;
-	private int CurrentCharacter;
+	private int CurrentTextCharacter;
+	private AudioStreamPlayer VoicePlayer;
+	private double CurrentWaitTime;
 
 	private CTPI_PauseMenu UI_PauseMenu;
 
@@ -82,29 +87,32 @@ public partial class CTPI_Dialogue : Control
 
 		TimeToMenu.Timeout += ToTitleMenu;
 
-		NewCharacter = GetNode<Timer>("NewCharacter");
-		NewCharacter.Timeout += TypeWriteEffect;
+		NewTextCharacter = GetNode<Timer>("NewTextCharacter");
+		NewTextCharacter.Timeout += TypeWriteEffect;
 		RTL_Text.Text = "";
+		VoicePlayer = GetNode<AudioStreamPlayer>("VoicePlayer");
 	}
 
 	public override void _Process(double delta)
 	{
 	}
 
-	public void Speak(ECharacter character, string text)
+	public void Speak(RTPI_Character character, EEmotion emotion, string text)
 	{
-		NewCharacter.Stop();
+		NewTextCharacter.Stop();
 		IsSpeaking = true;
-		CurrentCharacter = 0;
+		CurrentTextCharacter = 0;
+
+		CurrentCharacter = character;
 
 		// Visibility
 		CON_DialogueBox.Visible = true;
 
 		// Name
-		RTL_Name.Text = character.ToString();
+		RTL_Name.Text = character.Name.ToString();
 
 		// Position
-		switch (character)
+		switch (character.Name)
 		{
 			case ECharacter.Fuwawa:
 				CON_DialogueBox.Position = CON_FwwPos.Position;
@@ -123,32 +131,91 @@ public partial class CTPI_Dialogue : Control
 				break;
 		}
 
+		// Emotion
+		switch (emotion)
+		{
+			case EEmotion.Neutral:
+				VoiceBasePitch = 1.0;
+				CurrentWaitTime = 0.1;
+				break;
+			case EEmotion.Happy:
+				VoiceBasePitch = 1.1;
+				CurrentWaitTime = 0.1;
+				break;
+			case EEmotion.Alert:
+				VoiceBasePitch = 1.1;
+				CurrentWaitTime = 0.08;
+				break;
+			case EEmotion.Thinking:
+				VoiceBasePitch = 0.9;
+				CurrentWaitTime = 0.12;
+				break;
+			case EEmotion.Sad:
+				VoiceBasePitch = 0.9;
+				CurrentWaitTime = 0.12;
+				break;
+			case EEmotion.Mad:
+				VoiceBasePitch = 1.1;
+				CurrentWaitTime = 0.05;
+				break;
+			case EEmotion.Laugh:
+				VoiceBasePitch = 1.2;
+				CurrentWaitTime = 1.0;
+				break;
+		}
+		NewTextCharacter.WaitTime = CurrentWaitTime;
+
 		Text = text;
 		RTL_Text.Text = "";
-		NewCharacter.Start();
+		NewTextCharacter.Start();
 	}
 
 	public void Skip()
 	{
 		IsSpeaking = false;
-		NewCharacter.Stop();
+		NewTextCharacter.Stop();
 		RTL_Text.Text = Text;
 	}
 
 	private void TypeWriteEffect()
 	{
-		if (CurrentCharacter + 1 < Text.Length)
+		if (CurrentTextCharacter + 1 < Text.Length)
 		{
-			RTL_Text.Text = Text.Substr(0, CurrentCharacter + 1)
-				+ "[color=#00000000]" + Text.Substring(CurrentCharacter) + "[/color]";
+			RTL_Text.Text = Text.Substr(0, CurrentTextCharacter + 1)
+				+ "[color=#00000000]" + Text.Substring(CurrentTextCharacter) + "[/color]";
 
-			// RTL_Text.Text += Text[CurrentCharacter];
-			CurrentCharacter++;
+			CurrentTextCharacter++;
+
+			// Sound voice
+			if (
+					Text[CurrentTextCharacter] != ' ' &&
+					Text[CurrentTextCharacter] != ',' &&
+					Text[CurrentTextCharacter] != '.' &&
+					Text[CurrentTextCharacter] != '?' &&
+					Text[CurrentTextCharacter] != '!' &&
+					Text[CurrentTextCharacter] != '\n')
+			{
+				VoicePlayer.Stream = CurrentCharacter.Voice;
+				VoicePlayer.PitchScale = (float)GD.RandRange(VoiceBasePitch - 0.1, VoiceBasePitch + 0.1);
+				VoicePlayer.Play();
+			}
+
+			// Stops and commas
+			if (
+				Text[CurrentTextCharacter] == ',' ||
+				Text[CurrentTextCharacter] == '.')
+			{
+				NewTextCharacter.WaitTime = CurrentWaitTime + 0.3;
+			}
+			else
+			{
+				NewTextCharacter.WaitTime = CurrentWaitTime;
+			}
 		}
 		else
 		{
 			IsSpeaking = false;
-			NewCharacter.Stop();
+			NewTextCharacter.Stop();
 		}
 	}
 
