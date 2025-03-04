@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="RTPI_Character" load_steps=2 format=3 uid="uid://ctyieqf3eqtbd"]
 
-[ext_resource type="Script" path="res://Code/Resources/RTPI_Character.cs" id="1_mjrf0"]
+[ext_resource type="Script" uid="uid://ffjqjd7cbab4" path="res://Code/Resources/RTPI_Character.cs" id="1_mjrf0"]
 
 [resource]
 script = ExtResource("1_mjrf0")

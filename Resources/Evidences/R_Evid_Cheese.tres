@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="RTPI_Evidence" load_steps=3 format=3 uid="uid://dtq53kvmu763p"]
 
 [ext_resource type="Texture2D" uid="uid://cy5qogcshrvww" path="res://Art/UI/HUD/T_Evidence_Cheese.png" id="1_65fje"]
-[ext_resource type="Script" path="res://Code/Resources/RTPI_Evidence.cs" id="2_h2yyr"]
+[ext_resource type="Script" uid="uid://bartg41o6qow3" path="res://Code/Resources/RTPI_Evidence.cs" id="2_h2yyr"]
 
 [resource]
 script = ExtResource("2_h2yyr")

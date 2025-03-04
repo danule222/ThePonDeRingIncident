@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://18tas7nugvv8"]
 
-[ext_resource type="Script" path="res://Code/SceneControllers/CTPI_InterrogationController.cs" id="1_6q4a4"]
+[ext_resource type="Script" uid="uid://cue1gp8gj112h" path="res://Code/SceneControllers/CTPI_InterrogationController.cs" id="1_6q4a4"]
 [ext_resource type="Resource" uid="uid://g3bm4h0bwrjb" path="res://Resources/Interrogations/R_Inte_Baelz.tres" id="2_5vnki"]
 [ext_resource type="Resource" uid="uid://d40i01lm6dob" path="res://Resources/Interrogations/R_Inte_Gura.tres" id="3_5x7oa"]
 [ext_resource type="PackedScene" uid="uid://cy2kdx4vti0ir" path="res://Scenes/World/S_WorldInterrogation.tscn" id="4_k2180"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://dkvmu8yslsktx"]
 
-[ext_resource type="Script" path="res://Code/UI/HUD/CTPI_HUD.cs" id="1_kx8dx"]
+[ext_resource type="Script" uid="uid://3jvmcycr51t6" path="res://Code/UI/HUD/CTPI_HUD.cs" id="1_kx8dx"]
 [ext_resource type="Texture2D" uid="uid://c4wi0mir2d6kn" path="res://Art/UI/HUD/T_Reticle_Default.png" id="2_1soiv"]
 [ext_resource type="Texture2D" uid="uid://5x44jllbq4nf" path="res://Art/UI/HUD/T_Reticle_Evidence.png" id="3_30yis"]
 [ext_resource type="Texture2D" uid="uid://d0go10pu0y0k1" path="res://Art/UI/HUD/T_Evidence_Paper.png" id="4_j2brh"]

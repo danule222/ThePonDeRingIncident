@@ -1,9 +1,9 @@
 [gd_scene load_steps=26 format=4 uid="uid://bd6lv77r7g56m"]
 
 [ext_resource type="PackedScene" uid="uid://bbrgq43mnuo3i" path="res://Scenes/World/S_WorldOffice.tscn" id="1_ne1xu"]
-[ext_resource type="Script" path="res://Code/SceneControllers/ATPI_InvestigationController.cs" id="1_uu0b1"]
+[ext_resource type="Script" uid="uid://2abpl7bd1o0j" path="res://Code/SceneControllers/ATPI_InvestigationController.cs" id="1_uu0b1"]
 [ext_resource type="PackedScene" uid="uid://dkvmu8yslsktx" path="res://UI/HUD/UI_HUD.tscn" id="1_yms2o"]
-[ext_resource type="Script" path="res://Code/Player/ATPI_PlayerController.cs" id="2_0tucb"]
+[ext_resource type="Script" uid="uid://vr0p3ork3vnb" path="res://Code/Player/ATPI_PlayerController.cs" id="2_0tucb"]
 [ext_resource type="VoxelGIData" uid="uid://cf7swx7aampck" path="res://Scenes/GI/S_Investigation.VoxelGI_data.res" id="3_awxbr"]
 [ext_resource type="PackedScene" uid="uid://cncev156gdqc2" path="res://Placeables/P_Evidence.tscn" id="4_6kgwc"]
 [ext_resource type="Resource" uid="uid://1aiugrohxj02" path="res://Resources/Evidences/R_Evid_SharkTooth.tres" id="5_hqg2m"]

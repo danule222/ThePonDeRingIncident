@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://e1p6wap32mjw"]
 
 [ext_resource type="PackedScene" uid="uid://cgre5s2mwjjkm" path="res://UI/Elements/UI_Button.tscn" id="1_odj8t"]
-[ext_resource type="Script" path="res://Code/UI/Settings/CTPI_Settings.cs" id="1_r002d"]
+[ext_resource type="Script" uid="uid://217aa1kpphp8" path="res://Code/UI/Settings/CTPI_Settings.cs" id="1_r002d"]
 [ext_resource type="FontFile" uid="uid://r68vafhpo33u" path="res://Art/Fonts/Font_BalsamiqSans.ttf" id="2_g8ohq"]
 
 [node name="PNL_Settings" type="Panel"]

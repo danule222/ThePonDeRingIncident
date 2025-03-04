@@ -7,7 +7,7 @@
 [ext_resource type="Resource" uid="uid://sbgrvii0fmuh" path="res://Ink/Interrogations/Ollie/Ink_Interrogation_Ollie_3_Con_Tension.ink" id="5_6hg6s"]
 [ext_resource type="Resource" uid="uid://bby8u38fovhx5" path="res://Ink/Interrogations/Ollie/Ink_Interrogation_Ollie_4_Con_Perfect.ink" id="6_bwifn"]
 [ext_resource type="Resource" uid="uid://820aesrdrou7" path="res://Ink/Interrogations/Ollie/Ink_Interrogation_Ollie_5_Con_Calm.ink" id="7_qo8fa"]
-[ext_resource type="Script" path="res://Code/Resources/RTPI_Interrogation.cs" id="8_6rjbg"]
+[ext_resource type="Script" uid="uid://cxsskfys7ld8u" path="res://Code/Resources/RTPI_Interrogation.cs" id="8_6rjbg"]
 
 [resource]
 script = ExtResource("8_6rjbg")

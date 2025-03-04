@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="RTPI_HolograChapter" load_steps=4 format=3 uid="uid://bfo1vxfmyrg3p"]
 
 [ext_resource type="AudioStream" uid="uid://cnl52vbxx6qpa" path="res://Video/V_Hologra_FWMC.ogg" id="1_8xpqg"]
-[ext_resource type="Script" path="res://Code/Resources/RTPI_HolograChapter.cs" id="1_lkg56"]
-[ext_resource type="VideoStream" path="res://Video/V_Hologra_FWMC.ogv" id="2_ndwbd"]
+[ext_resource type="Script" uid="uid://cxroiis6jdo1i" path="res://Code/Resources/RTPI_HolograChapter.cs" id="1_lkg56"]
+[ext_resource type="VideoStream" uid="uid://cim5cuv768c7e" path="res://Video/V_Hologra_FWMC.ogv" id="2_ndwbd"]
 
 [resource]
 script = ExtResource("1_lkg56")

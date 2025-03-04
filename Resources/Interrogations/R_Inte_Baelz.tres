@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="RTPI_Interrogation" load_steps=9 format=3 uid="uid://g3bm4h0bwrjb"]
 
-[ext_resource type="Script" path="res://Code/Resources/RTPI_Interrogation.cs" id="1_21252"]
+[ext_resource type="Script" uid="uid://cxsskfys7ld8u" path="res://Code/Resources/RTPI_Interrogation.cs" id="1_21252"]
 [ext_resource type="Resource" uid="uid://cmh5nmndt558o" path="res://Resources/Characters/R_Char_Baelz.tres" id="1_y1pe6"]
 [ext_resource type="Resource" uid="uid://l6wrq1a2ea0m" path="res://Ink/Interrogations/Baelz/Ink_Interrogation_Baelz_0_Introduction.ink" id="2_gk2mf"]
 [ext_resource type="Resource" uid="uid://cscb062on4gia" path="res://Ink/Interrogations/Baelz/Ink_Interrogation_Baelz_1_PtR_Tension.ink" id="3_t6sms"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cgre5s2mwjjkm"]
 
-[ext_resource type="Script" path="res://Code/UI/Elements/CTPI_Button.cs" id="1_d81lk"]
+[ext_resource type="Script" uid="uid://dkw5pvgeqqfpy" path="res://Code/UI/Elements/CTPI_Button.cs" id="1_d81lk"]
 [ext_resource type="FontFile" uid="uid://r68vafhpo33u" path="res://Art/Fonts/Font_BalsamiqSans.ttf" id="2_ivxqr"]
 
 [node name="UI_Button" type="Control"]

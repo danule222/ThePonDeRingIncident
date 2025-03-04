@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cnvse46kxyvwp"]
 
 [ext_resource type="PackedScene" uid="uid://bbrgq43mnuo3i" path="res://Scenes/World/S_WorldOffice.tscn" id="1_rfu5f"]
-[ext_resource type="Script" path="res://Code/Player/ATPI_PlayerController.cs" id="5_ervp4"]
+[ext_resource type="Script" uid="uid://vr0p3ork3vnb" path="res://Code/Player/ATPI_PlayerController.cs" id="5_ervp4"]
 [ext_resource type="VoxelGIData" uid="uid://b6ygk6cuf8xit" path="res://Scenes/Test/GI/S_OfficeTest.VoxelGI_data.res" id="34_gbydh"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vqny8"]

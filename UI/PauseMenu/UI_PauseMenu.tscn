@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://kspvbstgcye4"]
 
-[ext_resource type="Script" path="res://Code/UI/PauseMenu/CTPI_PauseMenu.cs" id="1_nt2jd"]
+[ext_resource type="Script" uid="uid://b6o5xlplekrmm" path="res://Code/UI/PauseMenu/CTPI_PauseMenu.cs" id="1_nt2jd"]
 [ext_resource type="FontFile" uid="uid://r68vafhpo33u" path="res://Art/Fonts/Font_BalsamiqSans.ttf" id="1_t3puf"]
 [ext_resource type="PackedScene" uid="uid://cgre5s2mwjjkm" path="res://UI/Elements/UI_Button.tscn" id="2_hdfg2"]
 [ext_resource type="PackedScene" uid="uid://e1p6wap32mjw" path="res://UI/Settings/UI_Settings.tscn" id="4_ih6ue"]

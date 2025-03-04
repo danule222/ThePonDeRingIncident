@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cncev156gdqc2"]
 
-[ext_resource type="Script" path="res://Code/Placeables/ATPI_Evidence.cs" id="1_45gyi"]
+[ext_resource type="Script" uid="uid://fevvaybu1mch" path="res://Code/Placeables/ATPI_Evidence.cs" id="1_45gyi"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_l8qdy"]
 radius = 0.75

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="RTPI_Evidence" load_steps=3 format=3 uid="uid://1aiugrohxj02"]
 
-[ext_resource type="Script" path="res://Code/Resources/RTPI_Evidence.cs" id="1_ie018"]
+[ext_resource type="Script" uid="uid://bartg41o6qow3" path="res://Code/Resources/RTPI_Evidence.cs" id="1_ie018"]
 [ext_resource type="Texture2D" uid="uid://e5hcseikkps0" path="res://Art/UI/HUD/T_Evidence_SharkTooth.png" id="1_qavpc"]
 
 [resource]
